@@ -1,0 +1,5 @@
+﻿<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1">
+	<sitecore>
+		<sc.variable name="MockProjectSourceFolder" value="D:\home\site\wwwroot\App_Data\Unicorn" xdt:Transform="Replace" xdt:Locator="Match(name)" />
+	</sitecore>
+</configuration>

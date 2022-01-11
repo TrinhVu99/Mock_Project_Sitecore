@@ -1,0 +1,7 @@
+﻿@{ var renderingName = (ViewData["Title"] == null || string.IsNullOrWhiteSpace(ViewData["Title"].ToString()))
+                    ? RenderingContext.Current.Rendering.RenderingItem.Name : ViewData["Title"].ToString();
+                var isPlaceHolder = (bool)ViewData["IsPlaceHolder"];
+    <div class="page-editor-handle @(isPlaceHolder ? "place-holder-header" : string.Empty)">
+        <img src="/Assets/Core/images/element.png" alt="components" title="@renderingName" />
+        @renderingName
+    </div> }

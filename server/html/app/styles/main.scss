@@ -1,0 +1,125 @@
+@import "variables";
+@import "bower_components/bootstrap/scss/bootstrap-reboot.scss";
+@import "bower_components/bootstrap/scss/bootstrap-grid.scss";
+@import "bower_components/bootstrap/scss/utilities";
+@import "bower_components/bootstrap/scss/modal";
+@import "bower_components/bootstrap/scss/card";
+@import "bower_components/bootstrap/scss/type";
+@import "bower_components/bootstrap/scss/pagination";
+@import "mixins";
+@import "global";
+@import "animation";
+@import "font";
+@import "../images/icons/style.css";
+@import "../partials/header/header";
+@import "../partials/navigation-cate/navigation-cate";
+@import "../partials/footer/footer";
+@import "../mixins/post-left-img/post-left-img";
+@import "../mixins/post-overlap-title/post-overlap-title";
+@import "../mixins/profile/profile";
+@import "../mixins/reaction/reaction";
+@import "../mixins/show-more-btn/show-more-btn";
+@import "../partials/hero/hero";
+@import "../partials/hero-event-landing/hero-event-landing";
+@import "../partials/hero-news-landing/hero-news-landing";
+@import "../partials/blog-of-the-day/blog-of-the-day";
+@import "../partials/photo-of-day/photo-of-day";
+@import "../partials/latest-post/latest-post";
+@import "../partials/podcast/podcast";
+@import "../partials/trending-post/trending-post";
+@import "../partials/upcoming/upcoming";
+@import "../partials/around-the-world/around-the-world";
+@import "../partials/latest-events/latest-events";
+@import "../partials/bloggers/bloggers";
+@import "../partials/video/video";
+@import "../partials/lottery/lottery";
+@import "../partials/news-detail-content-section/news-detail-content-section";
+@import "../partials/breadcrumb/breadcrumb";
+@import "../partials/lightbox/lightbox";
+@import "../partials/social-icon/social-icon";
+@import "../partials/social-icon-column/social-icon-column";
+@import "../partials/detail-page-title/detail-page-title";
+@import "../partials/news-detail-maincontent/news-detail-maincontent";
+@import "../partials/author-section/author-section.scss";
+@import "../partials/event-detail-content-section/event-detail-content-section.scss";
+@import "../partials/event-info/event-info.scss";
+@import "../partials/event-detail-maincontent-img/event-detail-maincontent-img.scss";
+@import "../partials/detail-logo/detail-logo.scss";
+@import "../partials/upcoming-date/upcoming-date.scss";
+@import "../mixins/readmore-btn/readmore-btn.scss";
+@import "../partials/e-newsletter-subscription/e-newsletter-subscription.scss";
+@import "../partials/payment-method-section/payment-method-section.scss";
+@import "search-results.scss";
+html {
+    font-size: $fz-root; // root font-size, DO NOT CHANGE
+}
+
+body {
+    font-family: $font-main;
+    color: $color-main;
+    font-size: 1.8rem; // base font-size
+    .device & {
+        cursor: pointer;
+    }
+}
+
+.wrapper-container {
+    overflow: hidden;
+    .wrapper {
+        padding-top: 175px;
+        @include min-md {
+            padding-top: 0;
+        }
+    }
+}
+
+@include min-md {
+    .container {
+        max-width: calc(100% - 38px);
+    }
+}
+
+@include min-xl {
+    .container {
+        max-width: #{map-get($container-max-width, xl)};
+    }
+}
+
+// change gutters for desktop
+@include min-lg {
+    .container,
+    [class*="col-"] {
+        padding-left: ($grid-gutter-width-desktop/2);
+        padding-right: ($grid-gutter-width-desktop/2);
+    }
+    .row {
+        margin-right: -($grid-gutter-width-desktop/2);
+        margin-left: -($grid-gutter-width-desktop/2);
+    }
+}
+
+.user-profile,
+.store {
+    // display: none !important; // Hide components in phase 1.1
+    // * {
+    // 	-webkit-filter: grayscale(100%);
+    // 	filter: grayscale(100%);
+    // }
+    pointer-events: none !important;
+    -moz-filter: grayscale(100%) !important;
+    -webkit-filter: grayscale(100%) !important;
+    filter: gray !important;
+    filter: grayscale(100%) !important;
+    opacity: 0.8;
+    * {
+        color: #9d9d9d !important;
+    }
+    &:active {
+        opacity: 1 !important;
+    }
+} 
+
+.user-profile,
+.store, .welcome-msg-wrapper, .language, .bloggers-section .view-all, .video-section .view-all {
+    display: none !important;
+} 

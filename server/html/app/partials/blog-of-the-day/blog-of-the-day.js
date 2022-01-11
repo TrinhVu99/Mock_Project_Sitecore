@@ -1,0 +1,4 @@
+var blogger = {
+    abc: function () {
+    }
+}

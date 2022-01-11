@@ -1,0 +1,16 @@
+.hero-news-landing {
+    .advertising-fixed {
+        display: none;
+        @include min-md {
+            display: block;
+        }
+        @include min-lg {
+            display: none;
+        }
+    }
+    .day-blog {
+        hr {
+            display: none;
+        }
+    }
+}

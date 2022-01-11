@@ -1,0 +1,6 @@
+.upcoming-sidebar {
+    padding: 1.8rem 0;
+    @include min-md {
+        padding: 0;
+    }
+}

@@ -1,0 +1,32 @@
+mixin sectionTitle(title)
+    .category-block-title.may-like-title
+        p=title
+
+mixin youMayLike(title)
+    +sectionTitle(title)
+    .row
+        .col-12.col-md-4
+            .may-like-category
+                //- +postOverlapTitle2('images/post-1.png', 'take a ride', 'เทรนมาแรง ออเจ้า กับชุดไทย')
+                +postOverlapTitle1('images/post-1.png', 'take a ride', 'เทรนมาแรง ออเจ้า กับชุดไทย', 'icon-heart', 'icon-eye')
+        .col-12.col-md-4
+            .may-like-category
+                //- +postOverlapTitle2('images/post-2.png', 'take a ride', 'เงินเดือน 15,000 บาท ')
+                +postOverlapTitle1('images/post-1.png', 'take a ride', 'เทรนมาแรง ออเจ้า กับชุดไทย', 'icon-heart', 'icon-eye')
+        .col-12.col-md-4
+            .may-like-category
+                //- +postOverlapTitle2('images/blog-post-1.png', 'take a ride', 'เงินเดือน 15,000 บาท ')
+                +postOverlapTitle1('images/post-1.png', 'take a ride', 'เทรนมาแรง ออเจ้า กับชุดไทย', 'icon-heart', 'icon-eye')
+
+mixin relatedEvent(title)
+    +sectionTitle(title)
+    .row
+        .col-12.col-md-4
+            .may-like-category
+                +postOverlapTitle1('images/post-1.png', 'take a ride', 'เทรนมาแรง ออเจ้า กับชุดไทย', 'icon-clock', 'icon-location')
+        .col-12.col-md-4
+            .may-like-category
+                +postOverlapTitle1('images/post-2.png', 'take a ride', 'เงินเดือน 15,000 บาท ', 'icon-clock', 'icon-location')
+        .col-12.col-md-4
+            .may-like-category
+                +postOverlapTitle1('images/blog-post-1.png', 'take a ride', 'เงินเดือน 15,000 บาท ', 'icon-clock', 'icon-location')

@@ -1,0 +1,45 @@
+.footer-payment-section {
+	display: none;
+	padding-top: 2.5rem;
+	.footer-menu-list-title {
+		border: none;
+	}
+}
+
+.payment-medthod-list {
+	width: 19rem; //   display: flex;
+	//   justify-content: space-between;
+	//   img {
+	//     padding-right: 2rem;
+	//   }
+}
+
+.service-list {
+	width: 26rem;
+}
+
+.qr-code {
+	width: 9rem;
+	height: 9rem;
+	float: left;
+	img {
+		float: right;
+	}
+}
+
+.mobile-app {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 9rem;
+	float: left;
+	min-height: 5.5rem;
+	height: 9rem;
+	padding-top: 2rem;
+	img {
+		margin-bottom: 1rem;
+	}
+	.mobile-app-img {
+		text-align: right;
+	}
+}

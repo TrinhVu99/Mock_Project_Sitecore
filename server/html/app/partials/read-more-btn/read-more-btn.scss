@@ -1,0 +1,47 @@
+// .news-detail-readmore-btn {
+//     // position: absolute;
+//     bottom: 0;
+//     @include min-md {
+//         position: absolute;
+//         // top:50%; 
+//         z-index: 20;
+//         left:50%; 
+//         transform: translateX(-50%);
+//     }
+//     @include min-lg {
+//         bottom: 5.6rem;
+//     }
+//     &.readmore-btn-tablet {
+//         @include min-md {
+//             width: 100%;
+//         }
+//         @include min-lg {
+//             display: none;
+//         }
+//     }
+//     &.readmore-btn-desktop {
+//         display: none;
+//         @include min-lg {
+//             display: block;
+//         }
+//     }
+//     button {
+//         display: block;
+//         margin: auto;
+//         cursor: pointer;
+//         width: 27.5rem;
+//         background-color: $color-blue-type-3;
+//         border: none;
+//         font-size: 2.1rem;
+//         color: $color-white;
+//         margin-top: 2rem;
+//         border-radius: 1.6rem;
+//         &.fadeOut {
+//             display: none;
+//         }
+//         &:active {
+//             background-color: $color-white;
+//             color: $color-blue-type-3;
+//         }
+//     }
+// }

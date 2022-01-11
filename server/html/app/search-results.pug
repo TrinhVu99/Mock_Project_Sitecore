@@ -1,0 +1,53 @@
+extends layouts/default
+
+block content
+    section.search-results-section
+        .container
+            h1.heading
+                | ค้นพบ "
+                span#keyword การเมือง
+                | " 
+                span.results-count 42 รายการ
+            .filter-list
+                span เลือกตามหมวด
+                ul
+                    li.active
+                        a(href="#") All
+                    li
+                        a(href="https://www.google.com/") Article
+                    li
+                        a(href="https://www.google.com/") Blogger
+                    li
+                        a(href="https://www.google.com/") Videos
+                    li
+                        a(href="https://www.google.com/") Podcasts
+                    li
+                        a(href="https://www.google.com/") Events
+            .search-result-list
+                .row
+                    .col-md-8.col-lg-9
+                        .search-result-item
+                            +postLeftImgSearchResult('images/search-result-1.png', 'Trending post img', 'The risk taker', 'คนไทยปิดหูปิดตา')
+                            +postLeftImgSearchResult('images/search-result-2.png', 'Trending post img', 'The risk taker', 'คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง')
+                            +postLeftImgSearchResult('images/search-resutlt-3.png', 'Trending post img', 'The risk taker', '')
+                            +postLeftImgSearchResult('images/search-resultt-4.png', 'Trending post img', 'The risk taker', 'คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง')
+                            +postLeftImgSearchResult('images/search-result-5.png', 'Trending post img', 'The risk taker', 'คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง')
+                        ul.pagination.justify-content-center
+                            li.prev.disabled
+                                a.page-link(href='#') ก่อนหน้า
+                            li.page-item.active
+                                a.page-link(href='#') 1
+                            li.page-item
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') 4
+                            li.page-item
+                                a.page-link(href='#') 5
+                            li.next
+                                a.page-link(href='#') ถัดไป
+                    .col-md-4.col-lg-3
+                        +advertisingInCol('images/advertis-1.png')
+                
+                    

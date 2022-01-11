@@ -1,0 +1,24 @@
+.latest-events {
+    padding-bottom: 2rem;
+    .post {
+        padding: 0 0 1rem;
+        @include min-md {
+            padding-bottom: 2.5rem;
+        }
+    }
+    .social-list-items {
+        .item {
+            display: flex;
+            align-items: baseline;
+        }
+    }
+    .advertising {
+        margin-top: 1rem;
+        @include min-lg {
+            margin-top: 10rem;
+        }
+    }
+    .view-all {
+        display: none;
+    }
+}

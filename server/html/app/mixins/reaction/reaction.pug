@@ -1,0 +1,10 @@
+mixin reaction(viewNumber, heartNumber)
+    .reaction(class!=attributes.class)
+        .reaction-view
+            //- img(src="images/icons/icon-eye.svg", alt="")
+            span.icon-eye
+            span=viewNumber
+        .reaction-heart
+            span.icon-heart-bold
+            span.heart-number=heartNumber
+    

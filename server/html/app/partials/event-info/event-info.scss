@@ -1,0 +1,66 @@
+.event-info-section {
+    .event-info-block {
+        background-color: $color-grey-13;
+        border-radius: 0.5rem;
+    }
+    span, p {
+        font-family: $font-main;
+        color: $color-black-s;
+        font-size: 2.4rem;
+        &.event-info-category-title, &.event-info-hours-detail {
+            font-weight: $weight-xbold;
+        } 
+        @include min-md {
+            font-size: 2.2rem;
+        }
+        @include min-lg {
+            font-size: 2.4rem;
+            margin-bottom: 0;
+        }
+    }
+    .event-info-list {
+        list-style: none;
+    }
+    .event-info-list {
+        padding: 2.5rem 0 2.5rem 0rem;
+    }
+    .event-info-category-icon {
+        font-size: 1.8rem;
+        position: absolute;
+        top: 1rem;
+        @include min-md {
+            font-size: 1.4rem;
+        }
+    }
+    .event-info-category-content {
+        padding-left: 3rem;
+    }
+    .event-info-category {
+        position: relative;
+    }
+    @include min-lg {
+        margin-bottom: 2rem;
+    }
+    .event-info-block-desciption {
+        padding-top: 2.5rem;
+        @include min-lg {
+            padding-top: 0;
+        }
+        p {
+            font-family: "CordiaUPC", sans-serif;
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+            @include min-lg {
+                margin-top: 3rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        .event-info-block-desciption-container {
+            @include min-md {
+                max-width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}

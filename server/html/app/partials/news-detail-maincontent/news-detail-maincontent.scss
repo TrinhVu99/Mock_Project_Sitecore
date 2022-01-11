@@ -1,0 +1,225 @@
+.detail-maincontent-block {
+  font-family: $font-tahoma;
+  font-size: 2.4rem;
+  @include min-md {
+    font-size: 2rem;
+  }
+  @include min-lg {
+    font-size: 2.6rem;
+    line-height: 1.5;
+    width: 80%;
+    float: right;
+  }
+
+  p,
+  span {
+    font-family: $font-tahoma;
+    font-size: 2.4rem;
+    @include min-md {
+      font-size: 2rem;
+    }
+    @include min-lg {
+      font-size: 2.6rem;
+    //   line-height: calc(36/26);
+    }
+  }
+
+  .author-title-detail-page {
+    font-family: $font-tahoma;
+    font-size: 1.8rem;
+
+    p {
+      font-family: $font-tahoma;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.detail-maincontent {
+  .news-detail-readmore-btn {
+    display: none;
+  }
+
+  .detail-maincontent-text {
+    font-family: $font-tahoma;
+    font-size: 1.8rem;
+
+    img {
+      height: auto !important;
+    }
+
+    p,
+    span {
+      font-family: $font-tahoma;
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-indent: 4rem;
+
+      &.no-indent {
+        text-indent: 0;
+      }
+    }
+
+    ul {
+      font-family: $font-tahoma;
+    }
+
+    .news-detail-readmore-btn {
+      display: block;
+    }
+  }
+}
+
+.news-detail {
+  .detail-maincontent-text {
+    padding-top: 2rem;
+    // max-height: 13rem;
+    overflow: hidden;
+    padding-bottom: 2rem;
+    @include min-md {
+      padding-bottom: inherit;
+      position: relative;
+      // max-height: 27rem;
+    }
+    @include min-lg {
+      padding-left: 0.3rem;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: 1px solid $color-grey-11;
+
+      // max-height: 36rem;
+      &:after {
+        bottom: 0px;
+      }
+
+      &.active {
+
+        // max-height: initial;
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    &.fadedSection {
+      &:after {
+        height: 7rem;
+        @include min-md {
+        }
+        @include min-lg {
+          height: 13rem;
+          content: '';
+        }
+      }
+    }
+
+    ul li {
+      line-height: 1.5;
+    }
+  }
+}
+
+.detail-news-maincontent-img {
+  width: 100%;
+}
+
+.news-detail {
+  .detail-maincontent-container {
+    @include min-md {
+      margin-bottom: 0;
+    }
+    @include min-lg {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.detail-maincontent-container {
+  @include min-lg {
+    margin-bottom: 3rem;
+  }
+}
+
+blockquote {
+  border-bottom: 0.2rem solid $color-white-s;
+  border-top: 0.2rem solid $color-white-s;
+  text-align: center;
+  background-image: url('/Assets/RabbitToday/images/open-quote.png'), url('/Assets/RabbitToday/images/close-quote.png');
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-position: 0 1rem, 100% calc(100% - 3rem);
+  padding: 2rem 2rem 3rem 2rem;
+  background-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: $font-DB-Adman-X;
+  font-weight: $weight-xbold;
+  color: $color-navy;
+  font-size: 2.6rem;
+  margin-bottom: 0;
+  @include min-md {
+    font-size: 2.4rem;
+    line-height: calc(26/24);
+    padding: 1.5rem 4rem;
+    margin-bottom: 1.5rem;
+    background-position: 0 2rem, 100% calc(100% - 2rem);
+  }
+  @include min-lg {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: 2rem 4rem 4rem 4rem;
+    background-size: 3.5rem;
+  }
+}
+
+.detail-maincontent {
+  // padding-top: 0;
+  position: relative;
+  // max-height: 7rem;
+  overflow: hidden; // position: relative;
+  margin-bottom: 3rem;
+
+  &:after {
+    height: 8rem; // bottom: 0px;
+    bottom: -3.5rem;
+    @include min-md {
+      bottom: 0;
+      content: none;
+    }
+    @include min-lg {
+      content: none;
+    }
+  }
+  @include min-md {
+    padding-top: 2.5rem;
+    margin-bottom: 0rem;
+
+    &.active {
+      margin-bottom: 3rem;
+    }
+  }
+  @include min-lg {
+    padding-top: 0.5rem;
+    max-height: 100%;
+  }
+
+  .post-overlap-title .round-box p {
+    font-size: 2.8rem;
+    font-family: "DB-Adman-X-Bold", sans-serif;
+  }
+
+  .category-block-title {
+    p {
+      font-family: "DB-Adman-X", sans-serif;
+      font-size: 2.6rem;
+      margin: 2rem 0;
+      @include min-md {
+        font-size: 2rem;
+        margin: 0 0 1rem 0;
+      }
+      @include min-lg {
+        font-size: 2.1rem;
+      }
+    }
+  }
+}

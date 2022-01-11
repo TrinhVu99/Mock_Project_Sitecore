@@ -1,0 +1,33 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.RenderingModels.AdvertismentRenderingModel
+
+
+<h1>Test View Rendering Component</h1>
+
+<section class="advertising-section">
+    <div class="container">
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            @Html.Glass().Editable(x => x.Model.Time)
+        }
+        <div class="swiper-container advertising advertising-carousel text-center" autoplaytime="@Model.Model.Time">
+            <div class="swiper-wrapper">
+                @foreach (var item in Model.Model.Items)
+                {
+
+                    <div class="swiper-slide item">
+                        @using (Html.Glass().BeginRenderLink(item, x => x.Link, isEditable: true))
+                        {
+                            @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
+                        }
+                    </div>
+                }
+                @*<div class="swiper-slide item"><a href="#" target="_blank"><img src="static/images/advertising-1.png" alt="Advertising"></a></div>
+                    <div class="swiper-slide item"><a href="#" target="_blank"><img src="static/images/advertising-1.png" alt="Advertising"></a></div>
+                    <div class="swiper-slide item"><a href="#" target="_blank"><img src="static/images/advertising-1.png" alt="Advertising"></a></div>*@
+            </div>
+        </div>
+    </div>
+</section>

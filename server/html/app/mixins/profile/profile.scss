@@ -1,0 +1,35 @@
+// .profile-wrapper {
+//     width: 70%;
+//     float: left;
+// }
+.profile {
+    @include clearfix();
+    display: flex;
+    align-items: center;
+    .pic {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 1px solid $color-grey-10;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        float: left;
+        margin-right: 1rem;
+        img {
+            opacity: 0;
+        }
+    }
+    .info {
+        color: $color-grey-9;
+        font-size: 1.45rem;
+        p {
+            margin-bottom: 0;
+            line-height: 1;
+        }
+        span {
+            color: $color-orange2;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.lightbox-wrapper {
+	width: 82rem;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 900;
+	max-width: calc(100% - 6rem);
+	display: none;
+}
+
+.close {
+	width: 5.2rem;
+	height: 5.2rem;
+	border-radius: 50%;
+	background-color: $color-orange;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%);
+	z-index: $index-lightbox-content;
+	cursor: pointer;
+	@include hoverStateBtn;
+	&:before,
+	&:after {
+		content: '';
+		width: 70%;
+		height: 0.1rem;
+		background-color: #fff;
+		position: absolute;
+		top: 50%;
+	}
+	&:before {
+		left: 15%;
+		transform: rotate(45deg);
+	}
+	&:after {
+		right: 15%;
+		transform: rotate(-45deg);
+	}
+}
+
+.lightbox {
+	background-color: #fff;
+	height: calc(100vh - 15rem);
+	overflow: hidden;
+	border-top-left-radius: .7rem;
+	border-top-right-radius: .7rem;
+	@include min-lg {
+		height: 90vh;
+	}
+	&-content {
+		@include clearfix();
+		padding: 1.5rem 2.5rem; // max-height: 22rem;
+	}
+	.lightbox-youtube-video & {
+		height: auto;
+		background: #000;
+		.loader {
+			// z-index: 0;
+		}
+	}
+	.brief {
+		font-size: 2.5rem;
+		line-height: 1.1;
+		color: $color-grey-6;
+		clear: both;
+		font-family: $font-cordia;
+		@include min-sm {
+			width: calc(100% - 20rem);
+		}
+	}
+	.profile {
+		margin-bottom: 1rem;
+		@include min-sm {
+			margin-bottom: 2rem;
+		}
+		@include min-sm {
+			float: left;
+		}
+	}
+	.reaction {
+		margin-bottom: 1rem;
+		@include min-sm {
+			margin-bottom: 2rem;
+		}
+		@include min-sm {
+			float: right;
+		}
+	}
+}
+
+.lightbox-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(6, 100, 155, .87);
+	z-index: $index-lightbox;
+	display: none;
+	.device & {
+		cursor: pointer;
+	}
+}
+
+.iframe-responsive-wrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+	z-index: 1;
+}
+
+.iframe-responsive {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}

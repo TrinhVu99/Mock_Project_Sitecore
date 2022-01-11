@@ -1,0 +1,28 @@
+section.section.hero-section
+	.container
+		.row
+			.col-lg-9.order-md-1
+				.hero-banner
+					.swiper-container.banner-carousel(autoPlayTime="5000")
+						.swiper-wrapper
+							.swiper-slide.item.bg-overlay
+								a.img-to-bg(href="#", target='_blank')
+									img(src="images/hero-img-1.png", alt="hero banner image")
+							.swiper-slide.item.video-item(video-url="https://www.youtube.com/embed/bXMEAsBDlBg")
+								a.img.bg-overlay.img-to-bg(href="#", title="Image")
+									img(src="images/trend-2.png", alt='video poster')
+									.video-overlay-bg
+										i.icon-play-button
+							.swiper-slide.item.video-item(video-url="https://www.youtube.com/embed/oHAyXlnOMqQ")
+								a.img.bg-overlay.img-to-bg(href="#", title="Image")
+									img(src="images/trend-1.png", alt='Video poster')
+									.video-overlay-bg
+										i.icon-play-button
+						.swiper-pagination
+			.col-md-4.order-md-3.order-lg-2.col-lg-3.social-post
+				include ../trending-post/trending-post.pug
+				include ../blog-of-the-day/blog-of-the-day.pug
+			.col-md-8.order-md-2.order-lg-3.col-lg-9.latest-posts
+				include ../latest-post/latest-post.pug
+			.col-lg-3.order-lg-4.lottery-board.d-block.d-md-none.d-lg-block
+				include ../lottery/lottery.pug

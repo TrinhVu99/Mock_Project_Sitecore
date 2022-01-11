@@ -1,0 +1,240 @@
+.e-newsletter-form {
+    .e-newsletter-input-section,
+    .thanks-message {
+        @include min-md {
+            margin-top: 3rem;
+            padding-right: 2rem;
+        }
+        @include min-lg {
+            padding-left: 4rem;
+        }
+        .email-input {
+            color: $color-white;
+            &::-webkit-input-placeholder {
+                color: $color-white;
+                letter-spacing: 0.1rem;
+                padding-left: 1.1rem;
+                font-size: 2.4rem;
+                font-weight: $weight-reg;
+                font-family: $font-DB-Adman-X;
+            }
+            @include min-md {
+                font-size: 2rem;
+            }
+            @include min-lg {
+                font-size: 2.7rem;
+            }
+        }
+        label.error {
+            font-size: 2rem;
+            font-family: $font-DB-Adman-X;
+            color: $color-orange;
+            text-align: center;
+            @include min-md {
+                text-align: left;
+            }
+        }
+    }
+    .row-newsletter {
+        flex-wrap: nowrap;
+    }
+    &::-webkit-input-placeholder {
+        color: $color-white;
+        letter-spacing: 0rem;
+        padding-left: 1.1rem;
+        font-size: 2.4rem;
+        font-weight: $weight-reg;
+        font-family: $font-DB-Adman-X;
+        @include min-md {
+            font-size: 2rem;
+        }
+        @include min-lg {
+            font-size: 2.7rem;
+        }
+    }
+    .email-submit-button {
+        flex: 0 0 4rem;
+        @include min-md {
+            flex: 0 0 auto;
+        }
+        .email-submit-tablet-button {
+            width: 4rem;
+            height: 4rem;
+            @include border-radius(50%);
+            background-color: $color-white;
+            color: rgba(0, 0, 0, 0);
+            display: block;
+            position: relative;
+            -webkit-appearance: caret;
+            &:after {
+                content: "\e90e";
+                color: $color-orange;
+                font-family: 'icomoon' !important;
+                font-size: 1.5rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @include min-md {
+                display: block;
+                cursor: pointer;
+                text-align: center;
+                font-size: 2.4rem;
+                max-width: 12rem;
+                margin: auto;
+                color: $color-blue-type-2;
+                outline: none !important;
+                border: none;
+                border-radius: 0.5rem;
+                width: 100%;
+                margin-top: 2rem;
+                height: 3rem;
+                line-height: 3rem;
+                font-family: $font-DB-Adman-X;
+                transition: $transition;
+                &:after {
+                    content: '';
+                }
+                &:hover {
+                    color: $color-blue-type-2;
+                }
+            }
+            @include min-lg {
+                font-size: 2.7rem;
+                height: 5.3rem;
+                line-height: 5.3rem;
+                max-width: 21rem;
+            }
+        }
+    }
+    .thanks-message {
+        display: none;
+        text-align: center;
+        @include min-md {
+            margin-top: 2rem;
+        }
+        p {
+            font-size: 3.3rem;
+            color: $color-white;
+            @include min-md {
+                font-size: 2rem;
+            }
+            @include min-lg {
+                font-size: 3.3rem;
+            }
+        }
+    }
+}
+
+.newsletter-logo {
+    display: block;
+    margin: auto;
+}
+
+.submit-email-text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: $font-cordia-BI;
+    color: $color-white;
+    margin-top: 2rem;
+    @include min-md {
+        display: block;
+        margin: auto;
+        margin-top: 0;
+        max-width: 12rem;
+        font-size: 2rem;
+        text-align: left;
+        line-height: 2rem;
+        padding-top: 0.5rem;
+    }
+    @include min-lg {
+        // font-size: 2.2rem;
+        font-size: 1.75rem;
+        max-width: initial;
+        text-align: center;
+        line-height: 1.5;
+    }
+    &.disable {
+        color: $color-grey-14;
+    }
+    span {
+        display: inline-block;
+    }
+}
+
+.e-newsletter-subscription-section {
+    background-color: $color-grey-dark;
+    padding-bottom: 1.2rem;
+    @include min-md {
+        padding-bottom: 2.5rem;
+        padding-top: 1.5rem;
+    }
+    @include min-lg {
+        min-height: 11.6rem;
+    }
+    .submit-email-text {
+        @include min-md {
+            display: none;
+        }
+    }
+    .email-submit-button {
+        .submit-email-text {
+            display: none;
+            @include min-md {
+                display: block;
+            }
+        }
+        &.active {
+            .email-submit-tablet-button {
+                background-color: $color-blue;
+                &:after {
+                    color: $color-white;
+                }
+                @include min-md {
+                    color: $color-white;
+                }
+            }
+            &.disable {
+                display: none;
+                @include min-md {
+                    display: block;
+                }
+                .email-submit-tablet-button {
+                    background-color: $color-grey-11;
+                    pointer-events: none;
+                    &:after {
+                        color: $color-grey-dark;
+                    }
+                    @include min-md {
+                        color: $color-grey-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.newsletter-img {
+    padding-top: 2rem;
+    @include min-md {
+        padding-top: 3rem;
+    }
+    display: flex;
+    align-items: center;
+    img {
+        width: 24.8rem;
+        height: 6rem;
+        @include min-md {
+            width: 22.8rem;
+            height: 5.8rem;
+        }
+        @include min-lg {
+            width: 29.2rem;
+            height: 7.4rem;
+        }
+        display: block;
+        margin: auto;
+    }
+}

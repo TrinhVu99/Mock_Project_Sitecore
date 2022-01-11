@@ -1,0 +1,92 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    title Rabbit
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    style
+      include ../../dist/styles/criticalCSS.css
+    // Place favicon.ico in the root directory
+
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='/bower_components/swiper/dist/css/swiper.css')
+    // endbower
+    // endbuild
+
+    // build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+
+    // build:js scripts/vendor/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    // endbuild
+  body
+    <!--[if lt IE 10]>
+      p.browserupgrade You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    <![endif]-->
+    include ../mixins/index
+    .wrapper-container
+      include ../partials/header/header
+      .wrapper
+        .main-content
+          block content
+      include ../partials/footer/footer
+    .lightbox-overlay
+    a#back-to-top(href='#', title='Back to top')
+      .content
+        i.icon-arrow-down
+        span.bt-txt Top
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='/bower_components/modernizr/modernizr.js')
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/jquery-validation/dist/jquery.validate.js')
+    script(src='/bower_components/swiper/dist/js/swiper.js')
+    script(src='/bower_components/sticky-kit/jquery.sticky-kit.js')
+    // endbower
+    // endbuild
+
+    // build:js scripts/plugins.js
+    // endbuild
+
+    // build:js scripts/main.js
+    script(src='/node_modules/jquery.nicescroll/dist/jquery.nicescroll.js')
+    script(src='/node_modules/dotdotdot/src/js/jquery.dotdotdot.min.js')
+    script(src='/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js')
+    script(src='partials/header/header.js')
+    script(src='partials/navigation-cate/navigation-cate.js')
+    script(src='partials/footer/footer.js')
+    script(src='partials/lightbox/lightbox.js')
+    script(src='partials/hero/hero.js')
+    script(src='partials/trending-post/trending-post.js')
+    script(src='partials/bloggers/bloggers.js')
+    script(src='partials/upcoming/upcoming.js')
+    script(src='partials/video/video.js')
+    script(src='partials/lottery/lottery.js')
+    script(src='mixins/show-more-btn/show-more-btn.js')
+    script(src='partials/news-detail-content-section/news-detail-content-section.js')
+    script(src='partials/event-detail-content-section/event-detail-content-section.js')
+    script(src='partials/social-icon-column/social-icon-column.js')
+    script(src='mixins/show-more-btn/show-more-btn.js')
+    script(src='mixins/readmore-btn/readmore-btn.js')
+    script(src='mixins/post-left-img/post-left-img.js')
+    script(src='mixins/post-overlap-title/post-overlap-title.js')
+    script(src='partials/detail-page-title/detail-page-title.js')
+    script(src='scripts/vendor/jquery.autocomplete.js')
+    script(src='scripts/vendor/jquery.JStick.min.js')
+    script(src='scripts/vendor/jquery.appear.js')
+    script(src='scripts/main.js')
+    script(src='scripts/execution.js')
+    // endbuild

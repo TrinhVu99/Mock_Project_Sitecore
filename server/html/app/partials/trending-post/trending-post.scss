@@ -1,0 +1,32 @@
+.trending-post-section {
+  padding: 1.8rem 0;
+  @include min-md {
+    padding: 0;
+  }
+
+  h2 {
+    font-family: $font-DB-Adman-X-B;
+    margin-bottom: 2rem;
+    font-size: 2.1rem;
+    color: $color-blue-dark;
+    letter-spacing: 0.1em;
+    margin-top: 0;
+    @include min-md {
+      margin-bottom: 0;
+    }
+  }
+
+  .trending-item-group {
+    .more-btn {
+      @include min-md {
+        display: none;
+      }
+    }
+  }
+
+  .more-btn {
+    @include min-md {
+      display: none;
+    }
+  }
+}

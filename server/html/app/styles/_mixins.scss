@@ -1,0 +1,99 @@
+@mixin min-sm {
+	@media (min-width: #{map-get($grid-breakpoints, sm)}) {
+		@content;
+	}
+}
+
+@mixin min-md {
+	@media (min-width: #{map-get($grid-breakpoints, md)}) {
+		@content;
+	}
+}
+
+@mixin min-lg {
+	@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+		@content;
+	}
+}
+
+@mixin min-xl {
+	@media (min-width: #{map-get($grid-breakpoints, xl)}) {
+		@content;
+	}
+}
+
+@mixin min-xxl {
+	@media (min-width: #{$xxl-breakpoint}) {
+		@content;
+	}
+}
+
+@mixin max-md {
+	@media (max-width: #{map-get($grid-breakpoints, md)}) {
+		@content;
+	}
+}
+
+@mixin translateX($left) {
+	-webkit-transform: translateX($left);
+	-moz-transform: translateX($left);
+	-ms-transform: translateX($left);
+	-o-transform: translateX($left);
+	transform: translateX($left);
+}
+
+@mixin translateY($top) {
+	-webkit-transform: translateY($top);
+	-moz-transform: translateY($top);
+	-ms-transform: translateY($top);
+	-o-transform: translateY($top);
+	transform: translateY($top);
+}
+
+@mixin translate2D($x, $y) {
+	-webkit-transform: translate($x, $y);
+	-moz-transform: translate($x, $y);
+	-ms-transform: translate($x, $y);
+	-o-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}
+
+@mixin border-top-right-radius($radius) {
+	@if $enable-rounded {
+		border-top-right-radius: $radius;
+	}
+}
+
+@mixin navy-rounded-border {
+	border: 2px solid $color-navy;
+	@include border-radius(1.2rem);
+	overflow: hidden;
+}
+
+@mixin transitionAttr($attr, $time) {
+	-webkit-transition: $attr $time ease-out;
+	-moz-transition: $attr $time ease-out;
+	-o-transition: $attr $time ease-out;
+	transition: $attr $time ease-out;
+}
+
+@mixin hoverStateBtn {
+	transition: $transition;
+	&:hover {
+		opacity: .8;
+	}
+}
+
+@mixin centerContent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

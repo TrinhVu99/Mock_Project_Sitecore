@@ -1,0 +1,37 @@
+﻿
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+@using System.Web.Mvc.Html
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <title>Rabbit</title>
+        <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+        <style></style>
+        <link rel="stylesheet" href="/static/styles/vendor.css">
+        <link rel="stylesheet" href="/static/styles/main.css">
+        <script src="/static/scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+    <!--[if lt IE 10]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <div class="wrapper-container">
+        @Html.Sitecore().Placeholder("header")
+        @Html.Sitecore().Placeholder("main")
+        @Html.Sitecore().Placeholder("footer")
+        @Html.Sitecore().Placeholder("footer-payment-section")
+        @Html.Sitecore().Placeholder("tags-section")
+    </div>
+        <div class="lightbox-overlay"></div><a id="back-to-top" href="#" title="Back to top">
+            <div class="content"><i class="icon-arrow-down"></i><span class="bt-txt">Top</span></div>
+        </a>
+        <script src="/static/scripts/vendor.js"></script>
+        <script src="/static/static/scripts/main.js"></script>
+</body>
+</html>

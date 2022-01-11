@@ -1,0 +1,63 @@
+.post-overlap-title {
+    border: none;
+
+    .img-with-box {
+        position: relative;
+    }
+
+    .round-box {
+        position: relative;
+        bottom: -1px;
+        left: -1px;
+        background: $white;
+        z-index: 1;
+        padding: 1.5rem 0.5rem 0;
+        @include border-top-right-radius(0.6rem);
+        width: 100%;
+
+        // @include min-md {
+        //     width: 14rem;
+        // }
+        // @include min-lg {
+        //     width: 17rem;
+        // }
+        a.round-box-text {
+            font-size: 2.8rem;
+            font-family: $font-DB-Adman-X-B;
+            color: $color-blue-dark;
+            line-height: 1;
+            text-transform: uppercase;
+
+            @include min-md {
+                font-size: 2.2rem;
+            }
+
+            @include min-lg {
+                font-size: 2.1rem;
+            }
+        }
+    }
+
+    .title-carrot {
+        position: absolute;
+        top: -1rem;
+    }
+
+    .social-list-items {
+        padding-left: 0;
+        list-style: none;
+        margin: 1rem 0.5rem 0;
+
+        li {
+            display: flex;
+            align-items: baseline;
+            font-family: $font-DB-Adman-X;
+            color: $color-grey;
+            font-size: 2.2rem;
+            
+            @include min-md {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

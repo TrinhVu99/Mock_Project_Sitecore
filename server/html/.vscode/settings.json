@@ -1,0 +1,48 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "beautify.config": {
+        "indent_size": 4,
+        "indent_char": " ",
+        "max_preserve_newlines": 0,
+        "js": {
+            "indent_size": 4,
+            "indent_with_tabs": true,
+            "eol": "\n",
+            "end_with_newline": true,
+            "indent_level": 0,
+            "preserve_newlines": true,
+            "max_preserve_newlines": 1,
+            "space_in_paren": false,
+            "space_in_empty_paren": false,
+            "jslint_happy": true,
+            "space_after_anon_function": false,
+            "brace_style": "collapse",
+            "break_chained_methods": false,
+            "keep_array_indentation": true,
+            "unescape_strings": false,
+            "wrap_line_length": 0,
+            "e4x": false,
+            "comma_first": false,
+            "operator_position": "before-newline"
+        }
+    },
+    "git.enabled": true,
+    "editor.formatOnSave": true,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Monokai",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "newUntitledFile",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true,
+        "suppressWelcomeNotice": true
+    },
+    "[javascriptreact]": {},
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "gitlens.keymap": "alternate",
+    "vetur.format.defaultFormatter.js": "none",
+}

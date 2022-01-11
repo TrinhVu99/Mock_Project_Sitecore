@@ -1,0 +1,55 @@
+mixin postLeftImg(imgUrl, imgAlt, title, content)
+	article.post-left-img.card.flex-row.border-0
+		.card-img-left
+			a.img.bg-overlay.img-to-bg(href="#", title="Image")
+				img(src=imgUrl, alt=imgAlt)
+		.card-body
+			+titleCarrot(title)
+			a.card-text(href="#") #{content}
+
+mixin postLeftAudio(imgUrl, imgAlt, title, content)
+	article.post-left-img.card.flex-row.border-0
+		.card-img-left
+			a.img.bg-overlay.img-to-bg(href="#", title="Image", data-src='//clips.vorwaerts-gmbh.de/VfE_html5.mp4')
+				img(src=imgUrl, alt=imgAlt)
+				.video-overlay-bg
+					i.icon-audio
+		.card-body
+			+titleCarrotTxt(title)
+			a.card-text(href="#") #{content}
+
+mixin postLeftVideo(posterURL, imgAlt, title, content, icoClassName1, icoClassName2)
+	article.post-left-img.card.flex-row.border-0
+		.card-img-left
+			a.img.bg-overlay.img-to-bg(href="#", title="Image", data-src='//clips.vorwaerts-gmbh.de/VfE_html5.mp3')
+				img(src=posterURL, alt=imgAlt)
+				.video-overlay-bg
+					i.icon-play-button
+		.card-body
+			+titleCarrotTxt(title)
+			a.card-text.mb-0(href="#") #{content}
+			+listItem('icon-heart', 'icon-eye')
+
+mixin postLeftImgDate(imgUrl, imgAlt, title, content)
+	article.post-left-img.card.flex-row.border-0
+		.card-img-left
+			a.img.bg-overlay.img-to-bg(href="#", title="Image")
+				img(src=imgUrl, alt=imgAlt)
+		.card-body
+			+titleCarrot(title)
+			a.card-text(href="#") #{content}
+			.date
+				i.icon-clock
+				| 285342343
+
+mixin postLeftImgSearchResult(imgUrl, imgAlt, title, content)
+	article.post-left-img.card.flex-row.border-0
+		.card-img-left
+			a.img.bg-overlay.img-to-bg(href="#", title="Image")
+				img(src=imgUrl, alt=imgAlt)
+		.card-body
+			.heading
+				+titleCarrot(title)
+				a.card-text-ext(href="#") #{content}
+			.info
+				p หนึ่งในบุคคลผู้สร้างปรากฏการณ์นี้ คือ Cristóbal Balenciaga นักออกแบบจาก Bas que ผู้ก่อกำเนิดแบรนด์แฟชั่นการเมือง Balenciaga ซึ่งเริ่มต้นชื่อเสียงในฐานะนัก ออกแบบแฟชั่นชั้นสูงหัวก้าวหน้าจากการทำงาน

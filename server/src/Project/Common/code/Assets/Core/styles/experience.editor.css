@@ -1,0 +1,15 @@
+﻿.page-editor-handle {
+    padding: 5px; 
+	background-color: #E5EFF7; 
+	color: #5089A9;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+.page-editor-handle img {
+    vertical-align: middle;
+}
+.place-holder-header {
+    background-color: darkblue;
+    color: white;
+}

@@ -1,0 +1,55 @@
+mixin itemWithImg(imgURL, title, heading)
+	.img-with-box
+		a.img.bg-overlay.img-to-bg(href="#", title="Image")
+			img(src=imgURL, alt="post img")
+		.round-box
+			+titleCarrot(title)
+			a.round-box-text.mb-0(href="#") #{heading}
+
+mixin itemWithImg2(imgURL, title, heading, icoClassName1)
+	.img-with-box
+		a.img.bg-overlay.img-to-bg(href="#", title="Image")
+			img(src=imgURL, alt="post img")
+		.round-box
+			+titleCarrotIcon(title, icoClassName1)
+			a.round-box-text.mb-0(href="#") #{heading}
+
+mixin listItem(icoClassName1, icoClassName2)
+	ul.social-list-items
+		li.item
+			i(class=icoClassName1)
+			| 285
+		li.item
+			i(class=icoClassName2)
+			| 285342343
+
+mixin postOverlapTitle1(imgURL, title, heading, icoClassName1, icoClassName2)
+	article.post-overlap-title
+		+itemWithImg(imgURL, title, heading)
+		+listItem(icoClassName1, icoClassName2)
+
+
+mixin postOverlapTitle2(imgURL, title, heading)
+	article.post-overlap-title
+		+itemWithImg(imgURL, title, heading)
+
+mixin postOverlapTitle3(imgURL, title, heading, avtURL, icoClassName1, icoClassName2)
+	article.post-overlap-title
+		+itemWithImg(imgURL, title, heading)
+		.blogger-info
+			span
+				img.rounded-circle(src=avtURL, alt='blogger')
+				| Nanna_V
+		+listItem(icoClassName1, icoClassName2)
+
+mixin postOverlapTitle4(imgURL, title, heading, avtURL, icoClassName1)
+	article.post-overlap-title
+		+itemWithImg2(imgURL, title, heading, icoClassName1)
+		.blogger-info
+			span
+				img.rounded-circle(src=avtURL, alt='blogger')
+				| Nanna_V
+
+mixin postOverlapTitle5(imgURL, title, heading, icoClassName1)
+	article.post-overlap-title
+		+itemWithImg2(imgURL, title, heading, icoClassName1)

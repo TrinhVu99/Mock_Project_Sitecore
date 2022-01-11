@@ -1,0 +1,56 @@
+.social-icon-title {
+    font-family: $font-DB-Adman-X-B;
+    font-weight: $weight-xbold;
+    font-size: 3.2rem;
+    text-align: center;
+    color: $color-white;
+    .social-icon-block-footer & {
+        @include min-md {
+            font-size: 1.6rem;
+        }
+        @include min-lg {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.social-icon-list {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 3rem;
+    max-width: 40rem;
+    width: 30rem;
+    img {
+        width: 6rem;
+        height: 6rem;
+        .social-icon-block-footer & {
+            @include min-md {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+    .social-icon {
+        transition: $transition;
+        a:hover {
+            text-decoration: none;
+        }
+        [class^="icon-"],
+        [class*=" icon-"] {
+            font-size: 6rem;
+            color: #fff;
+            .social-icon-block-footer & {
+                @include min-md {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    @include min-md {
+        width: 20.8rem;
+        border-bottom: .1rem solid $color-grey-xl;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,28 @@
+.detail-maincontent
+    .container
+        .detail-maincontent-container
+            .row.detail-maincontent-row
+                .col.col-md-8.col-lg-9.detail-maincontent-col
+                    include ../social-icon-column/social-icon-column.pug
+                    .detail-maincontent-block
+                        .detail-maincontent-text
+                            include ../event-detail-maincontent-img/event-detail-maincontent-img.pug
+                            p มาร่วมเป็นส่วนหนึ่งในประสบการณ์สุดพิเศษ ของเทศกาลดนตรี EDM ริมชายหาด กับเพื่อนและคนรู้ใจ ของคุณ #FutureBass #Trap #PsyTrance #House #Trance #Techno
+                            p เตรียมตัวให้พร้อม! พบกันวันที่ 6-7 เมษายนนี้ ที่ Pinnacle Grand Jomtien พัทยา
+                            include ../detail-logo/detail-logo.pug
+    .event-detail-advertising-section
+        +advertisingOutCol('images/advertise-type-1.jpg')
+    .event-detail-related-item-section
+        .container
+            .row
+                .col-12.col-lg-9
+                    +relatedEvent('RELATED EVENTS')
+    .detail-page-advertising-type2-section
+        +advertisingOutCol('images/advertise-type-2.jpg')
+    .detail-maincontent-sidebar-section
+        .container
+            .row.trending-post-row
+                .col-12.col-md-4.col-lg-3.trending-post-col
+                    include ../upcoming-date/upcoming-date.pug
+                    .advertise-trending-post
+                        +advertisingInCol('images/advertise-type-2.jpg')

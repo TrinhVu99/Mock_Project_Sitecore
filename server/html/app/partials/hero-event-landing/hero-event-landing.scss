@@ -1,0 +1,56 @@
+.hero-event-landing {
+    .social-list-items {
+        display: block !important;
+        @include min-md {
+            display: block;
+            li {
+                display: flex;
+            }
+        }
+        @include min-lg {
+            margin-top: 0;
+            li {
+                display: inline-flex;
+                padding-right: 1rem;
+            }
+        }
+        li {
+            align-items: baseline;
+        }
+    }
+    .highlight-post .social-list-items {
+        li {
+            display: flex;
+            align-items: baseline;
+            @include min-md {
+                display: inline-flex;
+                padding-right: 1rem;
+            }
+        }
+    }
+    .trending-post-section {
+        .more-btn {
+            @include min-md {
+                display: none;
+            }
+        }
+        .card-body {
+            min-width: 0;
+            .card-text {
+                white-space: nowrap !important;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    .advertising {
+        display: none;
+        @include min-md {
+            display: block;
+            margin-top: 2rem;
+        }
+        @include min-lg {
+            display: none;
+        }
+    }
+}

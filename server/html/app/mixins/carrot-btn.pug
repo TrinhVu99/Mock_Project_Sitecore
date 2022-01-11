@@ -1,0 +1,10 @@
+mixin titleCarrot(name)
+	a.title-carrot(class!=attributes.class href="#")= name
+
+mixin titleCarrotTxt(name)
+	.title-carrot(class!=attributes.class)= name
+
+mixin titleCarrotIcon(name, icoClassName1)
+	.title-carrot(class!=attributes.class)= name
+		i(class=icoClassName1)
+		| 285

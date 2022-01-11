@@ -1,0 +1,233 @@
+.nav-cate-wrapper {
+  overflow: hidden;
+  height: 8rem;
+
+  &.overflow-x-hidden {
+    height: 35rem;
+    margin-bottom: -27rem;
+  }
+}
+
+.nav-cate {
+  margin-top: 2rem;
+  overflow: visible;
+  position: relative;
+
+  &:after {
+    @include min-md {
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      // content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      width: 50px;
+      height: 100%;
+    }
+  }
+
+  &-list {
+    display: flex;
+  }
+
+  &-item {
+    flex: 0 0 14.5rem; // border-bottom: .3rem solid #fff;
+    overflow: hidden;
+    border: none !important;
+    height: 5.8rem;
+    transition: $transition;
+    background-color: #a09e91;
+    @include min-lg {
+      flex: 1;
+      min-width: 16rem;
+    }
+
+    img {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    span {
+      font-size: 2.2rem;
+      color: #fff;
+      font-family: $font-DB-Adman-X-B;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      @include centerContent;
+      transition: $transition;
+      line-height: .8;
+      padding: 0 2.5rem;
+      box-sizing: border-box;
+    }
+
+    &:hover {
+      background-color: #036297;
+
+      span {
+        // color: $orange;
+        transform: scale(1.3);
+      }
+    }
+
+    &.has-sub-cate:hover {
+      // font-size: 3.3rem;
+      // color: $orange;
+      border-bottom: .3rem solid $color-orange;
+
+      .nav-sub-cate {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .nav-sub-cate {
+    position: absolute;
+    top: calc(100% + .3rem);
+    left: 0;
+    width: 20.5rem;
+    background-color: $color-navy;
+    color: #fff;
+    list-style: none;
+    padding: 1.5rem 1.2rem;
+    font-size: 2.1rem;
+    font-family: $font-DB-Adman-X-B;
+    line-height: 1.7;
+    transition: $transition;
+    opacity: 0;
+    visibility: hidden;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .nav-cate-item.active {
+    border-bottom: 0.3rem solid $color-orange !important;
+    background-color: #036297;
+    height: 5.7rem;
+  }
+}
+
+.header {
+  .nav-cate-wrapper {
+    position: relative;
+    @include min-lg {
+      display: block;
+    }
+
+    .button__swiper {
+      cursor: pointer;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      align-items: center;
+      height: 5.8rem;
+      width: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $color-arrow;
+      display: none !important;
+      @include min-md {
+        display: block !important;
+      }
+
+      &.is-prev {
+        left: 0;
+        background-image: url('../images/arrow-left.png');
+
+        &:hover {
+          background-image: url('../images/arrow-left-active.png');
+        }
+      }
+
+      &.is-next {
+        right: 0;
+        background-image: url('../images/arrow-right.png');
+
+        &:hover {
+          background-image: url('../images/arrow-right-active.png');
+        }
+      }
+
+      &.swiper-button-disabled {
+        display: none !important;
+      }
+    }
+  }
+
+  .nav-mobile {
+    border-bottom: 1px solid $color-grey-9;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    @include min-lg {
+      display: none;
+    }
+
+    .nav-cate-wrapper {
+      display: block;
+      height: auto;
+      @include min-lg {
+        display: none;
+      }
+
+      .nav-cate {
+        &:after {
+          background: transparent;
+        }
+      }
+
+      .nav-cate-list {
+        display: block;
+      }
+
+      .nav-cate-item {
+        height: auto;
+
+        &:hover {
+          span {
+            color: $color-white;
+            transform: scale(1);
+          }
+        }
+
+        &.active {
+          span {
+            color: $color-orange;
+          }
+        }
+
+        img {
+          display: none;
+        }
+
+        span {
+          position: relative;
+          overflow: hidden;
+          text-transform: uppercase;
+          line-height: 1.5;
+          letter-spacing: .05rem;
+          padding: 0;
+          font-size: 3.2rem;
+          color: #fff;
+          font-family: $font-DB-Adman-X-B;
+          text-align: center;
+        }
+
+        &.active {
+          border: none !important;
+        }
+      }
+    }
+  }
+} 

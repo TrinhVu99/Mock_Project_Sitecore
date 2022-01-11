@@ -1,0 +1,35 @@
+mixin advertisingInCol(img) 
+    .advertising(class!=attributes.class href=href)
+        .swiper-container.advertising-in-col.text-center(autoPlayTime="5000")
+            .swiper-wrapper
+                .swiper-slide.ad-item
+                    a(href="#" target="_blank")
+                        img(src=img, alt="Advertising")
+                .swiper-slide.ad-item
+                    a(href="#" target="_blank")
+                        img(src=img, alt="Advertising")
+                .swiper-slide.ad-item
+                    a(href="#" target="_blank")
+                        img(src=img, alt="Advertising")
+                .swiper-slide.ad-item
+                    a(href="#" target="_blank")
+                        img(src=img, alt="Advertising")
+        p.title Advertising
+
+mixin advertisingOutCol(img, className) 
+    section.advertising-section(class=className)
+        .container
+            .swiper-container.advertising.advertising-carousel.text-center(autoPlayTime="5000")
+                .swiper-wrapper
+                    .swiper-slide.item
+                        a(href="#" target="_blank")
+                            img(src=img, alt="Advertising")
+                    .swiper-slide.item
+                        a(href="#" target="_blank")
+                            img(src=img, alt="Advertising")
+                    .swiper-slide.item
+                        a(href="#" target="_blank")
+                            img(src=img, alt="Advertising")
+                    .swiper-slide.item
+                        a(href="#" target="_blank")
+                            img(src=img, alt="Advertising")

@@ -1,0 +1,24 @@
+extends layouts/default
+
+block content
+    include partials/hero-news-landing/hero-news-landing.pug
+    +advertisingOutCol('images/advertising-1.png')
+    section.bloggers-section.section-grey-bg
+        .container.animated
+            .row
+                .col-lg-9
+                    include partials/bloggers/bloggers.pug
+                .col-lg-3.d-none.d-lg-block
+                    .advertising-fixed
+                        +advertisingInCol('images/advertis-1.png')
+    .d-none.d-md-block
+        +advertisingOutCol('images/advertising-1.png')
+    section.upcoming-section
+        .container.animated
+            .row
+                .col-lg-3.d-block.d-md-none.d-lg-block.order-lg-2
+                    .advertising-fixed
+                        +advertisingInCol('images/advertis-1.png')
+                include partials/upcoming/upcoming.pug
+    include partials/video/video.pug
+    include partials/lightbox/lightbox-video

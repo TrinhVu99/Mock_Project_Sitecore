@@ -1,0 +1,521 @@
+.header {
+  padding: 2rem 0;
+  @include clearfix();
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: $index-menu;
+  @include min-md {
+    padding: 2rem 0;
+    position: relative;
+    background: transparent;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-mobile {
+  a {
+    img {
+      display: none;
+    }
+  }
+
+  li.active {
+    span {
+      color: $color-orange;
+    }
+  }
+}
+
+.main-nav {
+  float: left;
+  padding: 0 1rem;
+  overflow: auto;
+  display: none;
+
+  .promotion-header {
+    border-bottom: 1px solid $color-grey-9;
+    padding-bottom: 1rem;
+    @include min-lg {
+      border-bottom: none;
+      padding-bottom: inherit;
+    }
+  }
+  @include min-lg {
+    display: block !important;
+    padding: 0;
+  }
+
+  .close {
+    top: 1rem;
+    right: 1.5rem;
+    transform: none;
+    width: 3.5rem;
+    height: 3.51rem;
+    @include min-lg {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 100, 155, .87);
+    z-index: $index-menu;
+    padding-top: 5rem;
+  }
+
+  .welcome-msg-wrapper {
+    border-bottom: 1px solid $color-grey-9;
+    padding-bottom: 1rem;
+    @include min-lg {
+      display: none;
+    }
+  }
+
+  .welcome-msg {
+    text-align: center;
+
+    h3 {
+      color: $color-orange;
+      font-size: 3.2rem;
+      text-transform: uppercase;
+      font-family: $font-DB-Adman-X-B;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      font-weight: 500;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      color: $color-white;
+      padding: 0 2rem;
+      font-family: $font-DB-Adman-X;
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  ul {
+    overflow: hidden;
+    list-style-type: none;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: .1rem;
+    padding: 0;
+    font-size: 3.2rem;
+    color: #fff;
+    font-family: $font-DB-Adman-X-B;
+    text-align: center;
+    @include min-lg {
+      padding: 0 0 0 4rem;
+      font-size: 1.9rem;
+      color: $color-navy-dark;
+      font-family: $font-DB-Adman-X-B;
+    }
+
+    li {
+      line-height: 1.5;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include min-lg {
+        line-height: 1;
+        float: left;
+        margin-right: 2rem;
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      @include min-xl {
+        margin-right: 4rem;
+      }
+    }
+
+    a {
+      color: inherit;
+      font: inherit;
+    }
+  }
+
+  .social-icon-block {
+    padding: 3rem 0;
+    @include min-lg {
+      display: none;
+    }
+
+    .social-icon-list {
+      border: none;
+      width: 30rem;
+
+      [class^="icon-"],
+      [class*="icon-"] {
+        color: $color-orange;
+        background: $white;
+        border-radius: 50%;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .social-icon-title,
+  .icomoon-social-icon:before {
+    color: $color-orange;
+  }
+
+  .icomoon-social-icon {
+    width: 5.8rem;
+    height: 5.8rem;
+    background: #fff;
+    margin-right: 1rem;
+    padding: 0;
+    border-radius: 50%;
+    display: block;
+
+    &:before {
+      margin-left: -.1rem;
+      margin-top: -.1rem;
+    }
+  }
+}
+
+.logo {
+  float: left;
+
+  img {
+    width: 10rem;
+    @include min-md {
+      width: 12.3rem;
+    }
+  }
+}
+
+.activity {
+  color: $color-navy-dark;
+  font-size: 2rem;
+  float: right;
+  display: flex;
+  align-items: center;
+  font-weight: $weight-bold;
+  margin-left: auto;
+
+  img {
+    color: inherit;
+  }
+
+  .date,
+  .degree,
+  .weather,
+  .language,
+  .user-profile {
+    display: none;
+    @include min-md {
+      display: block;
+    }
+  }
+
+  .date {
+    float: left;
+    text-transform: uppercase;
+    padding-right: 1rem;
+    border-right: 1px solid;
+  }
+
+  .degree {
+    float: left;
+    padding: 0 1rem;
+
+    &:after {
+      content: '°';
+    }
+  }
+
+  .weather {
+    float: left;
+
+    img {
+      width: 2.5rem;
+    }
+  }
+
+  .language {
+    float: left;
+    cursor: pointer;
+    padding: 0 1rem;
+    list-style: none;
+    margin: 0;
+    width: 3.7rem;
+
+    a {
+      color: $color-navy-dark;
+    }
+
+    .lang-en {
+      display: none;
+    }
+
+    &.active-en {
+      .lang-en {
+        display: block;
+      }
+
+      .lang-th {
+        display: none;
+      }
+    }
+  }
+
+  .user-profile {
+    float: left;
+    padding: 0 1rem;
+    cursor: pointer;
+
+    img {
+      width: 2.2rem;
+    }
+  }
+
+  .store {
+    float: left;
+    padding: 0 1rem;
+    position: relative;
+
+    span {
+      position: absolute;
+      top: 100%;
+      right: -.5rem;
+      transform: translate(0, -50%);
+      width: 2.4rem;
+      height: 2.4rem;
+      background: #ed1c24;
+      font-size: 2.9rem;
+      border-radius: 50%;
+      color: #fff;
+      padding-top: .2rem;
+      @include centerContent;
+      font-family: $font-DB-Adman-X;
+      font-weight: $weight-reg;
+    }
+
+    img {
+      width: 2.5rem;
+      @include min-md {
+        width: 1.9rem;
+      }
+    }
+  }
+
+  .search-global-icon {
+    float: left;
+    padding: 0 1rem;
+    cursor: pointer;
+
+    .header-search-icon {
+      display: block;
+      font-size: 3rem;
+      @include min-md {
+        font-size: 2rem;
+      }
+    }
+    @include hoverStateBtn;
+  }
+
+  .menu-icon {
+    display: block;
+    padding: 0 1rem;
+    cursor: pointer;
+    border-left: 2px solid $color-blue-dark;
+    @include hoverStateBtn;
+
+    span {
+      font-family: $font-DB-Adman-X-B;
+      padding: 0 1rem 0 0;
+      font-size: 2.6rem;
+      line-height: 1;
+    }
+
+    img {
+      width: 2.5rem;
+    }
+    @include min-lg {
+      display: none;
+    }
+  }
+}
+
+.search-global {
+  margin-top: 2rem;
+  display: none;
+
+  .header-search-icon {
+    font-size: 2rem;
+    padding-right: 0;
+    margin: auto;
+
+    &:before {
+      color: $color-white;
+    }
+  }
+
+  .search-list-popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: $color-white;
+    width: calc(100% - 4rem);
+    z-index: 10;
+    max-height: 16.5rem;
+    overflow-y: scroll;
+    box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
+
+    ul {
+      padding-left: 0.5rem;
+
+      a {
+        color: $color-main;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  .search-global-error-message {
+    font-size: 2rem;
+    font-family: $font-DB-Adman-X;
+    color: $color-orange;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.search-input-wrapper {
+  position: relative;
+
+  input {
+    border-bottom: .2rem solid $color-navy;
+    font-size: 2.6rem;
+    width: calc(100% - 5rem);
+    padding-left: 1.6rem;
+
+    &::-webkit-input-placeholder {
+      letter-spacing: 0.1rem;
+      // padding-left: 1.1rem;
+      font-size: 2.4rem;
+      font-family: $font-DB-Adman-X;
+    }
+  }
+
+  .header-search-icon {
+    margin-left: 2rem;
+    margin-bottom: 0;
+    background-color: $color-orange;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+
+    i {
+      padding-right: 0;
+      font-size: 1.2rem;
+
+      &:before {
+        color: $white;
+      }
+    }
+  }
+}
+
+.suggestion-kw-wrapper {
+  display: flex;
+  @include min-lg {
+    padding-bottom: 2rem;
+  }
+}
+
+.suggestion-kw {
+  margin-top: 2rem;
+  margin-right: 1.5rem;
+  border-right: .1rem solid #ccc;
+
+  &:last-child {
+    margin-right: 0;
+    border: none;
+  }
+
+  h4 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: $font-DB-Adman-X-B;
+    @include min-lg {
+      font-size: 2.1rem;
+    }
+  }
+
+  .tag-list {
+    margin-bottom: -.5rem;
+  }
+  @include media-breakpoint-down(md) {
+    display: none;
+
+    &.top-search {
+      display: block;
+      margin-right: 0;
+      border: none;
+      flex: 0 0 100%;
+    }
+  }
+}
+
+.autocomplete-suggestions {
+  background: $color-white;
+  // max-height: 16.5rem;
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 10px;
+  position: fixed !important;
+  padding-bottom: 2rem;
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  color: $color-black-s;
+  @include min-md {
+    position: absolute !important;
+  }
+
+  .autocomplete-suggestion {
+    padding-left: 1.5rem;
+    font-family: $font-DB-Adman-X;
+    font-size: 2.6rem;
+  }
+
+  .autocomplete-selected {
+    background-color: $color-navy;
+  }
+
+  strong {
+    color: $color-orange;
+  }
+}

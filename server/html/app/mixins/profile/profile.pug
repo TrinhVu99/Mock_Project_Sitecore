@@ -1,0 +1,8 @@
+mixin profile(imgUrl, publishTime, sponsor)
+    .profile(class!=attributes.class)
+        .pic(style='background-image: url('+imgUrl+')')
+            img(src=imgUrl)
+        .info
+            p=publishTime
+            p By #[span=sponsor]
+    

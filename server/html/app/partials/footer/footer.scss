@@ -1,0 +1,350 @@
+footer {
+  #email-error {
+    font-size: 1.8rem;
+    font-family: $font-DB-Adman-X;
+    color: $color-orange;
+    text-align: center;
+    @include min-md {
+      text-align: left;
+    }
+  }
+
+  .container {
+    height: 100%;
+  }
+}
+
+.footer-menu-section {
+  background-color: $color-blue;
+  padding-top: 3rem;
+  @include min-md {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  @include min-lg {
+    padding-top: 4rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .footer-menu-list {
+    width: 100%;
+    float: left;
+    @include min-md {
+      width: 50%;
+    }
+    @include min-lg {
+      width: 100%;
+    }
+    border-bottom: 1px solid $color-grey-xl;
+
+    &:last-child {
+      @include min-lg {
+        float: right;
+      }
+    }
+
+    &:first-child {
+      .footer-menu-list-title {
+        @include min-md {
+          border-top: none;
+        }
+      }
+    }
+    @include min-md {
+      p {
+        margin-bottom: 0rem;
+      }
+      border-bottom: none;
+    }
+    @include min-lg {
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .footer-menu-list-item {
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition;
+    @include min-md {
+      max-height: inherit;
+    }
+
+    ul {
+      padding-left: 5rem;
+
+      a {
+        color: $color-white;
+        position: relative;
+
+        &:hover {
+          text-decoration: none;
+
+          &:after {
+            width: 100%;
+          }
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0%;
+          border-bottom: 1px solid $color-white;
+          transition: $transition;
+        }
+      }
+      font-size: 2.4rem;
+      font-family: $font-DB-Adman-X;
+      color: $color-white;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      @include min-md {
+        padding-left: 0;
+        font-size: 2rem;
+        padding-top: 1rem;
+      }
+      @include min-lg {
+        padding-top: 3rem;
+        margin-bottom: 3rem;
+        font-size: 2.1rem;
+      }
+
+      li {
+        list-style: none;
+        @include min-md {
+          line-height: 2.5rem;
+        }
+        @include min-lg {
+          line-height: 3rem;
+        }
+      }
+    }
+
+    .footer-menu-link {
+      display: flex;
+    }
+  }
+
+  .footer-logo {
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+    @include min-md {
+      margin-top: 7rem;
+      margin-bottom: 7.5rem;
+    }
+    @include min-lg {
+      margin-top: 12rem;
+      margin-bottom: 2.5rem;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      width: 15rem;
+      height: 6.6rem;
+      @include min-md {
+        width: 18rem;
+        height: auto;
+      }
+      @include min-lg {
+        width: 18.6rem;
+        height: 8.2rem;
+      }
+    }
+  }
+
+  .footer-copyright {
+    font-size: 1.7rem;
+    font-family: $font-DB-Adman-X;
+    text-align: center;
+    color: $color-white;
+    @include min-md {
+      font-size: 1.6rem;
+    }
+    @include min-lg {
+      font-size: 1.2rem;
+    }
+
+    .footer-copyright-span {
+      display: inline-block;
+    }
+  }
+
+  .footer-menu-block {
+    .col-md-6 {
+      &:first-child {
+        .footer-menu-list {
+          border-top: 1px solid $color-grey-xl;
+          @include min-md {
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-menu-list-title {
+  height: 60px;
+  cursor: pointer;
+  line-height: 60px;
+  font-size: 3rem;
+  // font-weight: $weight-xbold;
+  position: relative;
+
+  &:before {
+    content: '';
+    background: url('../images/down-btn.png') no-repeat center right;
+    width: 1.6rem;
+    background-size: contain;
+    height: 1rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition;
+  }
+  @include min-md {
+    &:before {
+      display: none;
+    }
+    cursor: auto;
+    font-size: 2rem;
+    border-bottom: 1px solid $color-grey-xl;
+    height: initial;
+    line-height: inherit;
+    background: none;
+    width: 22rem;
+  }
+  @include min-lg {
+    font-size: 2.4rem;
+    width: auto;
+    max-width: 28rem;
+    min-width: 21rem;
+    line-height: initial;
+  }
+  color: $color-orange;
+  font-family: $font-DB-Adman-X-B;
+  transition: $transition;
+
+  &.active {
+    background-size: 1.6rem 1rem;
+
+    &:before {
+      transform: translateY(-50%) rotateX(-180deg);
+    }
+    @include min-md {
+      background: none;
+    }
+
+    & + .footer-menu-list-item {
+      max-height: 50rem;
+    }
+  }
+}
+
+.news-letter-image {
+  a:hover {
+    text-decoration: none;
+  }
+  display: flex;
+  align-items: center;
+
+  p.heading {
+    font-size: 2.7rem;
+    color: $color-white;
+    letter-spacing: 0.8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    white-space: nowrap;
+    font-family: $font-DB-Adman-X-B;
+    @include min-md {
+      font-size: 2.877rem;
+      letter-spacing: 0.6rem;
+      padding-top: 3rem;
+      padding-bottom: 0;
+    }
+    @include min-lg {
+      font-size: 3rem;
+    }
+
+    .txt-italic {
+      font-size: 3.7rem;
+      color: $color-orange;
+      text-align: right;
+      display: block;
+      margin-top: -1rem;
+      position: relative;
+      top: auto;
+      left: auto;
+      padding-left: 0.5rem;
+      white-space: nowrap;
+      text-transform: lowercase;
+      font-weight: 100;
+      line-height: 1;
+      letter-spacing: 0;
+      font-family: $font-quentin;
+      @include min-md {
+        font-size: 3.346rem;
+      }
+      @include min-lg {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+// .payment-row {
+//   margin-bottom: 3.5rem;
+// }
+.tags-section {
+  padding-top: 3.5rem;
+  padding-bottom: 4.5rem;
+  // display: none;
+  text-transform: uppercase;
+  @include min-md {
+    display: block;
+  }
+
+  p,
+  span {
+    font-family: $font-DB-Adman-X-B;
+    // font-weight: $weight-xbold;
+  }
+
+  .tag-title {
+    float: left;
+    padding-right: 1rem;
+  }
+
+  a {
+    color: $color-tag-grey;
+  }
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  color: $color-tag-grey;
+
+  .tag-item {
+    padding: 0.1rem 1rem;
+    border-radius: 2rem;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    margin-right: 0.9rem;
+    background-color: $color-white-s;
+    font-family: $font-tahoma;
+    margin-bottom: 1.8rem;
+    font-size: 1.5rem;
+  }
+}
+
+// .footer-logo-block {
+//   @include min-md {
+//     float: right;
+//   }
+// }

@@ -1,0 +1,42 @@
+.upcoming-section {
+    .post {
+        padding: 0 0 1rem;
+    }
+
+    .advertising {
+        margin-top: 1rem;
+
+        @include min-md {
+            margin-top: 2rem;
+        }
+
+        @include min-lg {
+            margin-top: 10rem;
+        }
+    }
+
+    .more-btn {
+        @include min-md {
+            display: none;
+        }
+    }
+
+    hr {
+        border-top: 1px solid $color-grey-5;
+
+        @include min-lg {
+            border: none;
+            background: url('../images/dashed.png') repeat;
+            width: 100%;
+            height: 1px;
+        }
+    }
+
+    .social-list-items {
+
+        li {
+            display: flex;
+            align-items: baseline;
+        }
+    }
+}

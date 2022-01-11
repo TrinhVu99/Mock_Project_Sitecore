@@ -1,0 +1,83 @@
+.event-detail-logo-img {
+    height: 6.8rem;
+    display: flex;
+    align-items: center;
+    img {
+        max-width: 14.5rem;
+        margin: auto;
+    }
+}
+.event-detail-logo-section {
+    background-color: $color-grey-13;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .event-detail-logo-title {
+        width: 50%;
+        @include min-md {
+            width: 40%;
+        }
+        @include min-lg {
+            width: auto;
+        }
+    }
+    .event-detail-logo-img {
+        width: 50%;
+        @include min-md {
+            width: 20%;
+            img {
+                max-width: 8.5rem;
+            }
+        }
+        @include min-lg {
+            width: auto;
+            margin-right: 3rem;
+        }
+    }
+    @include min-md {
+        padding-left: 2rem;
+    }
+    @include min-lg {
+        margin-top: 2.5rem;
+    }
+}
+.event-detail-logo-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    p {
+        margin: auto;
+        font-family: $font-main;
+        font-size: 2.1rem;
+        font-weight: $weight-xbold;
+        @include min-md {
+            font-size: 2.2rem;
+            margin-left: 0rem;
+            color: $color-navy-dark2;
+        }
+        @include min-lg {
+            font-size: 2.1rem;
+            color: $color-main;
+            margin-left: 0;
+        }
+    }
+    @include min-lg {
+        margin-right: 2rem;
+    }
+}
+.event-detail-logo-list {
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        max-width: 14.5rem;
+    }
+    @include min-md {
+        width: 60%;
+        img {
+        max-width: 8.5rem;
+    }
+    }
+}

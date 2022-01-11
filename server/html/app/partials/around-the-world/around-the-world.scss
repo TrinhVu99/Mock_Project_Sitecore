@@ -1,0 +1,34 @@
+.around-the-world-section {
+  .post {
+    padding: 0 0 1rem;
+    @include min-md {
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  .social-list-items {
+    .item {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  .post-overlap-title {
+    .round-box {
+      background-color: $color-grey-7;
+    }
+  }
+
+  .advertising {
+    margin-top: 1rem;
+    @include min-lg {
+      margin-top: 10rem;
+    }
+  }
+
+  .more-btn {
+    @include min-md {
+      display: none;
+    }
+  }
+}

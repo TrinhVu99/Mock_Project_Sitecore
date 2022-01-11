@@ -1,0 +1,43 @@
+header.header
+    .container
+        .header-content
+            a(href="#").logo
+                img(src="images/logo.svg", alt="")
+            nav.main-nav
+                .close
+                .welcome-msg-wrapper
+                    .welcome-msg
+                        h3 hello, new user
+                        p #[a(href="") log in] or #[a(href="") register]
+                .nav-mobile
+                    ul
+                ul.promotion-header
+                    li
+                        a(href="/articles/promotions") Promotions
+                .social-icon-block
+                    include ../social-icon/social-icon
+            .activity
+                .date mon 20 jan
+                .degree 23&#176;
+                ul.language
+                    li.lang-th TH
+                    li.lang-en EN
+                a(href="#").user-profile
+                    img(src="images/icons/icon-userprofile.svg", alt="")
+                a(href="#").store
+                    img(src="images/icons/icon-store.svg", alt="")
+                    span 2
+                .search-global-icon
+                    span.icon-search.header-search-icon
+                .menu-icon
+                    span เมนู
+                    img(src="images/icons/icon-menu.svg", alt="")
+        .search-global
+            .search-input-wrapper
+                    input.search-input(type="text" name="search-global" placeholder="placeholder...")
+                    span.header-search-icon
+                        i.icon-search
+            .search-global-error-message 123123123
+            #max-length-message.search-global-error-message 123123123
+        include ../navigation-cate/navigation-cate
+                        

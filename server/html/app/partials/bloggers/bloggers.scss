@@ -1,0 +1,102 @@
+.bloggers-section {
+  margin-bottom: 2rem;
+  @include min-lg {
+    margin-bottom: 0;
+  }
+
+  .col-lg-3 > .row {
+    height: 100%;
+  }
+
+  .blogger {
+    padding: 0 0 3rem;
+
+    ul.social-list-items {
+      li.item {
+        display: inline-flex;
+        margin-right: 1rem;
+
+        i::before {
+          color: $color-orange;
+        }
+      }
+    }
+  }
+
+  .post-overlap-title {
+    .round-box {
+      background-color: $color-grey-7;
+    }
+  }
+
+  .blogger-info {
+    span {
+      //   font-size: 2rem;
+      font-family: $font-DB-Adman-X;
+      color: $color-grey-3;
+      // margin-top: 0.8rem;
+      display: inline-block;
+      letter-spacing: 0.025rem;
+      @include min-md {
+        font-size: 1.8rem;
+      }
+
+      img {
+        @include size(4rem, 4rem);
+        margin-right: 1rem;
+        @include min-md {
+          @include size(2.8rem, 2.8rem);
+        }
+      }
+    }
+  }
+
+  .section-heading {
+    @include min-lg {
+      height: 4rem;
+    }
+  }
+
+  #photo-of-the-day {
+    .heading {
+      @include min-lg {
+        font-size: 2.1rem;
+        height: 4rem;
+        margin: 4rem 0 2rem;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .advertising {
+    margin-top: 1rem;
+    @include min-md {
+      margin-top: 2rem;
+    }
+    @include min-lg {
+      margin-top: 10rem;
+    }
+  }
+
+  .more-btn {
+    .show-more {
+      display: inline-block;
+    }
+
+    .show-less.active {
+      display: none;
+    }
+    @include min-lg {
+      // display: none;
+    }
+  }
+}
+
+.expand-item-wrapper {
+  overflow: hidden;
+  transition: $transition;
+
+  &.active {
+    transition: $transition-slow;
+  }
+}

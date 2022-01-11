@@ -1,0 +1,25 @@
+extends layouts/default
+
+block content
+    include partials/hero/hero.pug
+    +advertisingOutCol('images/advertising-1.png')
+    section.bloggers-section.section-grey-bg
+        .container.animated
+            .row
+                .col-lg-9
+                    include partials/bloggers/bloggers.pug
+                .col-lg-3.d-none.d-lg-block
+                    .row
+                        .col-md-4.col-lg
+                            .photo-day-section
+    include partials/photo-of-day/photo-of-day.pug
+    +advertisingOutCol('images/advertising-1.png', 'section-ad-bg')
+    section.upcoming-section
+        .container.animated
+            .row
+                include partials/upcoming/upcoming.pug
+                .col-lg-3.d-block.d-md-none.d-lg-block
+                    +advertisingInCol('images/advertis-1.png')
+            hr
+    include partials/video/video.pug
+    include partials/lightbox/lightbox-video

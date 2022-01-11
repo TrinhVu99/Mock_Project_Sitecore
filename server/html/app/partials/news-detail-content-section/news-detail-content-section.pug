@@ -1,0 +1,30 @@
+.detail-maincontent
+    .container
+        include ../news-detail-maincontent/news-detail-maincontent.pug
+        .tags-section.tags-section-detail-page
+            .tag-title-detail-page
+                p TAGS:
+            .tag-list
+                span.tag-item.tag-item-detail-page WORLD CUP 2018
+                span.tag-item.tag-item-detail-page HUEWEI
+                span.tag-item.tag-item-detail-page NASA 
+    +advertisingOutCol('images/advertise-type-1.jpg')
+    include ../author-section/author-section.pug
+    .detail-page-advertising-type2-section
+        +advertisingInCol('images/advertise-type-2.jpg')
+    .detail-page-may-like-section
+        .container
+            .row
+                .col-12.col-lg-9
+                    +youMayLike('YOU MAY LIKE')
+    .detail-maincontent-sidebar-section
+        .container
+            .row.trending-post-row
+                .col-12.col-md-4.col-lg-3.trending-post-col
+                    include ../trending-post/trending-post.pug
+                    .advertise-trending-post
+                        +advertisingInCol('images/advertise-type-2.jpg')
+
+                        
+
+    

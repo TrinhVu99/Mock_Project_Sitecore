@@ -1,0 +1,11 @@
+extends layouts/default
+
+block content
+    section.detail-section.news-detail
+        include partials/detail-page-title/detail-page-title
+        .detail-image-block.detail-video-block
+            .video-wrap
+                iframe( src='https://www.youtube.com/embed/5JyC0dsA8zU?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+        include partials/news-detail-content-section/news-detail-content-section.pug
+        .readmore-button-advertise
+            +advertisingOutCol('images/advertise-type-1.jpg')

@@ -1,0 +1,23 @@
+.e-newsletter-subscription-section
+    .container
+      .row
+        .col-md-4.col-lg-3
+          //- .newsletter-img
+          //-   img(src="../images/newsletter-logo.png", alt="")
+          .news-letter-image
+            a(href="").newsletter-logo
+                p.heading
+                    | E-NEWSLETTER
+                    span.txt-italic sign up
+        .col-md-8.col-lg-9
+          .e-newsletter-form
+            form#e-newsletter-form(method="POST")
+              .row.row-newsletter
+                .e-newsletter-input-section.col-md-6.col-lg-8
+                  input.email-input#newsletter__register.email(data-msg-regex="It's not email", name="newsletter__register", type="text", placeholder="Your email address")
+                .thanks-message.col-md-6.col-lg-8
+                    p รับข่าวสารอัพเดตไลฟ์สไตล์หลากหลายจาก Rabbit Today 
+                .email-submit-button.col-md-6.col-lg-4
+                  button.email-submit-tablet-button SIGN UP
+        span.submit-email-text #DON'T WORRY. 
+            span WE DON'T SPAM

@@ -1,0 +1,10 @@
+extends layouts/default
+
+block content
+    section.detail-section.event-detail
+        include partials/detail-page-title/detail-page-title
+        .detail-image-block
+            img(src='../images/detail-image.jpg', alt='')
+        include partials/event-info/event-info.pug
+        include partials/event-detail-content-section/event-detail-content-section.pug
+        

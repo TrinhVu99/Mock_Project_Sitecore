@@ -1,0 +1,31 @@
+.more-btn {
+    a {
+        display: none;
+        &.active {
+            display: inline-block;
+            @include hoverStateBtn;
+        }
+    }
+    border-top: 1px solid $color-grey-l;
+    padding: 1rem 0;
+    span {
+        color: $color-black;
+        text-decoration: underline;
+        text-transform: lowercase;
+        display: inline-block;
+        position: relative;
+        font-size: 2.4rem;
+        letter-spacing: 0.1em;
+        font-family: $font-DB-Adman-X-B;
+    }
+    i {
+        font-size: 1.5rem;
+        display: inline-block;
+        padding-left: 1rem;
+    }
+    .show-less {
+        .icon-arrow-down {
+            transform: rotate(-180deg);
+        }
+    }
+}

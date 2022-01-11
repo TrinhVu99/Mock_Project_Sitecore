@@ -1,0 +1,44 @@
+.news-detail-readmore-btn {
+    // position: absolute;
+    opacity: 0;
+    z-index: 21;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    @include min-lg {
+        bottom: 5.6rem;
+    }
+    button {
+        font-family: $font-cordia;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+        width: 27.5rem;
+        background-color: $color-blue-type-3;
+        border: none;
+        font-size: 2.1rem;
+        color: $color-white;
+        margin-top: 2rem;
+        border-radius: 1.6rem;
+        &.fadeOut {
+            display: none;
+        }
+        &:active {
+            background-color: $color-white;
+            color: $color-blue-type-3;
+        }
+    }
+}
+.faded-section {
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 35rem;
+        bottom: 0px;
+        background: rgba(255, 255, 255, 0);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(1%, rgba(255, 255, 255, 0)), color-stop(29%, rgba(255, 255, 255, 0.97)), color-stop(30%, white), color-stop(100%, white));
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, rgba(255, 255, 255, 0.97) 29%, white 30%, white 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+    }
+}

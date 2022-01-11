@@ -1,0 +1,18 @@
+section.photo-day-section.d-lg-none
+    .container
+        .row
+            .col-md-4.col-lg
+                #photo-of-the-day
+                    h2.heading.text-uppercase Photo of the day
+                    .photo-item
+                        a.img-responsive(href="#" target="_blank")
+                            img.img-lg(src='images/photo-day-desktop.png', alt="Photo of the day image")
+                            img.img-md(src='images/photo-day-tablet.png', alt="Photo of the day image")
+                            img.img-xs(src='images/photo-day-mobile.png', alt="Photo of the day image")
+            .col-md-4.d-none.d-md-block.d-lg-none
+                h2.heading.text-uppercase Photo of the day
+                .lottery-board
+            .col-md-4.d-none.d-md-block.d-lg-none
+                h2.heading.text-uppercase Photo of the day
+                +advertisingInCol('images/advertis-1.png')
+        

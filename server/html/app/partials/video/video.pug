@@ -1,0 +1,25 @@
+section.video-section
+	.container.animated
+		.row
+			.col-md
+				.row
+					.col-md-8.col-lg-9
+						.section-heading
+							+headingH1('video', 'today')
+							a.view-all(href="#") View all
+						.row
+							.col-lg-8
+								.video.video-highlight(video-id="c4117a97-0d64-496b-a6e5-e9d7cb45811c")
+									+postLeftVideo('images/video-1.png', 'Video', 'Cover artist', 'ที่สุดของเมล็ดกาแฟ นำเข้าจาก ทั่วทุกมุมโลก ที่สุดของเมล็ดกาแฟ นำเข้าจาก ทั่วทุกมุมโลก ')
+							.col-lg-4
+								.row
+									.col-md.col-lg-12
+										.video(video-id="c4117a97-0d64-496b-a6e5-e9d7cb45811c")
+											+postLeftVideo('images/video-2.png', 'Video', 'Cover artist', 'ที่สุดของเมล็ดกาแฟ นำเข้าจาก  ั่วทุกมุมโลก')
+									.col-md.col-lg-12
+										.video(video-id="c4117a97-0d64-496b-a6e5-e9d7cb45811c")
+											+postLeftVideo('images/video-3.png', 'Video', 'Cover artist', 'ที่สุดของเมล็ดกาแฟ นำเข้าจาก ทั่วทุกมุมโลก ที่สุดของเมล็ดกาแฟ นำเข้าจาก ทั่วทุกมุมโลก')
+					.col-md-4.col-lg-3
+						include ../podcast/podcast.pug
+		input#VideoDetailDatasourceId(name="VideoDetailDatasourceId", type="hidden", value="{441FDC02-B2B7-4E85-8616-36CD28861827}")
+			

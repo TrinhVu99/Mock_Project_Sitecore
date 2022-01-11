@@ -1,0 +1,22 @@
+.column-social-block {
+    display: none;
+    @include min-lg {
+        display: flex;
+        width: 20%;
+        float: left;
+        flex-direction: column;
+        span {
+            font-size: 4rem;
+            color: $color-orange;
+            margin: auto;
+            // margin-bottom: 2rem;
+            display: flex;
+            padding-right: 0;
+        }
+    }
+    .column-social-icon {
+        margin: auto;
+        display: flex;
+        margin-bottom: 2rem;
+    }
+}

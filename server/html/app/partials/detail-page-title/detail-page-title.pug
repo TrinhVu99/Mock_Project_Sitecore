@@ -1,0 +1,16 @@
+.news-detail-title-block
+    include ../breadcrumb/breadcrumb.pug
+    .container
+        .row
+            .col-md-8.col-lg-9
+                +titleCarrot('RABBIT CLUB')
+                .news-detail-title
+                    h1 เปิดกรุ BALENCIAGA พร้อมไอเท็ม้ามพลาดประจำปี 2018
+        .row
+            .col-md-10.detail-author-col.col-lg-9
+                .news-detail-author
+                    +profile('images/author-avatar.png', 'Published 8 months ago', 'Rabbit Today Staff')
+                .news-detail-share-block.flex-end
+                    +reaction('2,012,399', '285')
+                    .news-detail-share-img
+                        img(src='../images/share-icon.png', alt='')

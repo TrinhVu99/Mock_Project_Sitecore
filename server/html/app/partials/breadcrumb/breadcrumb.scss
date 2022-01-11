@@ -1,0 +1,50 @@
+.breadcrumb {
+  margin-bottom: 1rem;
+
+  .breadcrumb-link-list {
+    list-style: none;
+    padding-left: 0;
+
+    .breadcrumb-link {
+      position: relative;
+      margin-right: 20px;
+      display: inline;
+
+      span {
+        font-family: $font-tahoma;
+        color: $color-grey-10;
+        letter-spacing: 0;
+        font-size: 1.4rem;
+
+        &.arrow {
+          margin-left: .5rem;
+          color: $color-orange;
+        }
+      }
+
+      &.active {
+        span {
+          color: $color-blue-type-3;
+        }
+
+        &::after {
+          content: none;
+        }
+      }
+
+      &:after {
+        content: '>';
+        color: $color-orange;
+        font-family: $font-tahoma;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 0;
+        right: -15px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

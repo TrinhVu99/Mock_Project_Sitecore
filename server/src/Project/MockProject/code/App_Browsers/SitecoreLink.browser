@@ -1,0 +1,8 @@
+﻿<browsers>
+  <browser refID="Default">
+    <controlAdapters>
+      <adapter controlType="Sitecore.Shell.Applications.ContentEditor.Link, Sitecore.Kernel" adapterType="Project.Common.ControlAdapters.LinkAdapter, MockProject.Common.Web" />
+      <adapter controlType="Sitecore.Shell.Applications.ContentEditor.InternalLink, Sitecore.Kernel" adapterType="Project.Common.ControlAdapters.LinkAdapter, MockProject.Common.Web" />
+    </controlAdapters>
+  </browser>
+</browsers>

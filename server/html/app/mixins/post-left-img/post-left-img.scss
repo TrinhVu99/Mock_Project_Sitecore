@@ -1,0 +1,55 @@
+.post-left-img {
+    padding: 0 0 3rem;
+    margin: 0;
+    @include min-md {
+        padding: 1rem 0 0;
+    }
+    @include min-lg {
+        padding: 1.5rem 0 0;
+    }
+    .card-img-left {
+        position: relative;
+        flex: 0 0 35%;
+        @include border-radius(0.4rem);
+        overflow: hidden;
+        @include min-md {
+            flex: 0 0 36%;
+        }
+        .img {
+            position: relative;
+            @include border-radius(0.4rem);
+            overflow: hidden;
+            display: block;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .card-body {
+        padding: 1rem;
+        @include min-md {
+            padding: 0 1rem;
+            line-height: 1;
+        }
+        .card-text {
+            font-family: $font-DB-Adman-X-B;
+            font-size: 2.67rem;
+            line-height: 1.1;
+            color: $color-navy-dark;
+            margin: 0.2rem 0;
+            display: block;
+            @include min-md {
+                font-size: 2rem;
+            }
+            @include min-lg {
+                font-size: 2.1rem;
+            }
+        }
+        .title-carrot {
+            margin-bottom: 0.3rem;
+            @include min-md {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

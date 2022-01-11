@@ -1,0 +1,17 @@
+extends layouts/default
+
+block content
+  - var pages = {Home:'/home.html',Detail:'/news-detail.html',News:'/news-landing.html', Event:'/event-landing.html', EventDetail:'/event-detail.html', BlankPage:'/blank-page.html', VideoDetail:'/video-detail.html', searchResults:'/search-results.html'}
+  ul
+    each val, index in pages
+      li
+        a(href=val)= index
+  h3 Components
+  +titleCarrot('Carrot')
+  +titleCarrot('Carrot button')
+  +titleCarrot('read more')
+  .container
+    .row
+      .col-md-6 col md 6
+        .test test
+      .col-md-4 col md 4

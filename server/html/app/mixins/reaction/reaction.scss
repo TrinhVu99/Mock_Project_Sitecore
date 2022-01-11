@@ -1,0 +1,45 @@
+.reaction {
+    @include clearfix();
+    display: inline-flex;
+    align-items: center;
+    color: $color-grey-9;
+    span {
+        font-size: 1.7rem;
+        line-height: 1.3;
+        display: inline-block;
+        margin-left: .8rem;
+        &.icon-eye {
+            font-size: 2rem;
+            padding-right: 0;
+        }
+    }
+    &-view,
+    &-heart {
+        display: inline-block;
+    }
+    &-view {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 1rem;
+        img {
+            width: 2.6rem;
+        }
+    }
+    &-heart {
+        border: 1px solid $color-grey-10;
+        border-radius: 5rem;
+        padding: .2rem 1.5rem;
+        img {
+            width: 2.3rem;
+        }
+        span {
+            margin-left: 0;
+        }
+    }
+    .reaction-heart {
+        display: flex;
+        .icon-heart-bold::before {
+            color: $color-orange;
+        }
+    }
+}
