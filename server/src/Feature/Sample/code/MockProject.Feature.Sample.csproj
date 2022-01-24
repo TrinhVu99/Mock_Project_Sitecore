@@ -72,10 +72,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\Templates.cs" />
+    <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\SectionController.cs" />
+    <Compile Include="Controller\SlidebarController.cs" />
+    <Compile Include="Controller\HeaderController.cs" />
     <Compile Include="Controller\AdvertismentController.cs" />
     <Compile Include="Models\RenderingModels\AdvertismentRenderingModel.cs" />
+    <Compile Include="Models\RenderingModels\ProductRenderingModel.cs" />
+    <Compile Include="Models\TemplateModels\SectionModel.cs" />
+    <Compile Include="Models\TemplateModels\SlidebarModel.cs" />
+    <Compile Include="Models\TemplateModels\ImageBaseModel.cs" />
     <Compile Include="Models\TemplateModels\AdvertisementModel.cs" />
     <Compile Include="Models\TemplateModels\AdvertisementImage.cs" />
+    <Compile Include="Models\TemplateModels\CategoryModel.cs" />
+    <Compile Include="Models\TemplateModels\NavCategoryModel.cs" />
+    <Compile Include="Models\TemplateModels\HeaderModel.cs" />
+    <Compile Include="Models\TemplateModels\ProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +95,15 @@
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Views\MockProject\Sample\Advertisement.cshtml" />
     <Content Include="Views\MockProject\Sample\Advertisement2.cshtml" />
+    <Content Include="Views\MockProject\Sample\Product.cshtml" />
+    <Content Include="Views\MockProject\Sample\Header.cshtml" />
+    <Content Include="Views\MockProject\Sample\GetTopNavigationBar.cshtml" />
+    <Content Include="Views\MockProject\Sample\Slidebars\BannerSlidebar.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\HeroSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\AdvertisingSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\BloggerSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\VideoSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\UpcomingSection.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />

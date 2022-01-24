@@ -1,0 +1,70 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.HeaderModel
+
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <a class="logo" href="#">
+                @Html.Glass().RenderImage(Model, x => x.Logo, isEditable: true)
+                <img src="images/logo.svg" alt="">
+            </a>
+            <nav class="main-nav">
+                <div class="close"></div>
+                <div class="welcome-msg-wrapper">
+                    <div class="welcome-msg">
+                        <h3>hello, new user</h3>
+                        <p><a href="">log in</a> or <a href="">register</a></p>
+                    </div>
+                </div>
+                <div class="nav-mobile">
+                    <ul></ul>
+                </div>
+                <ul class="promotion-header">
+                    @foreach (var item in Model.MainNavigation)
+                    {
+                        <li><a href="/articles/@item.Name">@Html.Glass().Editable(item, x => x.Name)</a></li>
+                    }
+                </ul>
+                <div class="social-icon-block">
+                    <div class="social-icon-title">
+                        <p>FOLLOW US</p>
+                    </div>
+                    <div class="social-icon-list">
+                        <div class="social-icon"><a href="#"><span class="icon-twitter"></span></a></div>
+                        <div class="social-icon"><a href="#"><span class="icon-facebook"></span></a></div>
+                        <div class="social-icon"><a href="#"><span class="icon-instagram"></span></a></div>
+                        <div class="social-icon"><a href="#"><span class="icon-youtube"></span></a></div>
+                    </div>
+                </div>
+            </nav>
+            <div class="activity">
+                <div class="date">@Html.Glass().Editable(Model, x => x.Weather)</div>
+                <div class="degree">23&#176;</div>
+                <ul class="language">
+                    <li class="lang-th">TH</li>
+                    <li class="lang-en">EN</li>
+                </ul><a class="user-profile" href="#"><img src="images/icons/icon-userprofile.svg" alt=""></a><a class="store" href="#"><img src="images/icons/icon-store.svg" alt=""><span>2</span></a>
+                <div class="search-global-icon"><span class="icon-search header-search-icon"></span></div>
+                <div class="menu-icon"><span>เมนู</span><img src="images/icons/icon-menu.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="search-global">
+            <div class="search-input-wrapper">
+                <input class="search-input" type="text" name="search-global" placeholder="placeholder..."><span class="header-search-icon"><i class="icon-search"></i></span>
+            </div>
+            <div class="search-global-error-message">123123123</div>
+            <div class="search-global-error-message" id="max-length-message">123123123</div>
+        </div>
+        <div class="nav-cate-wrapper">
+            <div class="swiper-container nav-cate">
+                <div class="button__swiper is-next"></div>
+                <div class="swiper-wrapper nav-cate-list swiper-no-swiping">
+                    @Html.Sitecore().Placeholder("navcategories")
+                </div>
+                <div class="button__swiper is-prev"></div>
+            </div>
+        </div>
+    </div>
+</header>
