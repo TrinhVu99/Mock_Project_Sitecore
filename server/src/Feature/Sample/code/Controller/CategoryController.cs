@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using MockProject.Foundation.Mvc.Controllers;
 using MockProject.Feature.Sample.Models.TemplateModels;
+using System.Linq;
 
 namespace MockProject.Feature.Sample.Controller
 {

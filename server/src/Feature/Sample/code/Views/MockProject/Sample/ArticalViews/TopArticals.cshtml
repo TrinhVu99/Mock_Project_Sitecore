@@ -1,70 +1,57 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using MockProject.Foundation.SitecoreExtensions.Extensions
 @using MockProject.Foundation.SitecoreExtensions.Helpers
-@using System.Linq;
+@using System.Linq
 @model MockProject.Feature.Sample.Models.TemplateModels.ListArticalModel
 
-@{
-    var news = Model.Articals.Take(1);
-}
 <div class="row">
     <div class="col-lg-8">
         <div class="post highlight-post">
-            <article class="post-overlap-title">
-                <div class="img-with-box">
-                    <a class="img bg-overlay img-to-bg" href="#" title="Image">
-                        @*images/post-light.png*@
-                        <img src="https://zcc.vn/wp-content/uploads/2020/12/zcc.vn-top-5-dia-diem-chup-anh-ao-dai-dep-tai-tp-ho-chi-minh-15826440-241072202986970-9026333708629482702-n.jpg" alt="post img">
-                    </a>
-                    <div class="round-box">
-                        <div class="title-carrot">
-                            Music
-                            <i class="icon-eye"></i>285
+            @foreach(var artical in Model.Articals.Take(1))
+            {
+                <article class="post-overlap-title">
+                    <div class="img-with-box">
+                        <a class="img bg-overlay img-to-bg" href="#" title="Image">
+                            @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
+                            @*images/post-light.png*@
+                            @*<img src="https://zcc.vn/wp-content/uploads/2020/12/zcc.vn-top-5-dia-diem-chup-anh-ao-dai-dep-tai-tp-ho-chi-minh-15826440-241072202986970-9026333708629482702-n.jpg" alt="post img">*@
+                        </a>
+                        <div class="round-box">
+                            <div class="title-carrot">
+                                @Html.Glass().Editable(artical, x => x.Category)
+                                <i class="icon-eye"></i>@Html.Glass().Editable(artical, x => x.Views)
+                            </div>
+                            <a class="round-box-text mb-0" href="#">@Html.Glass().Editable(artical, x => x.Title)</a>
                         </div>
-                        <a class="round-box-text mb-0" href="#">เงินเดือน 15,000 บาท ซื้อคอนโดได้หรือไม่? เงินเดือน 15,000 บาท ซื้อคอนโดได้หรือไม่? เงินเดือน 15,000 บาท ซื้อคอนโดได้หรือไม่?</a>
                     </div>
-                </div>
-            </article>
+                </article>
+            }
         </div>
     </div>
     <div class="col-lg-4">
         <div class="row">
-            <div class="col-md col-lg-12">
-                <div class="post">
-                    <article class="post-overlap-title">
-                        <div class="img-with-box">
-                            <a class="img bg-overlay img-to-bg" href="#" title="Image">
-                                <img src="https://bizweb.dktcdn.net/100/360/145/files/chup-anh-tet-dep-namnguyenstudio-2.jpg?v=1578372176201" alt="post img">
-                            </a>
-                            <div class="round-box">
-                                <div class="title-carrot">
-                                    take a ride
-                                    <i class="icon-eye"></i>285
+            @foreach (var artical in Model.Articals.Skip(1))
+            {
+                <div class="col-md col-lg-12">
+                    <div class="post">
+                        <article class="post-overlap-title">
+                            <div class="img-with-box">
+                                <a class="img bg-overlay img-to-bg" href="#" title="Image">
+                                    @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
+                                    @*<img src="https://bizweb.dktcdn.net/100/360/145/files/chup-anh-tet-dep-namnguyenstudio-2.jpg?v=1578372176201" alt="post img">*@
+                                </a>
+                                <div class="round-box">
+                                    <div class="title-carrot">
+                                        @Html.Glass().Editable(artical, x => x.Category)
+                                        <i class="icon-eye"></i>@Html.Glass().Editable(artical, x => x.Views)
+                                    </div>
+                                    <a class="round-box-text mb-0" href="#">@Html.Glass().Editable(artical, x => x.Title)</a>
                                 </div>
-                                <a class="round-box-text mb-0" href="#">เทรนมาแรง ออเจ้า กับชุดไทย</a>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md col-lg-12">
-                <div class="post">
-                    <article class="post-overlap-title">
-                        <div class="img-with-box">
-                            <a class="img bg-overlay img-to-bg" href="#" title="Image">
-                                <img src="https://i.ytimg.com/vi/Xp29hxMR4nA/maxresdefault.jpg" alt="post img">
-                            </a>
-                            <div class="round-box">
-                                <div class="title-carrot">
-                                    take a ride
-                                    <i class="icon-eye"></i>285
-                                </div>
-                                <a class="round-box-text mb-0" href="#">เทรนมาแรง ออเจ้า กับชุดไทย</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </div>
