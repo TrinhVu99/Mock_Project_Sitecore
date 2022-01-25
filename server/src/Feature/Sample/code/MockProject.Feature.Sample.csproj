@@ -124,6 +124,8 @@
     <Content Include="Views\MockProject\Sample\ArticalViews\BlogOfTheDay.cshtml" />
     <Content Include="Views\MockProject\Sample\ArticalViews\TopArticals.cshtml" />
     <Content Include="Views\MockProject\Sample\Slidebars\LotterySlidebar.cshtml" />
+    <Content Include="Views\MockProject\Sample\Slidebars\AdvertisementHorizontal.cshtml" />
+    <Content Include="Views\MockProject\Sample\Slidebars\AdvertisementBlock.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />

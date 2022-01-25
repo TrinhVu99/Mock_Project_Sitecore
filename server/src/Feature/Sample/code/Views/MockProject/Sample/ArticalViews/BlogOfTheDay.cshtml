@@ -4,7 +4,7 @@
 @model MockProject.Feature.Sample.Models.TemplateModels.ListArticalModel
 
 <section class="day-blog">
-    <h2 class="heading text-uppercase">Blog of the day</h2>
+    <h2 class="heading text-uppercase">@Html.Glass().Editable(Model, x=>x.Name)</h2>
     <div class="blog-item-group">
         @foreach (var artical in Model.Articals)
         {

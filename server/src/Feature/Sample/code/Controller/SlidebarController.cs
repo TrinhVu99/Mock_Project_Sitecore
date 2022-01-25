@@ -22,6 +22,18 @@ namespace MockProject.Feature.Sample.Controller
             var model = MvcContext.GetDataSourceItem<SlidebarModel>();
             return View("~/Views/MockProject/Sample/Slidebars/LotterySlidebar.cshtml", model);
         }
+
+        public ActionResult GetAdvertisementHorizontalSlidebar()
+        {
+            var model = MvcContext.GetDataSourceItem<SlidebarModel>();
+            return View("~/Views/MockProject/Sample/Slidebars/AdvertisementHorizontal.cshtml", model);
+        }
+
+        public ActionResult GetAdvertisementBlockSlidebar()
+        {
+            var model = MvcContext.GetDataSourceItem<SlidebarModel>();
+            return View("~/Views/MockProject/Sample/Slidebars/AdvertisementBlock.cshtml", model);
+        }
     }
 }
 

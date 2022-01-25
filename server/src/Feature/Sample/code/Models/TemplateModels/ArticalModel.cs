@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Glass.Mapper.Sc.Configuration;
 using MockProject.Foundation.GlassMapper;
 using MockProject.Feature.Sample.Constants;
-
+using System.Linq;
 
 namespace MockProject.Feature.Sample.Models.TemplateModels
 {
