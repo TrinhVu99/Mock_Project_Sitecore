@@ -178,5 +178,73 @@
                 public const string Bloggers = "{409BB3C9-58DD-4CA6-9258-A5C67644D8D3}";
             }
         }
+
+        public static class Navigation
+        {
+            public const string TemplateId = "{BE4DA514-48C5-44A5-BE9F-39B0B2A9AA0F}";
+
+            public static class Fields
+            {
+                public const string Name = "{D708B015-76C6-4067-839D-25717B395455}";
+                public const string Categories = "{5E31DD65-322E-4472-B6C1-0F41C402825D}";
+            }
+        }
+
+        public static class FooterPayment
+        {
+            public const string TemplateId = "{BA842394-B796-4EA4-AA0B-BD3191BA7759}";
+
+            public static class Fields
+            {
+                public const string Name = "{B4BD5489-5C38-486E-9A20-016F22519949}";
+                public const string Image = "{9B6D06A8-5B7A-446A-9ECA-70DCB55B5D31}";
+                public const string Link = "{071C5BAE-8128-4174-AB2C-3D768BFD75F7}";
+                public const string Alt = "{B93BA0E1-75B5-4807-99FE-C3DFBC6A120F}";
+            }
+        }
+
+        public static class Tag
+        {
+            public const string TemplateId = "{DF7B0204-44CA-4038-A1C5-F019F15F0B99}";
+
+            public static class Fields
+            {
+                public const string Name = "{278E8AAF-89E6-4FCD-A6E0-6164EC1B6700}";
+            }
+        }
+
+        public static class ListTag
+        {
+            public const string TemplateId = "{A6F8449F-B25F-43D5-9DDE-31CD84F2D4FC}";
+
+            public static class Fields
+            {
+                public const string Name = "{4C3A23E0-D1E6-4E06-A0D7-9A3027E1E0D1}";
+                public const string Tags = "{74F5756B-D102-4451-BCDC-464BDE563EA5}";
+            }
+        }
+
+        public static class Social
+        {
+            public const string TemplateId = "{B89A1121-9BE1-493A-92A9-386225B198DF}";
+
+            public static class Fields
+            {
+                public const string LogoFooter = "{FE17BC69-D03D-45B0-A7AE-C70507A1368D}";
+                public const string ListSocial = "{DF37963B-797D-49C6-AA1A-3E7E35632B5C}";
+            }
+        }
+
+        public static class SignUp
+        {
+            public const string TemplateId = "{03352227-4C11-4DA5-A133-3CF7355EDCCA}";
+
+            public static class Fields
+            {
+                public const string Name = "{D8118E73-7811-4836-AF90-48D5DBE15B80}";
+                public const string SubName = "{5D41D43A-3FFF-422D-98BA-D94A1B1A1083}";
+                public const string Slogan = "{AF4E6479-318F-4256-9B51-3D9B5C47D4ED}";
+            }
+        }
     }
 }

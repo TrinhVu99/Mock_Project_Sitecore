@@ -1,0 +1,14 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.FooterNavigation.PaymentModel
+
+<div class="footer-menu-list-title">
+    <p>@Model.Name</p>
+</div>
+<div class="payment-medthod-list">
+    @if (Model.Image != null)
+    {
+        @Html.Glass().RenderImage(Model, x => x.Image, isEditable: true)
+    }
+</div>

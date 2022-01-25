@@ -86,14 +86,21 @@
     <Compile Include="Constants\Templates.cs" />
     <Compile Include="Controller\CategoryController.cs" />
     <Compile Include="Controller\ArticalController.cs" />
+    <Compile Include="Controller\NavigationFooterController.cs" />
+    <Compile Include="Controller\PaymentController.cs" />
     <Compile Include="Controller\SectionController.cs" />
     <Compile Include="Controller\SlidebarController.cs" />
     <Compile Include="Controller\HeaderController.cs" />
     <Compile Include="Controller\AdvertismentController.cs" />
+    <Compile Include="Controller\TagController.cs" />
     <Compile Include="Models\RenderingModels\AdvertismentRenderingModel.cs" />
     <Compile Include="Models\TemplateModels\BloggerModel.cs" />
     <Compile Include="Models\TemplateModels\EventModel.cs" />
     <Compile Include="Models\TemplateModels\ArticalModel.cs" />
+    <Compile Include="Models\TemplateModels\FooterNavigation\NavigationFooterModel.cs" />
+    <Compile Include="Models\TemplateModels\FooterNavigation\PaymentModel.cs" />
+    <Compile Include="Models\TemplateModels\FooterNavigation\SignUpModel.cs" />
+    <Compile Include="Models\TemplateModels\FooterNavigation\SocialModel.cs" />
     <Compile Include="Models\TemplateModels\MainModel\ListModel\ListBloggerModel.cs" />
     <Compile Include="Models\TemplateModels\MainModel\ListModel\ListEventModel.cs" />
     <Compile Include="Models\TemplateModels\MainModel\ListModel\ListArticalModel.cs" />
@@ -105,6 +112,8 @@
     <Compile Include="Models\TemplateModels\CategoryModel.cs" />
     <Compile Include="Models\TemplateModels\NavCategoryModel.cs" />
     <Compile Include="Models\TemplateModels\HeaderModel.cs" />
+    <Compile Include="Models\TemplateModels\Tag\ListTagsModel.cs" />
+    <Compile Include="Models\TemplateModels\Tag\TagModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +133,13 @@
     <Content Include="Views\MockProject\Sample\ArticalViews\BlogOfTheDay.cshtml" />
     <Content Include="Views\MockProject\Sample\ArticalViews\TopArticals.cshtml" />
     <Content Include="Views\MockProject\Sample\Slidebars\LotterySlidebar.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\FooterPayment.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\FooterPaymentContent.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\FooterSignUp.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\NavigationContent.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\NavigationContentAboutTerm.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\NavigationSocial.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\Navigation.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />

@@ -1,0 +1,35 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.FooterNavigation.SignUpModel
+
+<div class="e-newsletter-subscription-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-3">
+                <div class="news-letter-image">
+                    <a class="newsletter-logo" href="">
+                        <p class="heading">@Html.Glass().Editable(Model, x => x.Name)<span class="txt-italic">@Html.Glass().Editable(Model, x => x.SubName)</span></p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9">
+                <div class="e-newsletter-form">
+                    <form id="e-newsletter-form" method="POST">
+                        <div class="row row-newsletter">
+                            <div class="e-newsletter-input-section col-md-6 col-lg-8">
+                                <input class="email-input email" id="newsletter__register" data-msg-regex="It's not email" name="newsletter__register" type="text" placeholder="Your email address">
+                            </div>
+                            <div class="thanks-message col-md-6 col-lg-8">
+                                <p>รับข่าวสารอัพเดตไลฟ์สไตล์หลากหลายจาก Rabbit Today </p>
+                            </div>
+                            <div class="email-submit-button col-md-6 col-lg-4">
+                                <button class="email-submit-tablet-button">SIGN UP</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><span class="submit-email-text">@Html.Glass().Editable(Model, x => x.Slogan)</span>
+        </div>
+    </div>
+</div>
