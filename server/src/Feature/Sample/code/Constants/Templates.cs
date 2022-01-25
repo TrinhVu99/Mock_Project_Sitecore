@@ -101,7 +101,7 @@
                 public const string Name = "{FBAAA67B-69F7-46A0-8981-278926078DE3}";
                 public const string Description = "{A9CEE756-A4AA-48D4-9B18-37BA3ABA12C7}";
                 public const string Images = "{A93BA99C-EB57-4480-93E1-FA75BBEF2C18}";
-                public const string Title = "{91E3B147-4D28-478B-A66A-0BF91AC6DB30}";
+                public const string TitleEntity = "{C9F6FC5D-1B70-4C47-92D5-DECB328BBCE6}";
                 public const string Category = "{9C36BA68-31EB-428E-B3A9-39A43E922995}";
                 public const string Views = "{36FA86AB-0664-47CE-8B51-E30AE1E2728F}";
                 public const string Tags = "{698E3A92-2911-4F54-A259-47201E64A59F}";
@@ -122,7 +122,7 @@
                 public const string StartTime = "{E09810B5-02A2-4135-8FB4-838340500FB7}";
                 public const string EndTime = "{7B06AF56-5DEC-4F7F-A060-6FB2D48B1997}";
                 public const string Location = "{E1D61937-0612-464D-B094-2A4091890F5B}";
-                public const string Title = "{91E3B147-4D28-478B-A66A-0BF91AC6DB30}";
+                public const string TitleEntity = "{C9F6FC5D-1B70-4C47-92D5-DECB328BBCE6}";
                 public const string Category = "{9C36BA68-31EB-428E-B3A9-39A43E922995}";
                 public const string Views = "{36FA86AB-0664-47CE-8B51-E30AE1E2728F}";
                 public const string Tags = "{698E3A92-2911-4F54-A259-47201E64A59F}";
@@ -165,6 +165,7 @@
             {
                 public const string Name = "{41FBA764-28CE-44CC-80F8-48E095F7B7EC}";
                 public const string Events = "{B0E999AC-86C1-437C-ADEA-EE0E54ED620A}";
+                public const string ViewAll = "{C3F426A1-3251-49CA-A05C-1646FA8D8737}";
             }
         }
 
