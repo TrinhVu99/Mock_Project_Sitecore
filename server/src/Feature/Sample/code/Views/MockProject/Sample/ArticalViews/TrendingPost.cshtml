@@ -1,0 +1,26 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.ListArticalModel
+
+<section class="trending-post-section">
+    <h2 class="heading text-uppercase">trending post</h2>
+    <div class="trending-item-group expand-item-wrapper">
+        @foreach (var artical in Model.Articals)
+        {
+            <article class="post-left-img card flex-row border-0">
+                <div class="card-img-left">
+                    <a class="img bg-overlay img-to-bg" href="@artical.Link" title="Image">
+                        @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
+                        @*<img src="https://icdn.dantri.com.vn/thumb_w/640/2016/kieu-trinh2-1482859504769.jpg" alt="Trending post img">*@
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a class="title-carrot" href="#">@Html.Glass().Editable(artical, x => x.Category)</a>
+                    <a class="card-text" href="@artical.Link">@Html.Glass().Editable(artical, x => x.Title)</a>
+                </div>
+            </article>
+        }
+    </div>
+    <div class="more-btn text-center"><a class="show-more active" title="Show more button"> <span>more</span><i class="icon-arrow-down"></i></a><a class="show-less" title="Show less button"><span>less</span><i class="icon-arrow-down"></i></a></div>
+</section>

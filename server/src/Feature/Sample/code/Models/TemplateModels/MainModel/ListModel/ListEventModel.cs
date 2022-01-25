@@ -9,12 +9,12 @@ using MockProject.Feature.Sample.Constants;
 
 namespace MockProject.Feature.Sample.Models.TemplateModels
 {
-    [SitecoreType(TemplateId = Templates.Product.TemplateId)]
-    public class ProductModel : GlassBase<Item>
+    [SitecoreType(TemplateId = Templates.ListEvent.TemplateId)]
+    public class ListEventModel : GlassBase<Item>
     {
-        [SitecoreField(Templates.Product.Fields.Name)]
+        [SitecoreField(Templates.ListEvent.Fields.Name)]
         public virtual string Name { get; set; }
-        [SitecoreField(Templates.Product.Fields.Image)]
-        public virtual Glass.Mapper.Sc.Fields.Image Image { get; set; }
+        [SitecoreField(Templates.ListEvent.Fields.Events)]
+        public virtual IEnumerable<EventModel> Events { get; set; }
     }
 }

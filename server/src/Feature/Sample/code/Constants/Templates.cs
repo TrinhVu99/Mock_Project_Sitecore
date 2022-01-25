@@ -92,14 +92,90 @@
             }
         }
 
-        public static class Product
+        public static class Artical
         {
-            public const string TemplateId = "{BA28A4D1-67FD-48A8-A211-706E5C680249}";
+            public const string TemplateId = "{7B462DD2-1CD2-414F-8143-1640394881AA}";
 
             public static class Fields
             {
-                public const string Name = "{70E6B441-A8AD-4F18-858F-DD3B7DA2921D}";
-                public const string Image = "{152C427A-7B88-4A0C-8A74-8A13F6506FF8}";
+                public const string Name = "{FBAAA67B-69F7-46A0-8981-278926078DE3}";
+                public const string Description = "{A9CEE756-A4AA-48D4-9B18-37BA3ABA12C7}";
+                public const string Images = "{A93BA99C-EB57-4480-93E1-FA75BBEF2C18}";
+                public const string Title = "{91E3B147-4D28-478B-A66A-0BF91AC6DB30}";
+                public const string Category = "{9C36BA68-31EB-428E-B3A9-39A43E922995}";
+                public const string Views = "{36FA86AB-0664-47CE-8B51-E30AE1E2728F}";
+                public const string Tags = "{698E3A92-2911-4F54-A259-47201E64A59F}";
+                public const string Content = "{39FD7253-AC88-414F-9A6E-03875C06DCEE}";
+                public const string Likes = "{D8FDB099-D9DB-476E-886E-FEA43A2221BC}";
+                public const string Author = "{9FE5AFB6-78E6-4DCA-8E79-B5DCE1BBCE4A}";
+                public const string Image = "{34DE20D7-8C2A-46A9-B1D7-895CDFCD816E}";
+                public const string Link = "{3D01F6D1-B9C6-4E6E-92C8-5CF034FE2588}";
+            }
+        }
+
+        public static class Event
+        {
+            public const string TemplateId = "{76D2C672-30C4-4C5A-A78D-4A6208CF341C}";
+
+            public static class Fields
+            {
+                public const string StartTime = "{E09810B5-02A2-4135-8FB4-838340500FB7}";
+                public const string EndTime = "{7B06AF56-5DEC-4F7F-A060-6FB2D48B1997}";
+                public const string Location = "{E1D61937-0612-464D-B094-2A4091890F5B}";
+                public const string Title = "{91E3B147-4D28-478B-A66A-0BF91AC6DB30}";
+                public const string Category = "{9C36BA68-31EB-428E-B3A9-39A43E922995}";
+                public const string Views = "{36FA86AB-0664-47CE-8B51-E30AE1E2728F}";
+                public const string Tags = "{698E3A92-2911-4F54-A259-47201E64A59F}";
+                public const string Content = "{39FD7253-AC88-414F-9A6E-03875C06DCEE}";
+                public const string Likes = "{D8FDB099-D9DB-476E-886E-FEA43A2221BC}";
+                public const string Author = "{9FE5AFB6-78E6-4DCA-8E79-B5DCE1BBCE4A}";
+                public const string Image = "{34DE20D7-8C2A-46A9-B1D7-895CDFCD816E}";
+                public const string Link = "{3D01F6D1-B9C6-4E6E-92C8-5CF034FE2588}";
+            }
+        }
+
+        public static class Blogger
+        {
+            public const string TemplateId = "{C7DCE390-4381-4EE9-AC68-29874652CFB1}";
+
+            public static class Fields
+            {
+                public const string Name = "{5A230DDE-DEF8-4F5D-A522-0D237B922523}";
+                public const string Text = "{7C7F7312-1B5F-4BE0-B526-1EF781A64F80}";
+                public const string Image = "{3F77A3EA-F323-4014-A570-3F1FB8375035}";
+            }
+        }
+
+        public static class ListArtical
+        {
+            public const string TemplateId = "{A9A0FA71-2180-4B68-A49F-C0B89A032F16}";
+
+            public static class Fields
+            {
+                public const string Name = "{71C34CD2-74A8-4A85-8758-A276756E7B41}";
+                public const string Articals = "{F96FEEC3-0EC7-4734-8D9E-5D7922842AB2}";
+            }
+        }
+
+        public static class ListEvent
+        {
+            public const string TemplateId = "{02E52F90-E98D-489D-82BD-EA6D0B08F1DE}";
+
+            public static class Fields
+            {
+                public const string Name = "{41FBA764-28CE-44CC-80F8-48E095F7B7EC}";
+                public const string Events = "{B0E999AC-86C1-437C-ADEA-EE0E54ED620A}";
+            }
+        }
+
+        public static class ListBlogger
+        {
+            public const string TemplateId = "{5BF3D0A4-53F4-46A1-9B35-BBCBE1F1A10D}";
+
+            public static class Fields
+            {
+                public const string Name = "{0D9AE236-AFD3-4CC4-A18F-34EDE6169120}";
+                public const string Bloggers = "{409BB3C9-58DD-4CA6-9258-A5C67644D8D3}";
             }
         }
     }

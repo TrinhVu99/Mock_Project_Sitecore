@@ -1,0 +1,26 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.SlidebarModel
+
+<section class="text-center" id="lottery-section">
+    <div class="lottery">
+        <a class="img-responsive" href="#" target="_blank">
+            <div class="swiper-container lottery-container" autoplaytime="5000">
+                <div class="swiper-wrapper">
+                    @foreach (var lottery in Model.Images)
+                    {
+                        <div class="swiper-slide">
+                            @Html.Glass().RenderImage(lottery, x => x.Image, isEditable: true)
+                            @*<img class="img-lg" src="https://i.pinimg.com/originals/79/a9/76/79a976011fd5229bf96ad0b703b1113a.jpg" alt="Lottery image">
+                            <img class="img-md" src="images/lottery-desktop.png" alt="Lottery image">
+                            <img class="img-xs" src="images/lottery-desktop.png" alt="Lottery image">*@
+                        </div>
+                    }
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </a>
+    </div>
+</section>

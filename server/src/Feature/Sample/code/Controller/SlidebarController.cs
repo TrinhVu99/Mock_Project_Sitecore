@@ -17,7 +17,11 @@ namespace MockProject.Feature.Sample.Controller
             return View("~/Views/MockProject/Sample/Slidebars/BannerSlidebar.cshtml", model);
         }
 
-
+        public ActionResult GetLotterySlidebar()
+        {
+            var model = MvcContext.GetDataSourceItem<SlidebarModel>();
+            return View("~/Views/MockProject/Sample/Slidebars/LotterySlidebar.cshtml", model);
+        }
     }
 }
 
