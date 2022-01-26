@@ -17,7 +17,7 @@
                     </a>
                 </div>
                 <div class="card-body">
-                    <div class="title-carrot">@Html.Glass().Editable(video, x => x.Category)</div>
+                    <div class="title-carrot">@Html.Glass().Editable(video.Category, x => x.Name)</div>
                     <a class="card-text" href="#" style="overflow-wrap: break-word;">@Html.Glass().Editable(video, x => x.TitleEntity)</a>
                 </div>
             </article>

@@ -16,5 +16,8 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
         
         [SitecoreField(Templates.Category.Fields.Description)]
         public virtual string Description { get; set; }
+
+        [SitecoreField(Templates.Category.Fields.Link)]
+        public virtual Glass.Mapper.Sc.Fields.Link Link { get; set; }
     }
 }

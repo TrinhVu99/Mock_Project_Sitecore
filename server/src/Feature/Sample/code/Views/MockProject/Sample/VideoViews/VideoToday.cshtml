@@ -20,7 +20,7 @@
                         </a>
                     </div>
                     <div class="card-body">
-                        <div class="title-carrot">@Html.Glass().Editable(video, x => x.Category)</div>
+                        <div class="title-carrot">@Html.Glass().Editable(video.Category, x => x.Name)</div>
                         <a class="card-text mb-0" href="#" style="overflow-wrap: break-word;">@Html.Glass().Editable(video, x => x.TitleEntity)</a>
                         <ul class="social-list-items">
                             <li class="item"><i class="icon-heart"></i>@Html.Glass().Editable(video, x => x.Views)</li>
@@ -45,7 +45,7 @@
                                 </a>
                             </div>
                             <div class="card-body">
-                                <div class="title-carrot">@Html.Glass().Editable(video, x => x.Category)</div><a class="card-text mb-0" href="#" style="overflow-wrap: break-word;">@Html.Glass().Editable(video, x => x.TitleEntity)</a>
+                                <div class="title-carrot">@Html.Glass().Editable(video.Category, x => x.Name)</div><a class="card-text mb-0" href="#" style="overflow-wrap: break-word;">@Html.Glass().Editable(video, x => x.TitleEntity)</a>
                                 <ul class="social-list-items">
                                     <li class="item"><i class="icon-heart"></i>@Html.Glass().Editable(video, x => x.Views)</li>
                                     <li class="item"><i class="icon-eye"></i>@Html.Glass().Editable(video, x => x.Likes)</li>

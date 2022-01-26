@@ -15,7 +15,7 @@
                         @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
                     }
                     <div class="round-box">
-                        <a class="title-carrot" href="#">@Html.Glass().Editable(item, x => x.Category)</a>
+                        <a class="title-carrot" href="#">@Html.Glass().Editable(item.Category, x => x.Name)</a>
                         @using (Html.Glass().BeginRenderLink(item, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))
                         {
                             @Html.Glass().Editable(item, x => x.TitleEntity);

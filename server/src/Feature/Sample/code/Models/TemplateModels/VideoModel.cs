@@ -20,7 +20,7 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
         public virtual string TitleEntity { get; set; }
 
         [SitecoreField(Templates.Video.Fields.Category)]
-        public virtual string Category { get; set; }
+        public virtual CategoryModel Category { get; set; }
 
         [SitecoreField(Templates.Video.Fields.Views)]
         public virtual int Views { get; set; }

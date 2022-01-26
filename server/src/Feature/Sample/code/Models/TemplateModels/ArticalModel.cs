@@ -26,7 +26,7 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
         public virtual string TitleEntity { get; set; }
 
         [SitecoreField(Templates.Artical.Fields.Category)]
-        public virtual string Category { get; set; }
+        public virtual CategoryModel Category { get; set; }
 
         [SitecoreField(Templates.Artical.Fields.Views)]
         public virtual int Views { get; set; }
@@ -48,5 +48,6 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
 
         [SitecoreField(Templates.Artical.Fields.Link)]
         public virtual Glass.Mapper.Sc.Fields.Link Link { get; set; }
+
     }
 }

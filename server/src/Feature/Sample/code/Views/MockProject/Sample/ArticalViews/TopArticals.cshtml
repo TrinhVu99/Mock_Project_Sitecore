@@ -17,7 +17,7 @@
                         }
                         <div class="round-box">
                             <div class="title-carrot">
-                                @Html.Glass().Editable(artical, x => x.Category)
+                                @Html.Glass().Editable(artical.Category, x => x.Name)
                                 <i class="icon-eye"></i>@Html.Glass().Editable(artical, x => x.Views)
                             </div>
                             @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))
@@ -44,7 +44,7 @@
                                 }
                                 <div class="round-box">
                                     <div class="title-carrot">
-                                        @Html.Glass().Editable(artical, x => x.Category)
+                                        @Html.Glass().Editable(artical.Category, x => x.Name)
                                         <i class="icon-eye"></i>@Html.Glass().Editable(artical, x => x.Views)
                                     </div>
                                     @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))

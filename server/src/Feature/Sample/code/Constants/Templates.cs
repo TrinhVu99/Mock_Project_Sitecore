@@ -57,6 +57,7 @@
             {
                 public const string Name = "{09DD80D4-BA7B-4DF2-8951-AAEF35DB500B}";
                 public const string Description = "{EE96D22E-9E02-493E-B305-234400A59AC9}";
+                public const string Link = "{068F4D04-B224-49FE-9632-48FE966A8C4D}";
             }
         }
 

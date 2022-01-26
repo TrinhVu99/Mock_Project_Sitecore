@@ -151,6 +151,7 @@
     <Content Include="Views\MockProject\Sample\EventViews\AllEvents.cshtml" />
     <Content Include="Views\MockProject\Sample\VideoViews\VideoToday.cshtml" />
     <Content Include="Views\MockProject\Sample\VideoViews\Podcast.cshtml" />
+    <Content Include="Views\MockProject\Sample\ArticalViews\DetailArtical\DetailArticle.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />
