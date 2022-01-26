@@ -109,7 +109,7 @@
                 public const string Likes = "{D8FDB099-D9DB-476E-886E-FEA43A2221BC}";
                 public const string Author = "{9FE5AFB6-78E6-4DCA-8E79-B5DCE1BBCE4A}";
                 public const string Image = "{34DE20D7-8C2A-46A9-B1D7-895CDFCD816E}";
-                public const string Link = "{3D01F6D1-B9C6-4E6E-92C8-5CF034FE2588}";
+                public const string Link = "{99DD331D-BC00-46CE-8594-BA2D625521CB}";
             }
         }
 
@@ -130,7 +130,7 @@
                 public const string Likes = "{D8FDB099-D9DB-476E-886E-FEA43A2221BC}";
                 public const string Author = "{9FE5AFB6-78E6-4DCA-8E79-B5DCE1BBCE4A}";
                 public const string Image = "{34DE20D7-8C2A-46A9-B1D7-895CDFCD816E}";
-                public const string Link = "{3D01F6D1-B9C6-4E6E-92C8-5CF034FE2588}";
+                public const string Link = "{99DD331D-BC00-46CE-8594-BA2D625521CB}";
             }
         }
 
@@ -245,6 +245,37 @@
                 public const string Name = "{D8118E73-7811-4836-AF90-48D5DBE15B80}";
                 public const string SubName = "{5D41D43A-3FFF-422D-98BA-D94A1B1A1083}";
                 public const string Slogan = "{AF4E6479-318F-4256-9B51-3D9B5C47D4ED}";
+            }
+        }
+
+        public static class Video
+        {
+            public const string TemplateId = "{0E012C93-02B2-47AF-AF73-91C0032325CA}";
+
+            public static class Fields
+            {
+                public const string LinkVideo = "{B22B1948-DFD7-4F4E-895A-E03E37F385C2}";
+                public const string TitleEntity = "{C9F6FC5D-1B70-4C47-92D5-DECB328BBCE6}";
+                public const string Category = "{9C36BA68-31EB-428E-B3A9-39A43E922995}";
+                public const string Views = "{36FA86AB-0664-47CE-8B51-E30AE1E2728F}";
+                public const string Tags = "{698E3A92-2911-4F54-A259-47201E64A59F}";
+                public const string Content = "{39FD7253-AC88-414F-9A6E-03875C06DCEE}";
+                public const string Likes = "{D8FDB099-D9DB-476E-886E-FEA43A2221BC}";
+                public const string Author = "{9FE5AFB6-78E6-4DCA-8E79-B5DCE1BBCE4A}";
+                public const string Image = "{34DE20D7-8C2A-46A9-B1D7-895CDFCD816E}";
+                public const string Link = "{99DD331D-BC00-46CE-8594-BA2D625521CB}";
+
+            }
+        }
+
+        public static class ListVideo
+        {
+            public const string TemplateId = "{4D5DE12F-2362-4A18-B4F8-7639B976E748}";
+
+            public static class Fields
+            {
+                public const string Name = "{94A5D325-F393-4A06-8F45-9B6446F80D36}";
+                public const string Videos = "{B26D4673-BB5C-4DEB-8642-147A536AA451}";
             }
         }
     }

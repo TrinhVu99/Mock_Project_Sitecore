@@ -94,6 +94,7 @@
     <Compile Include="Controller\HeaderController.cs" />
     <Compile Include="Controller\AdvertismentController.cs" />
     <Compile Include="Controller\TagController.cs" />
+    <Compile Include="Controller\VideoController.cs" />
     <Compile Include="Models\RenderingModels\AdvertismentRenderingModel.cs" />
     <Compile Include="Models\TemplateModels\BloggerModel.cs" />
     <Compile Include="Models\TemplateModels\EventModel.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Models\TemplateModels\MainModel\ListModel\ListBloggerModel.cs" />
     <Compile Include="Models\TemplateModels\MainModel\ListModel\ListEventModel.cs" />
     <Compile Include="Models\TemplateModels\MainModel\ListModel\ListArticalModel.cs" />
+    <Compile Include="Models\TemplateModels\MainModel\ListModel\ListVideoModel.cs" />
     <Compile Include="Models\TemplateModels\SectionModel.cs" />
     <Compile Include="Models\TemplateModels\SlidebarModel.cs" />
     <Compile Include="Models\TemplateModels\ImageBaseModel.cs" />
@@ -115,6 +117,7 @@
     <Compile Include="Models\TemplateModels\HeaderModel.cs" />
     <Compile Include="Models\TemplateModels\Tag\ListTagsModel.cs" />
     <Compile Include="Models\TemplateModels\Tag\TagModel.cs" />
+    <Compile Include="Models\TemplateModels\VideoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +149,8 @@
     <Content Include="Views\MockProject\Sample\Tag\Tag.cshtml" />
     <Content Include="Views\MockProject\Sample\EventViews\UpcomingEvents.cshtml" />
     <Content Include="Views\MockProject\Sample\EventViews\AllEvents.cshtml" />
+    <Content Include="Views\MockProject\Sample\VideoViews\VideoToday.cshtml" />
+    <Content Include="Views\MockProject\Sample\VideoViews\Podcast.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />
