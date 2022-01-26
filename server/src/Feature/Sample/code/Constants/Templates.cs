@@ -68,6 +68,7 @@
             {
                 public const string Name = "{7EEAF24E-F2EC-4B7E-AB77-1E629ACB58BE}";
                 public const string SectionComponents = "{C7B8ADD5-8A07-4EA1-B80C-EE907A5C810E}";
+                public const string SubName = "{94DDF215-7483-40EC-90F7-203F5FCFBA21}";
             }
         }
 

@@ -10,10 +10,16 @@
         <div class="post">
             <article class="post-overlap-title">
                 <div class="img-with-box">
-                    <a class="img bg-overlay img-to-bg" href="#" title="Image">@Html.Glass().RenderImage(item, x => x.Image, isEditable: true)</a>
+                    @using (Html.Glass().BeginRenderLink(item, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                    {
+                        @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
+                    }
                     <div class="round-box">
                         <a class="title-carrot" href="#">@Html.Glass().Editable(item, x => x.Category)</a>
-                        <a class="round-box-text mb-0" href="@item.Link">@Html.Glass().Editable(item, x => x.TitleEntity)</a>
+                        @using (Html.Glass().BeginRenderLink(item, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))
+                        {
+                            @Html.Glass().Editable(item, x => x.TitleEntity);
+                        }
                     </div>
                 </div>
                 <ul class="social-list-items">

@@ -4,20 +4,23 @@
 @model MockProject.Feature.Sample.Models.TemplateModels.ListArticalModel
 
 <section class="day-blog">
-    <h2 class="heading text-uppercase">@Html.Glass().Editable(Model, x=>x.Name)</h2>
+    <h2 class="heading text-uppercase">@Html.Glass().Editable(Model, x => x.Name)</h2>
     <div class="blog-item-group">
         @foreach (var artical in Model.Articals)
         {
             <article class="post-left-img card flex-row border-0">
                 <div class="card-img-left">
-                    <a class="img bg-overlay img-to-bg" href="@artical.Link" title="Image">
+                    @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                    {
                         @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
-                        @*<img src="https://danviet.mediacdn.vn/upload/1-2020/images/2020-01-18/15965430_1300583570002895_5607233112345429670_n-1579349181-width960height640.jpg" alt="Blog of the day img">*@
-                    </a>
+                    }
                 </div>
                 <div class="card-body">
                     <a class="title-carrot" href="#">@Html.Glass().Editable(artical, x => x.Category)</a>
-                    <a class="card-text" href="@artical.Link">@Html.Glass().Editable(artical, x => x.TitleEntity)</a>
+                    @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "card-text" }, isEditable: true))
+                    {
+                        @Html.Glass().Editable(artical, x => x.TitleEntity);
+                    }
                 </div>
             </article>
         }

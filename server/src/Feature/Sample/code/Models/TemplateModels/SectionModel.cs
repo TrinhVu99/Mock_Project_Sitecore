@@ -17,5 +17,8 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
 
         [SitecoreField(Templates.Section.Fields.SectionComponents)]
         public virtual IEnumerable<object> SectionComponents { get; set; }
+
+        [SitecoreField(Templates.Section.Fields.SubName)]
+        public virtual string SubName { get; set; }
     }
 }

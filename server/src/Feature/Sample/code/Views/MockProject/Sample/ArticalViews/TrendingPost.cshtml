@@ -10,14 +10,17 @@
         {
             <article class="post-left-img card flex-row border-0">
                 <div class="card-img-left">
-                    <a class="img bg-overlay img-to-bg" href="@artical.Link" title="Image">
+                    @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                    {
                         @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
-                        @*<img src="https://icdn.dantri.com.vn/thumb_w/640/2016/kieu-trinh2-1482859504769.jpg" alt="Trending post img">*@
-                    </a>
+                    }
                 </div>
                 <div class="card-body">
                     <a class="title-carrot" href="#">@Html.Glass().Editable(artical, x => x.Category)</a>
-                    <a class="card-text" href="@artical.Link">@Html.Glass().Editable(artical, x => x.TitleEntity)</a>
+                    @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "card-text" }, isEditable: true))
+                    {
+                        @Html.Glass().Editable(artical, x => x.TitleEntity);
+                    }
                 </div>
             </article>
         }

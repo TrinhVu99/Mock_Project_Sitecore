@@ -7,21 +7,23 @@
 <div class="row">
     <div class="col-lg-8">
         <div class="post highlight-post">
-            @foreach(var artical in Model.Articals.Take(1))
+            @foreach (var artical in Model.Articals.Take(1))
             {
                 <article class="post-overlap-title">
                     <div class="img-with-box">
-                        <a class="img bg-overlay img-to-bg" href="#" title="Image">
+                        @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                        {
                             @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
-                            @*images/post-light.png*@
-                            @*<img src="https://zcc.vn/wp-content/uploads/2020/12/zcc.vn-top-5-dia-diem-chup-anh-ao-dai-dep-tai-tp-ho-chi-minh-15826440-241072202986970-9026333708629482702-n.jpg" alt="post img">*@
-                        </a>
+                        }
                         <div class="round-box">
                             <div class="title-carrot">
                                 @Html.Glass().Editable(artical, x => x.Category)
                                 <i class="icon-eye"></i>@Html.Glass().Editable(artical, x => x.Views)
                             </div>
-                            <a class="round-box-text mb-0" href="#">@Html.Glass().Editable(artical, x => x.TitleEntity)</a>
+                            @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))
+                            {
+                                @Html.Glass().Editable(artical, x => x.TitleEntity);
+                            }
                         </div>
                     </div>
                 </article>
@@ -36,16 +38,19 @@
                     <div class="post">
                         <article class="post-overlap-title">
                             <div class="img-with-box">
-                                <a class="img bg-overlay img-to-bg" href="#" title="Image">
+                                @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                                {
                                     @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
-                                    @*<img src="https://bizweb.dktcdn.net/100/360/145/files/chup-anh-tet-dep-namnguyenstudio-2.jpg?v=1578372176201" alt="post img">*@
-                                </a>
+                                }
                                 <div class="round-box">
                                     <div class="title-carrot">
                                         @Html.Glass().Editable(artical, x => x.Category)
                                         <i class="icon-eye"></i>@Html.Glass().Editable(artical, x => x.Views)
                                     </div>
-                                    <a class="round-box-text mb-0" href="#">@Html.Glass().Editable(artical, x => x.TitleEntity)</a>
+                                    @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))
+                                    {
+                                        @Html.Glass().Editable(artical, x => x.TitleEntity);
+                                    }
                                 </div>
                             </div>
                         </article>
