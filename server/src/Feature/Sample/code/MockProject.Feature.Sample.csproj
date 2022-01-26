@@ -142,6 +142,7 @@
     <Content Include="Views\MockProject\Sample\FooterViews\NavigationContentAboutTerm.cshtml" />
     <Content Include="Views\MockProject\Sample\FooterViews\NavigationSocial.cshtml" />
     <Content Include="Views\MockProject\Sample\FooterViews\Navigation.cshtml" />
+    <Content Include="Views\MockProject\Sample\Tag\Tag.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />
