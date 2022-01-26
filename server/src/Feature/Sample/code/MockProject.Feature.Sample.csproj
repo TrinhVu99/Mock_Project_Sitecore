@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\Templates.cs" />
+    <Compile Include="Controller\EventController.cs" />
     <Compile Include="Controller\CategoryController.cs" />
     <Compile Include="Controller\ArticalController.cs" />
     <Compile Include="Controller\NavigationFooterController.cs" />
@@ -143,6 +144,8 @@
     <Content Include="Views\MockProject\Sample\FooterViews\NavigationSocial.cshtml" />
     <Content Include="Views\MockProject\Sample\FooterViews\Navigation.cshtml" />
     <Content Include="Views\MockProject\Sample\Tag\Tag.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventViews\UpcomingEvents.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventViews\AllEvents.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />
