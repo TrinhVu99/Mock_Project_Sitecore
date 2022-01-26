@@ -21,8 +21,8 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
         [SitecoreField(Templates.Event.Fields.Location)]
         public virtual string Location { get; set; }
 
-        [SitecoreField(Templates.Event.Fields.Title)]
-        public virtual string Title { get; set; }
+        [SitecoreField(Templates.Event.Fields.TitleEntity)]
+        public virtual string TitleEntity { get; set; }
 
         [SitecoreField(Templates.Event.Fields.Category)]
         public virtual string Category { get; set; }

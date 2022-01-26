@@ -115,6 +115,7 @@
     <Compile Include="Models\TemplateModels\Tag\ListTagsModel.cs" />
     <Compile Include="Models\TemplateModels\Tag\TagModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\MockProject\Sample\Test\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\MockProject.Feature.Sample.config" />

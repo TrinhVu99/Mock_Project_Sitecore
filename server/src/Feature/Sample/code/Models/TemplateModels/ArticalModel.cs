@@ -22,8 +22,8 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
         [SitecoreField(Templates.Artical.Fields.Images)]
         public virtual IEnumerable<ImageBaseModel> Images { get; set; }
 
-        [SitecoreField(Templates.Artical.Fields.Title)]
-        public virtual string Title { get; set; }
+        [SitecoreField(Templates.Artical.Fields.TitleEntity)]
+        public virtual string TitleEntity { get; set; }
 
         [SitecoreField(Templates.Artical.Fields.Category)]
         public virtual string Category { get; set; }
