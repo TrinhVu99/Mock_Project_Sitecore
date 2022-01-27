@@ -112,6 +112,8 @@
                 public const string Author = "{9FE5AFB6-78E6-4DCA-8E79-B5DCE1BBCE4A}";
                 public const string Image = "{34DE20D7-8C2A-46A9-B1D7-895CDFCD816E}";
                 public const string Link = "{99DD331D-BC00-46CE-8594-BA2D625521CB}";
+                public const string AuthorDescription = "{880E35FE-8A22-4562-8D42-3CBC1CECEAFF}";
+                public const string AuthorImage = "{65727955-8393-492E-9127-F8FBC0F81A87}";
             }
         }
 
