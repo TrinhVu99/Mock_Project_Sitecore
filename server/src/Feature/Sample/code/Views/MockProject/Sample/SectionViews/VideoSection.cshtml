@@ -1,0 +1,23 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.SectionModel
+
+<section class="video-section">
+    <div class="container animated">
+        <div class="row">
+            <div class="col-md">
+                <div class="row">
+
+                    <div class="col-md-8 col-lg-9">
+                        @Html.Sitecore().Placeholder("video-today")
+                    </div>
+                    <div class="col-md-4 col-lg-3">
+                        @Html.Sitecore().Placeholder("video-podcast")
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input id="VideoDetailDatasourceId" name="VideoDetailDatasourceId" type="hidden" value="{441FDC02-B2B7-4E85-8616-36CD28861827}">
+    </div>
+</section>

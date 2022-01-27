@@ -1,0 +1,34 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.SlidebarModel
+
+<div class="hero-banner">
+    <div class="swiper-container banner-carousel" autoplaytime="5000">
+        <div class="swiper-wrapper">
+            @foreach (var image in Model.Images)
+            {
+                if (image.LinkYoutube != "")
+                {
+                    <div class="swiper-slide item video-item" video-url="@image.LinkYoutube">
+                        <a class="img bg-overlay img-to-bg" href="#" title="Image">
+                            @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
+                            <div class="video-overlay-bg"><i class="icon-play-button"></i></div>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="swiper-slide item bg-overlay">
+                        @using (Html.Glass().BeginRenderLink(image, x => x.Link, new { @class = "img-to-bg" }, isEditable: true))
+                        {
+                                @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
+                        }
+                    </div>
+                }
+            }
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>

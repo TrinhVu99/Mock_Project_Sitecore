@@ -7,15 +7,15 @@
 <html class="no-js">
 <head>
 
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <title>Rabbit</title>
-        <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
-        <style></style>
-        <link rel="stylesheet" href="/static/styles/vendor.css">
-        <link rel="stylesheet" href="/static/styles/main.css">
-        <script src="/static/scripts/vendor/modernizr.js"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Rabbit</title>
+    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+    <style></style>
+    <link rel="stylesheet" href="/static/styles/vendor.css">
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <script src="/static/scripts/vendor/modernizr.js"></script>
 
 </head>
 <body>
@@ -23,15 +23,62 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
     <div class="wrapper-container">
         @Html.Sitecore().Placeholder("header")
-        @Html.Sitecore().Placeholder("main")
-        @Html.Sitecore().Placeholder("footer")
+        <div class="wrapper">
+            <div class="main-content">
+                @Html.Sitecore().Placeholder("main")
+                <div class="lightbox-wrapper lightbox-video">
+                    <div class="close"></div>
+                    <div class="lightbox">
+                        <div class="iframe-responsive-wrapper">
+                            <div class="loader"></div>
+                        </div>
+                        <div class="lightbox-content niceScroll">
+                            <a class="title-carrot" href="#">bucket list</a>
+                            <h3>JS Usage: call lightbox.openLightbox('video') to open lightbox</h3>
+                            <div class="profile">
+                                <div class="pic" style="background-image:url(images/photo-day-1.png)"><img src="images/photo-day-1.png"></div>
+                                <div class="info">
+                                    <p>Published 9 months ago</p>
+                                    <p>By <span>span Rabbit Today Staff</span></p>
+                                </div>
+                            </div>
+                            <div class="reaction red">
+                                <div class="reaction-view"><span class="icon-eye"></span><span></span></div>
+                                <div class="reaction-heart"><span class="icon-heart-bold"></span><span class="heart-number"></span></div>
+                            </div>
+                            <div class="brief">พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้ พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้ พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้ พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้ พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lightbox-wrapper lightbox-youtube-video">
+                    <div class="close"></div>
+                    <div class="lightbox">
+                        <div class="loader"></div>
+                        <div class="iframe-responsive-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            @Html.Sitecore().Placeholder("footer-signup")
+            @Html.Sitecore().Placeholder("footer")
+        </footer>
         @Html.Sitecore().Placeholder("footer-payment-section")
         @Html.Sitecore().Placeholder("tags-section")
     </div>
-        <div class="lightbox-overlay"></div><a id="back-to-top" href="#" title="Back to top">
-            <div class="content"><i class="icon-arrow-down"></i><span class="bt-txt">Top</span></div>
-        </a>
-        <script src="/static/scripts/vendor.js"></script>
-        <script src="/static/static/scripts/main.js"></script>
+    <div class="lightbox-overlay"></div>
+    <a id="back-to-top" href="#" title="Back to top">
+        <div class="content">
+            <i class="icon-arrow-down"></i>
+            <span class="bt-txt">Top</span>
+        </div>
+    </a>
+
+    <script>
+        !function (e, a, t, n, g, c) { e.GoogleAnalyticsObject = n, e.ga || (e.ga = function () { (e.ga.q = e.ga.q || []).push(arguments) }), e.ga.l = +new Date, g = a.createElement(t), c = a.getElementsByTagName(t)[0], g.src = "https://www.google-analytics.com/analytics.js", c.parentNode.insertBefore(g, c) }(window, document, "script", "ga"), ga("create", "UA-XXXXX-X"), ga("send", "pageview")
+    </script>
+    <script src="/static/scripts/vendor.js"></script>
+    <script src="/static/scripts/main.js"></script>
 </body>
 </html>

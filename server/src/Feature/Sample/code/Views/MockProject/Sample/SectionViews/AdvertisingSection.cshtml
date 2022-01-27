@@ -1,0 +1,12 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.SectionModel
+
+<section class="advertising-section">
+    <div class="container">
+        <div class="swiper-container advertising advertising-carousel text-center" autoplaytime="5000">
+            @Html.Sitecore().Placeholder("horizontal-slidebar")
+        </div>
+    </div>
+</section>

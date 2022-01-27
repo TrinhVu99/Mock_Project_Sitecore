@@ -1,0 +1,60 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@using System.Linq
+@model MockProject.Feature.Sample.Models.TemplateModels.MainModel.ListModel.ListVideoModel
+
+<div class="section-heading">
+    <h1 class="heading">video<span class="txt-italic">today</span></h1><a class="view-all" href="#">View all</a>
+</div>
+<div class="row">
+    <div class="col-lg-8">
+        @foreach (var video in Model.Videos.Take(1))
+        {
+            <div class="video video-highlight" video-id="c4117a97-0d64-496b-a6e5-e9d7cb45811c">
+                <article class="post-left-img card flex-row border-0">
+                    <div class="card-img-left">
+                        <a class="img bg-overlay img-to-bg" href="#" title="Image" data-src="//clips.vorwaerts-gmbh.de/VfE_html5.mp3" style="background-image: url(&quot;images/video-1.png&quot;);">
+                            @Html.Glass().RenderImage(video, x => x.Image, isEditable: true)
+                            <div class="video-overlay-bg"><i class="icon-play-button"></i></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="title-carrot">@Html.Glass().Editable(video.Category, x => x.Name)</div>
+                        <a class="card-text mb-0" href="#" style="overflow-wrap: break-word;">@Html.Glass().Editable(video, x => x.TitleEntity)</a>
+                        <ul class="social-list-items">
+                            <li class="item"><i class="icon-heart"></i>@Html.Glass().Editable(video, x => x.Views)</li>
+                            <li class="item"><i class="icon-eye"></i>@Html.Glass().Editable(video, x => x.Likes)</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        }
+        </div>
+    <div class="col-lg-4">
+        <div class="row">
+            @foreach (var video in Model.Videos.Skip(1))
+            {
+                <div class="col-md col-lg-12">
+                    <div class="video" video-id="c4117a97-0d64-496b-a6e5-e9d7cb45811c">
+                        <article class="post-left-img card flex-row border-0">
+                            <div class="card-img-left">
+                                <a class="img bg-overlay img-to-bg" href="#" title="Image" data-src="//clips.vorwaerts-gmbh.de/VfE_html5.mp3" style="background-image: url(&quot;images/video-2.png&quot;);">
+                                    @Html.Glass().RenderImage(video, x => x.Image, isEditable: true)
+                                    <div class="video-overlay-bg"><i class="icon-play-button"></i></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <div class="title-carrot">@Html.Glass().Editable(video.Category, x => x.Name)</div><a class="card-text mb-0" href="#" style="overflow-wrap: break-word;">@Html.Glass().Editable(video, x => x.TitleEntity)</a>
+                                <ul class="social-list-items">
+                                    <li class="item"><i class="icon-heart"></i>@Html.Glass().Editable(video, x => x.Views)</li>
+                                    <li class="item"><i class="icon-eye"></i>@Html.Glass().Editable(video, x => x.Likes)</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            }
+            </div>
+    </div>
+</div>

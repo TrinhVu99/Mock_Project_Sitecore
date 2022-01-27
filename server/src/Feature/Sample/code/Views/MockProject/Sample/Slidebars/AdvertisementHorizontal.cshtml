@@ -1,0 +1,16 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.SlidebarModel
+
+<div class="swiper-wrapper">
+    @foreach (var image in Model.Images)
+    {
+        <div class="swiper-slide item">
+            <a href="#" target="_blank">
+                @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
+                @*<img src="https://binhminhdigital.com/StoreData/Images/Category/tinsukien/banner-lich-nghi-tet-nham-dan-2022.jpg" alt="Advertising">*@
+            </a>
+        </div>
+    }
+</div>

@@ -1,0 +1,26 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.SectionModel
+
+<section class="section hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 order-md-1">
+                @Html.Sitecore().Placeholder("hero-slidebar")
+            </div>
+            <div class="col-md-4 order-md-3 order-lg-2 col-lg-3 social-post">
+                @Html.Sitecore().Placeholder("trending-post")
+                @Html.Sitecore().Placeholder("blog-of-the-day")
+                
+            </div>
+            <div class="col-md-8 order-md-2 order-lg-3 col-lg-9 latest-posts">
+                @Html.Sitecore().Placeholder("top-articals") 
+            </div>
+            <div class="col-lg-3 order-lg-4 lottery-board d-block d-md-none d-lg-block">
+                @Html.Sitecore().Placeholder("lottery-slidebar")
+                
+            </div>
+        </div>
+    </div>
+</section>

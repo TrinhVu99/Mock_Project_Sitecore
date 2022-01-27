@@ -1,0 +1,20 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.FooterNavigation.NavigationFooterModel
+
+<div class="col-md-6 col-lg-4">
+    <div class="footer-menu-list">
+        <div class="footer-menu-list-title">
+            <p>@Model.Name</p>
+        </div>
+        <div class="footer-menu-list-item">
+            <ul>
+                @foreach (var category in Model.Categories)
+                {
+                    <li class="footer-menu-link"><a href="">@Html.Glass().Editable(category, x => x.Name)</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

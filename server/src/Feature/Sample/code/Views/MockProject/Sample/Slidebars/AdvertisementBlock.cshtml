@@ -1,0 +1,20 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.SlidebarModel
+
+<div class="advertising">
+    <div class="swiper-container advertising-in-col text-center" autoplaytime="5000">
+        <div class="swiper-wrapper">
+            @foreach (var image in Model.Images)
+            {
+                <div class="swiper-slide ad-item">
+                    <a href="#" target="_blank">
+                        @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+    <p class="title">Advertising</p>
+</div>

@@ -47,7 +47,19 @@
     <PackageReference Include="Glass.Mapper.Sc.101.Mvc">
       <Version>5.8.177</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Razor">
+      <Version>3.2.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.WebPages">
+      <Version>3.2.7</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Web.Infrastructure">
+      <Version>1.0.0</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="System.Linq">
+      <Version>4.3.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Sitecore.Kernel, Version=16.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -72,10 +84,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\Templates.cs" />
+    <Compile Include="Controller\EventController.cs" />
+    <Compile Include="Controller\CategoryController.cs" />
+    <Compile Include="Controller\ArticalController.cs" />
+    <Compile Include="Controller\NavigationFooterController.cs" />
+    <Compile Include="Controller\PaymentController.cs" />
+    <Compile Include="Controller\SectionController.cs" />
+    <Compile Include="Controller\SlidebarController.cs" />
+    <Compile Include="Controller\HeaderController.cs" />
     <Compile Include="Controller\AdvertismentController.cs" />
+    <Compile Include="Controller\TagController.cs" />
+    <Compile Include="Controller\VideoController.cs" />
     <Compile Include="Models\RenderingModels\AdvertismentRenderingModel.cs" />
+    <Compile Include="Models\TemplateModels\BloggerModel.cs" />
+    <Compile Include="Models\TemplateModels\EventModel.cs" />
+    <Compile Include="Models\TemplateModels\ArticalModel.cs" />
+    <Compile Include="Models\TemplateModels\FooterNavigation\NavigationFooterModel.cs" />
+    <Compile Include="Models\TemplateModels\FooterNavigation\PaymentModel.cs" />
+    <Compile Include="Models\TemplateModels\FooterNavigation\SignUpModel.cs" />
+    <Compile Include="Models\TemplateModels\FooterNavigation\SocialModel.cs" />
+    <Compile Include="Models\TemplateModels\MainModel\ListModel\ListBloggerModel.cs" />
+    <Compile Include="Models\TemplateModels\MainModel\ListModel\ListEventModel.cs" />
+    <Compile Include="Models\TemplateModels\MainModel\ListModel\ListArticalModel.cs" />
+    <Compile Include="Models\TemplateModels\MainModel\ListModel\ListVideoModel.cs" />
+    <Compile Include="Models\TemplateModels\SectionModel.cs" />
+    <Compile Include="Models\TemplateModels\SlidebarModel.cs" />
+    <Compile Include="Models\TemplateModels\ImageBaseModel.cs" />
     <Compile Include="Models\TemplateModels\AdvertisementModel.cs" />
     <Compile Include="Models\TemplateModels\AdvertisementImage.cs" />
+    <Compile Include="Models\TemplateModels\CategoryModel.cs" />
+    <Compile Include="Models\TemplateModels\NavCategoryModel.cs" />
+    <Compile Include="Models\TemplateModels\HeaderModel.cs" />
+    <Compile Include="Models\TemplateModels\Tag\ListTagsModel.cs" />
+    <Compile Include="Models\TemplateModels\Tag\TagModel.cs" />
+    <Compile Include="Models\TemplateModels\VideoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +125,34 @@
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Views\MockProject\Sample\Advertisement.cshtml" />
     <Content Include="Views\MockProject\Sample\Advertisement2.cshtml" />
+    <Content Include="Views\MockProject\Sample\Header.cshtml" />
+    <Content Include="Views\MockProject\Sample\GetTopNavigationBar.cshtml" />
+    <Content Include="Views\MockProject\Sample\Slidebars\BannerSlidebar.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\HeroSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\AdvertisingSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\BloggerSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\VideoSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\UpcomingSection.cshtml" />
+    <Content Include="Views\MockProject\Sample\ArticalViews\TrendingPost.cshtml" />
+    <Content Include="Views\MockProject\Sample\ArticalViews\BlogOfTheDay.cshtml" />
+    <Content Include="Views\MockProject\Sample\ArticalViews\TopArticals.cshtml" />
+    <Content Include="Views\MockProject\Sample\Slidebars\LotterySlidebar.cshtml" />
+    <Content Include="Views\MockProject\Sample\Slidebars\AdvertisementHorizontal.cshtml" />
+    <Content Include="Views\MockProject\Sample\Slidebars\AdvertisementBlock.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\FooterPayment.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\FooterPaymentContent.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\FooterSignUp.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\NavigationContent.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\NavigationContentAboutTerm.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\NavigationSocial.cshtml" />
+    <Content Include="Views\MockProject\Sample\FooterViews\Navigation.cshtml" />
+    <Content Include="Views\MockProject\Sample\Tag\Tag.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventViews\UpcomingEvents.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventViews\AllEvents.cshtml" />
+    <Content Include="Views\MockProject\Sample\VideoViews\VideoToday.cshtml" />
+    <Content Include="Views\MockProject\Sample\VideoViews\Podcast.cshtml" />
+    <Content Include="Views\MockProject\Sample\ArticalViews\DetailArtical\DetailArticle.cshtml" />
+    <Content Include="Views\MockProject\Sample\VideoViews\ImageView.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />

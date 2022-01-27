@@ -1,0 +1,29 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.ListArticalModel
+
+<section class="trending-post-section">
+    <h2 class="heading text-uppercase">@Html.Glass().Editable(Model, x => x.Name)</h2>
+    <div class="trending-item-group expand-item-wrapper">
+        @foreach (var artical in Model.Articals)
+        {
+            <article class="post-left-img card flex-row border-0">
+                <div class="card-img-left">
+                    @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                    {
+                        @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
+                    }
+                </div>
+                <div class="card-body">
+                    <a class="title-carrot" href="#">@Html.Glass().Editable(artical.Category, x => x.Name)</a>
+                    @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "card-text" }, isEditable: true))
+                    {
+                        @Html.Glass().Editable(artical, x => x.TitleEntity);
+                    }
+                </div>
+            </article>
+        }
+    </div>
+    <div class="more-btn text-center"><a class="show-more active" title="Show more button"> <span>more</span><i class="icon-arrow-down"></i></a><a class="show-less" title="Show less button"><span>less</span><i class="icon-arrow-down"></i></a></div>
+</section>

@@ -1,0 +1,24 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.FooterNavigation.SocialModel
+
+<div class="footer-logo-block">
+    <div class="footer-logo"><a href="">@Html.Glass().RenderImage(Model, x => x.LogoFooter, isEditable: true)</a></div>
+    <div class="social-icon-block social-icon-block-footer">
+        <div class="social-icon-title">
+            <p>FOLLOW US</p>
+        </div>
+        <div class="social-icon-list">
+            @foreach (var item in Model.ListSocial)
+            {
+                <div class="social-icon">
+                    <a href="#">
+                        @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+    <p class="footer-copyright">COPYRIGHTS © 2018. <span class="footer-copyright-span">ALL RIGHTS RESERVED TO RABBIT TODAY </span></p>
+</div>

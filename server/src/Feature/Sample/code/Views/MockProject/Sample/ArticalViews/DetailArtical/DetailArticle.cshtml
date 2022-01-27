@@ -1,0 +1,258 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.ArticalModel
+
+
+<div class="wrapper">
+    <div class="main-content">
+        <section class="detail-section news-detail">
+            <div class="news-detail-title-block">
+                <section class="breadcrumb">
+                    <div class="container">
+                        <ul class="breadcrumb-link-list">
+                            <li class="breadcrumb-link"><a href="\"><span>HOME</span></a></li>
+                            <li class="breadcrumb-link">
+                                @using (Html.Glass().BeginRenderLink(Model.Category, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                                {
+                                    <span>@Html.Glass().Editable(Model.Category,x=>x.Name)</span>
+                                }
+                            </li>
+                            <li class="breadcrumb-link active">
+                                @using (Html.Glass().BeginRenderLink(Model, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                                {
+                                    <span>@Html.Glass().Editable(Model, x => x.Name)</span>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-9">
+                            <a class="title-carrot" href="#">RABBIT CLUB</a>
+                            <div class="news-detail-title">
+                                <h1>เปิดกรุ BALENCIAGA พร้อมไอเท็ม้ามพลาดประจำปี 2018</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 detail-author-col col-lg-9">
+                            <div class="news-detail-author">
+                                <div class="profile">
+                                    <div class="pic" style="background-image:url(images/author-avatar.png)"><img src="images/author-avatar.png"></div>
+                                    <div class="info">
+                                        <p>Published 8 months ago</p>
+                                        <p>By <span>Rabbit Today Staff</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news-detail-share-block flex-end">
+                                <div class="reaction">
+                                    <div class="reaction-view"><span class="icon-eye"></span><span>2,012,399</span></div>
+                                    <div class="reaction-heart"><span class="icon-heart-bold"></span><span class="heart-number">285</span></div>
+                                </div>
+                                <div class="news-detail-share-img"><img src="../images/share-icon.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-image-block"><img src="../images/detail-image.jpg" alt=""></div>
+            <div class="detail-maincontent">
+                <div class="container">
+                    <div class="detail-maincontent-container">
+                        <div class="row detail-maincontent-row">
+                            <div class="col col-md-8 col-lg-9 detail-maincontent-col">
+                                <div class="column-social-block"><a class="column-social-icon" href=""><span class="icon-twitter"></span></a><a class="column-social-icon" href=""><span class="icon-facebook"></span></a><a class="column-social-icon" href=""><span class="icon-mail"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a><a class="column-social-icon is__Line-Share" href=""><span class="icon-line"><span class="path1"></span><span class="path2"></span></span></a></div>
+                                <div class="detail-maincontent-block">
+                                    <div class="detail-maincontent-text">
+                                        <p>หนึ่งในบุคคลผู้สร้างปรากฏการณ์นี้ คือ Cristóbal Balenciaga นักออกแบบจาก Basque ผู้ก่อกำเนิดแบรนด์แฟชั่น สะท้านโลก Balenciaga ซึ่งเริ่มต้นชื่อเสียงในฐานะนักออก แบบแฟชั่นชั้นสูงหัวก้าวหน้าจากการทำงาน ออกแบบ เครื่องแต่งกายสตรีที่ผสมผสานทั้งความคิดสร้างสรรค์ที่ล้ำยุคเข้ากับความประณีตสุดเฉียบที่ไม่ยอม ให้ขาดตก บกพร่องในเรื่องฝีมือและคุณภาพจนได้รับการนับถือว่าเป็น “นักออกแบบชั้นครู” โดยคำนิยมที่ เชื่อถือได้จาก Christain Dior ผลงานออกแบบแฟชั่นในทุก ยุคสมัยของ Balenciaga นั้นมีอิทธิพลอย่าง สูงต่อทิศทางของวงการแฟชั่น ชั้นสูงของโลก เริ่มตั้งแต่เมื่อเขาเปิดร้านหรูที่ San Sebastián ประเทศสเปนในปี 1918 เป็นต้นมา และ ขยาย สาขาไปตามเมืองใหญ่ต่างๆ ทั่วประเทศ โดยมีลูกค้า เป็นเหล่าราชนิกูลและไฮโซมาอุดหนุนให้เขาฟูเพื่องทั้งเงิน และชื่อเสียง จนกระทั่งเกิดสงครามกลางเมืองขึ้นในสเปน</p><img class="detail-news-maincontent-img" src="../images/detail-maincontent-image.jpg" alt="">
+                                        <p>สารของบรรณาธิการแฟชั่นของนิตยสารชั้นนำ และส่งผลกระทบอย่างยิ่งใหญ่เป็นปรากฏการณ์ลูกโซ่ที่ไม่ได้ห ยุดแค่วงการแฟชั่น แต่อาจกระทบเลยเถิด ไปถึงอุตสาหกรรมอาหาร และรูปแบบการทำเกษตรกรรม หรือการเลี้ยงสัตว์เลยทีเดียว จึงเห็นได้ว่า นักออกแบบ แฟชั่นตัวเล็กๆ ในห้องทำงานที่เต็ม ไปด้วยกระดาษ ดินสอสี หุ่นโชว์เสื้อ และผ้าตัวอย่างมากมาย เป็นบุคคลสำคัญ ที่มีอิทธิพลต่อโลกอย่างยิ่งใหญ่และลึกล้ำ</p>
+                                        <blockquote>หนึ่งในบุคคลผู้สร้างปรากฏการณ์นี้ คือ Cristóbal Balenciaga นักออกแบบจาก Basque ผู้ก่อกำเนิดแบรนด์แฟชั่นสะท้านโลก Balenciaga ซึ่งเริ่มต้นชื่อเสียงใน ฐานะนักออกแบบแฟชั่นชั้นสูงหัว ก้าวหน้าจากการทำงาน</blockquote>
+                                        <p>หรูที่ San Sebastián ประเทศสเปนในปี 1918 เป็นต้นมา และขยายสาขาไปตามเมืองใหญ่ต่างๆทั่ว ประเทศ โดยมี ลูกค้าเป็นเหล่าราชนิกูลและไฮโซ มาอุดหนุนให้เขาฟูเพื่อง ทั้งเงินและชื่อเสียง จนกระทั่ง </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tags-section tags-section-detail-page">
+                        <div class="tag-title-detail-page">
+                            <p>TAGS:</p>
+                        </div>
+                        <div class="tag-list"><span class="tag-item tag-item-detail-page">WORLD CUP 2018</span><span class="tag-item tag-item-detail-page">HUEWEI</span><span class="tag-item tag-item-detail-page">NASA </span></div>
+                    </div>
+                </div>
+                <section class="advertising-section">
+                    <div class="container">
+                        <div class="swiper-container advertising advertising-carousel text-center" autoplaytime="5000">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide item"><a href="#" target="_blank"><img src="images/advertise-type-1.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide item"><a href="#" target="_blank"><img src="images/advertise-type-1.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide item"><a href="#" target="_blank"><img src="images/advertise-type-1.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide item"><a href="#" target="_blank"><img src="images/advertise-type-1.jpg" alt="Advertising"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <hr class="author-line open-line">
+                        </div>
+                        <div class="col-12 col-md-9 author-section-detail-page-col">
+                            <div class="author-section-detail-page">
+                                <div class="author-title-detail-page">
+                                    <p>AUTHOR:</p>
+                                </div>
+                                <div class="author-section-name-detail-page">
+                                    <img src="../images/author-avatar.png" alt="">
+                                    <div class="author-section-name-text"> <span>Rabbit Today Staff</span></div>
+                                </div>
+                                <div class="author-section-description"><span>นักเขียน และนักพิสูจน์อักษร สำนักข่าว Rabbit Today  ้ชื่นชอบแฟชั่นและความงาม เวลาว่างของเขาจะหมดไป กับการเสิร์ช Youtube แฟชั่นวีค และติดตามเทรนด์ใหม่ๆ</span></div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <hr class="author-line close-line">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-page-advertising-type2-section">
+                    <div class="advertising">
+                        <div class="swiper-container advertising-in-col text-center" autoplaytime="5000">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide ad-item"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide ad-item"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide ad-item"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide ad-item"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                            </div>
+                        </div>
+                        <p class="title">Advertising</p>
+                    </div>
+                </div>
+                <div class="detail-page-may-like-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-lg-9">
+                                <div class="category-block-title may-like-title">
+                                    <p>YOU MAY LIKE</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <div class="may-like-category">
+                                            <article class="post-overlap-title">
+                                                <div class="img-with-box">
+                                                    <a class="img bg-overlay img-to-bg" href="#" title="Image"><img src="images/post-1.png" alt="post img"></a>
+                                                    <div class="round-box">
+                                                        <a class="title-carrot" href="#">take a ride</a><a class="round-box-text mb-0" href="#">เทรนมาแรง ออเจ้า กับชุดไทย</a>
+                                                    </div>
+                                                </div>
+                                                <ul class="social-list-items">
+                                                    <li class="item"><i class="icon-heart"></i>285</li>
+                                                    <li class="item"><i class="icon-eye"></i>285342343</li>
+                                                </ul>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="may-like-category">
+                                            <article class="post-overlap-title">
+                                                <div class="img-with-box">
+                                                    <a class="img bg-overlay img-to-bg" href="#" title="Image"><img src="images/post-1.png" alt="post img"></a>
+                                                    <div class="round-box">
+                                                        <a class="title-carrot" href="#">take a ride</a><a class="round-box-text mb-0" href="#">เทรนมาแรง ออเจ้า กับชุดไทย</a>
+                                                    </div>
+                                                </div>
+                                                <ul class="social-list-items">
+                                                    <li class="item"><i class="icon-heart"></i>285</li>
+                                                    <li class="item"><i class="icon-eye"></i>285342343</li>
+                                                </ul>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="may-like-category">
+                                            <article class="post-overlap-title">
+                                                <div class="img-with-box">
+                                                    <a class="img bg-overlay img-to-bg" href="#" title="Image"><img src="images/post-1.png" alt="post img"></a>
+                                                    <div class="round-box">
+                                                        <a class="title-carrot" href="#">take a ride</a><a class="round-box-text mb-0" href="#">เทรนมาแรง ออเจ้า กับชุดไทย</a>
+                                                    </div>
+                                                </div>
+                                                <ul class="social-list-items">
+                                                    <li class="item"><i class="icon-heart"></i>285</li>
+                                                    <li class="item"><i class="icon-eye"></i>285342343</li>
+                                                </ul>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-maincontent-sidebar-section">
+                    <div class="container">
+                        <div class="row trending-post-row">
+                            <div class="col-12 col-md-4 col-lg-3 trending-post-col">
+                                <section class="trending-post-section">
+                                    <h2 class="heading text-uppercase">trending post</h2>
+                                    <div class="trending-item-group expand-item-wrapper">
+                                        <article class="post-left-img card flex-row border-0">
+                                            <div class="card-img-left"><a class="img bg-overlay img-to-bg" href="#" title="Image"><img src="images/trend-1.png" alt="Trending post img"></a></div>
+                                            <div class="card-body">
+                                                <a class="title-carrot" href="#">The risk taker</a><a class="card-text" href="#">คนไทยปิดหูปิดตา กับการเมือง คนไทยปิดหูปิดตา กับการเมือง</a>
+                                            </div>
+                                        </article>
+                                        <article class="post-left-img card flex-row border-0">
+                                            <div class="card-img-left"><a class="img bg-overlay img-to-bg" href="#" title="Image"><img src="images/trend-2.png" alt="Trending post img"></a></div>
+                                            <div class="card-body">
+                                                <a class="title-carrot" href="#">rabbit club</a><a class="card-text" href="#">รถยนต์แห่งโลกอนาคต ภายใน 2020</a>
+                                            </div>
+                                        </article>
+                                        <article class="post-left-img card flex-row border-0">
+                                            <div class="card-img-left"><a class="img bg-overlay img-to-bg" href="#" title="Image"><img src="images/trend-3.png" alt="Trending post img"></a></div>
+                                            <div class="card-body">
+                                                <a class="title-carrot" href="#">Trip follower</a><a class="card-text" href="#">เงินเดือน 15,000 บาท ซื้อคอนโดได้...</a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="more-btn text-center"><a class="show-more active" title="Show more button"> <span>more</span><i class="icon-arrow-down"></i></a><a class="show-less" title="Show less button"><span>less</span><i class="icon-arrow-down"></i></a></div>
+                                </section>
+                                <div class="advertise-trending-post">
+                                    <div class="advertising">
+                                        <div class="swiper-container advertising-in-col text-center" autoplaytime="5000">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide ad-item"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                                <div class="swiper-slide ad-item"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                                <div class="swiper-slide ad-item"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                                <div class="swiper-slide ad-item"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                            </div>
+                                        </div>
+                                        <p class="title">Advertising</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="readmore-button-advertise">
+                <section class="advertising-section">
+                    <div class="container">
+                        <div class="swiper-container advertising advertising-carousel text-center" autoplaytime="5000">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide item"><a href="#" target="_blank"><img src="images/advertise-type-1.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide item"><a href="#" target="_blank"><img src="images/advertise-type-1.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide item"><a href="#" target="_blank"><img src="images/advertise-type-1.jpg" alt="Advertising"></a></div>
+                                <div class="swiper-slide item"><a href="#" target="_blank"><img src="images/advertise-type-1.jpg" alt="Advertising"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </div>
+</div>

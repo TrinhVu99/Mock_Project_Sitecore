@@ -1,0 +1,26 @@
+﻿
+@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.MainModel.ListModel.ListVideoModel
+
+<section class="podcast">
+    <h2 class="heading text-uppercase">@Model.Name</h2>
+    <div class="podcast-item-group">
+        @foreach (var video in Model.Videos)
+        {
+            <article class="post-left-img card flex-row border-0">
+                <div class="card-img-left">
+                    <a class="img bg-overlay img-to-bg" href="#" title="Image" data-src="//clips.vorwaerts-gmbh.de/VfE_html5.mp4" style="background-image: url(&quot;images/trend-1.png&quot;);">
+                        @Html.Glass().RenderImage(video, x => x.Image, isEditable: true)
+                        <div class="video-overlay-bg"><i class="icon-audio"></i></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="title-carrot">@Html.Glass().Editable(video.Category, x => x.Name)</div>
+                    <a class="card-text" href="#" style="overflow-wrap: break-word;">@Html.Glass().Editable(video, x => x.TitleEntity)</a>
+                </div>
+            </article>
+        }
+        </div>
+</section>
