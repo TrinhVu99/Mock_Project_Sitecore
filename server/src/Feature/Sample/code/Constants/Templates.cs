@@ -33,6 +33,7 @@
                 public const string Image = "{9B6D06A8-5B7A-446A-9ECA-70DCB55B5D31}";
                 public const string Link = "{071C5BAE-8128-4174-AB2C-3D768BFD75F7}";
                 public const string Alt = "{B93BA0E1-75B5-4807-99FE-C3DFBC6A120F}";
+                public const string LinkYoutube = "{0E1E3AD4-F068-4DFA-A72C-005D291F09AC}";
             }
         }
 

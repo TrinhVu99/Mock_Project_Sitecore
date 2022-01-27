@@ -6,20 +6,26 @@
 <div class="hero-banner">
     <div class="swiper-container banner-carousel" autoplaytime="5000">
         <div class="swiper-wrapper">
-            <div class="swiper-slide item bg-overlay">
-                <a class="img-to-bg" href="#" target="_blank">
-                    <img src="https://icdn.dantri.com.vn/thumb_w/640/2016/kieu-trinh2-1482859504769.jpg" alt="hero banner image">
-                </a>
-            </div>
             @foreach (var image in Model.Images)
             {
-                <div class="swiper-slide item video-item" video-url="@image.Link">
-                    <a class="img bg-overlay img-to-bg" href="#" title="Image">
-                        @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
-                        @*<img src="https://3.bp.blogspot.com/-L-lSpVd4xBo/XCmS7-G87_I/AAAAAAAAEOg/Mnn1t2JMusgh4VEioaJEZrSn39LTqmE5gCLcBGAs/w350-h265-p-k-no-nu/12698541_1670650513186514_6796519023301018949_o_ollk.jpg" alt="Video poster">*@
-                        <div class="video-overlay-bg"><i class="icon-play-button"></i></div>
-                    </a>
-                </div>
+                if (image.LinkYoutube != "")
+                {
+                    <div class="swiper-slide item video-item" video-url="@image.LinkYoutube">
+                        <a class="img bg-overlay img-to-bg" href="#" title="Image">
+                            @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
+                            <div class="video-overlay-bg"><i class="icon-play-button"></i></div>
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="swiper-slide item bg-overlay">
+                        @using (Html.Glass().BeginRenderLink(image, x => x.Link, new { @class = "img-to-bg" }, isEditable: true))
+                        {
+                                @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
+                        }
+                    </div>
+                }
             }
 
         </div>
