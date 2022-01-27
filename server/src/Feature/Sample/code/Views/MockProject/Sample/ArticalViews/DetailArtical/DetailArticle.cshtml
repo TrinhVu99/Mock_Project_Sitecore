@@ -38,7 +38,7 @@
                 <div class="col-md-10 detail-author-col col-lg-9">
                     <div class="news-detail-author">
                         <div class="profile">
-                            <div class="pic">@Html.Glass().RenderImage(Model, x => x.AuthorImage, isEditable: true)</div>
+                            <div>@Html.Glass().RenderImage(Model, x => x.AuthorImage, isEditable: true)</div>
                             <div class="info">
                                 <p>Published 8 months ago</p>
                                 <p>By <span>@Html.Glass().Editable(Model, x => x.Author)</span></p>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="news-detail-share-block flex-end">
                         <div class="reaction">
-                            <div class="reaction-view"><span class="icon-eye"></span><span>@Html.Glass().Editable(Model, x=>x.Views)</span></div>
+                            <div class="reaction-view"><span class="icon-eye"></span><span>@Html.Glass().Editable(Model, x => x.Views)</span></div>
                             <div class="reaction-heart"><span class="icon-heart-bold"></span><span class="heart-number">@Html.Glass().Editable(Model, x => x.Views)</span></div>
                         </div>
                         <div class="news-detail-share-img"><img src="../images/share-icon.png" alt=""></div>
