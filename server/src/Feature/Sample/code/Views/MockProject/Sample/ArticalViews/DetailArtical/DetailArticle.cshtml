@@ -4,99 +4,75 @@
 @model MockProject.Feature.Sample.Models.TemplateModels.ArticalModel
 
 
-<div class="wrapper">
-    <div class="main-content">
-        <section class="detail-section news-detail">
-            <div class="news-detail-title-block">
-                <section class="breadcrumb">
-                    <div class="container">
-                        <ul class="breadcrumb-link-list">
-                            <li class="breadcrumb-link"><a href="\"><span>HOME</span></a></li>
-                            <li class="breadcrumb-link">
-                                @using (Html.Glass().BeginRenderLink(Model.Category, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
-                                {
-                                    <span>@Html.Glass().Editable(Model.Category,x=>x.Name)</span>
-                                }
-                            </li>
-                            <li class="breadcrumb-link active">
-                                @using (Html.Glass().BeginRenderLink(Model, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
-                                {
-                                    <span>@Html.Glass().Editable(Model, x => x.Name)</span>
-                                }
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-lg-9">
-                            <a class="title-carrot" href="#">@Html.Glass().Editable(Model.Category, x => x.Name)</a>
-                            <div class="news-detail-title">
-                                <h1>@Html.Glass().Editable(Model, x => x.TitleEntity)</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-10 detail-author-col col-lg-9">
-                            <div class="news-detail-author">
-                                <div class="profile">
-                                    <div class="pic" style="background-image:url(images/author-avatar.png)"><img src="images/author-avatar.png"></div>
-                                    <div class="info">
-                                        <p>Published 8 months ago</p>
-                                        <p>By <span>@Html.Glass().Editable(Model, x => x.Author)</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-detail-share-block flex-end">
-                                <div class="reaction">
-                                    <div class="reaction-view"><span class="icon-eye"></span><span>@Html.Glass().Editable(Model, x => x.Views)</span></div>
-                                    <div class="reaction-heart"><span class="icon-heart-bold"></span><span class="heart-number">@Html.Glass().Editable(Model, x => x.Likes)</span></div>
-                                </div>
-                                <div class="news-detail-share-img"><img src="../images/share-icon.png" alt=""></div>
-                            </div>
-                        </div>
+<section class="detail-section news-detail">
+    <div class="news-detail-title-block">
+        <section class="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb-link-list">
+                    <li class="breadcrumb-link"><a href="#"><span>HOME</span></a></li>
+                    <li class="breadcrumb-link">
+                        @using (Html.Glass().BeginRenderLink(Model.Category, x => x.Link, isEditable: true))
+                        {
+                            <span>@Html.Glass().Editable(Model.Category, x => x.Name)</span>
+                        }
+                    </li>
+                    <li class="breadcrumb-link active">
+                        @using (Html.Glass().BeginRenderLink(Model, x => x.Link, isEditable: true))
+                        {
+                            <span>@Html.Glass().Editable(Model, x => x.Name)</span>
+                        }
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-9">
+                    <a class="title-carrot" href="#">@Html.Glass().Editable(Model.Category, x => x.Name)</a>
+                    <div class="news-detail-title">
+                        <h1>@Html.Glass().Editable(Model, x => x.TitleEntity)</h1>
                     </div>
                 </div>
             </div>
-            <div class="detail-image-block"><img src="../images/detail-image.jpg" alt=""></div>
-            <div class="detail-maincontent">
-                <div class="container">
-                    <div class="detail-maincontent-container">
-                        <div class="row detail-maincontent-row">
-                            <div class="col col-md-8 col-lg-9 detail-maincontent-col">
-                                <div class="column-social-block"><a class="column-social-icon" href=""><span class="icon-twitter"></span></a><a class="column-social-icon" href=""><span class="icon-facebook"></span></a><a class="column-social-icon" href=""><span class="icon-mail"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a><a class="column-social-icon is__Line-Share" href=""><span class="icon-line"><span class="path1"></span><span class="path2"></span></span></a></div>
-                                <div class="detail-maincontent-block">
-                                    <div class="detail-maincontent-text">
-                                        @Model.Description
-                                        </div>
-                                </div>
+            <div class="row">
+                <div class="col-md-10 detail-author-col col-lg-9">
+                    <div class="news-detail-author">
+                        <div class="profile">
+                            <div class="pic">@Html.Glass().RenderImage(Model, x => x.AuthorImage, isEditable: true)</div>
+                            <div class="info">
+                                <p>Published 8 months ago</p>
+                                <p>By <span>@Html.Glass().Editable(Model, x => x.Author)</span></p>
                             </div>
                         </div>
                     </div>
-                    <div class="tags-section tags-section-detail-page">
-                        <div class="tag-title-detail-page">
-                            <p>TAGS:</p>
+                    <div class="news-detail-share-block flex-end">
+                        <div class="reaction">
+                            <div class="reaction-view"><span class="icon-eye"></span><span>@Html.Glass().Editable(Model, x=>x.Views)</span></div>
+                            <div class="reaction-heart"><span class="icon-heart-bold"></span><span class="heart-number">@Html.Glass().Editable(Model, x => x.Views)</span></div>
                         </div>
-                        <div class="tag-list"><span class="tag-item tag-item-detail-page">WORLD CUP 2018</span><span class="tag-item tag-item-detail-page">HUEWEI</span><span class="tag-item tag-item-detail-page">NASA </span></div>
+                        <div class="news-detail-share-img"><img src="../images/share-icon.png" alt=""></div>
                     </div>
-                </div
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <section class="advertising-section">
-                    <div class="container">
-                        <div class="swiper-container advertising advertising-carousel text-center" autoplaytime="5000">
-                            @Html.Sitecore().Placeholder("horizontal-slidebar")
-                        </div>
-                    </div>
-                </section>
+    <div class="detail-maincontent">
+        <div class="container">
+            <div class="detail-maincontent-container">
+                <div class="row detail-maincontent-row">
+                    <div class="col col-md-8 col-lg-9 detail-maincontent-col">
+                        <div class="detail-image-block"><img src="../images/detail-image.jpg" alt=""></div><div class="column-social-block"><a class="column-social-icon" href=""><span class="icon-twitter"></span></a><a class="column-social-icon" href=""><span class="icon-facebook"></span></a><a class="column-social-icon" href=""><span class="icon-mail"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a><a class="column-social-icon is__Line-Share" href=""><span class="icon-line"><span class="path1"></span><span class="path2"></span></span></a></div>
 
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <hr class="author-line open-line">
-                        </div>
-                        <div class="col-12 col-md-9 author-section-detail-page-col">
-                            <div class="author-section-detail-page">
+                        <div class="detail-maincontent-block">
+                            <div class="detail-maincontent-text">
+                                @Model.Description
+                            </div><div class="tags-section tags-section-detail-page">
+                                <div class="tag-title-detail-page">
+                                    <p>TAGS:</p>
+                                </div>
+                                <div class="tag-list"><span class="tag-item tag-item-detail-page">WORLD CUP 2018</span><span class="tag-item tag-item-detail-page">HUEWEI</span><span class="tag-item tag-item-detail-page">NASA </span></div>
+                            </div><div class="author-section-detail-page">
                                 <div class="author-title-detail-page">
                                     <p>AUTHOR:</p>
                                 </div>
@@ -104,62 +80,52 @@
                                     @Html.Glass().RenderImage(Model, x => x.AuthorImage, isEditable: true)
                                     <div class="author-section-name-text"> <span>@Html.Glass().Editable(Model, x => x.Author)</span></div>
                                 </div>
+
                                 <div class="author-section-description"><span>@Html.Glass().Editable(Model, x => x.AuthorDescription)</span></div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <hr class="author-line close-line">
-                        </div>
                     </div>
-                </div>
-
-                <div class="detail-page-advertising-type2-section">
-                    <div class="advertising">
-                        <div class="swiper-container advertising-in-col text-center" autoplaytime="5000">
-                            @Html.Sitecore().Placeholder("block-slidebar")
-                        </div>
-                        <p class="title">Advertising</p>
-                    </div>
-
-
-                </div>
-                <div class="detail-page-may-like-section">
-                    <div class="container">
-                        <div class="row">
-                            @Html.Sitecore().Placeholder("detail-youmaylike")
-                        </div>
-                    </div>
-                </div>
-                <div class="detail-maincontent-sidebar-section">
-                    <div class="container">
-                        <div class="row trending-post-row">
-                            <div class="col-12 col-md-4 col-lg-3 trending-post-col">
-                                <section class="trending-post-section">
-                                    @Html.Sitecore().Placeholder("trending-post")
-                                </section>
-                                <div class="advertise-trending-post">
-                                    <div class="advertising">
-                                        <div class="swiper-container advertising-in-col text-center" autoplaytime="5000">
-                                            
-                                        </div>
-                                        <p class="title">Advertising</p>
-                                    </div>
+                    <div class="col-12 col-md-4 col-lg-3 trending-post-col">
+                        <div class="advertise-trending-post">
+                            <div class="advertising">
+                                <div class="swiper-container advertising-in-col text-center instance-2 swiper-container-horizontal" autoplaytime="5000">
+                                    @Html.Sitecore().Placeholder("block-slidebar")
+                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                                 </div>
                             </div>
                         </div>
+                        <section class="trending-post-section">
+                            @Html.Sitecore().Placeholder("trending-post")
+                        </section>
+
                     </div>
                 </div>
             </div>
-
-            <div class="readmore-button-advertise">
-                <section class="advertising-section">
-                    <div class="container">
-                        <div class="swiper-container advertising advertising-carousel text-center" autoplaytime="5000">
-                            @Html.Sitecore().Placeholder("horizontal-slidebar")
-                        </div>
-                    </div>
-                </section>
-            </div>
+        </div>
+        <section class="advertising-section">
+            <div class="container">
+                <div class="swiper-container advertising advertising-carousel text-center instance-0 swiper-container-horizontal appear" autoplaytime="5000">
+                    @Html.Sitecore().Placeholder("horizontal-slidebar")
+                </div>
         </section>
-    </div>
-</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <hr class="author-line open-line">
+                </div>
+                <div class="col-12 col-md-9 author-section-detail-page-col">
+
+                </div>
+                <div class="col-12">
+                    <hr class="author-line close-line">
+                </div>
+            </div>
+        </div>
+        <div class="detail-page-may-like-section">
+            <div class="container">
+                <div class="row">
+                    @Html.Sitecore().Placeholder("detail-youmaylike")
+                </div>
+            </div>
+        </div>
+</section>

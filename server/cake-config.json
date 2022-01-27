@@ -1,8 +1,8 @@
 {
-  "WebsiteRoot": "D:\\inetpub\\sc1011.sc",
+  "WebsiteRoot": "D:\\inetpub\\wwwroot\\sc1011.sc",
   "InstanceUrl": "https://sc1011.sc/",
   "SolutionName": "MockProject.sln",
-  "ProjectFolder": "E:\\OJT_SITECORE\\Mock_Project_Sitecore\\server",
+  "ProjectFolder": "D:\\MockProjectSitecore\\Mock_Project_Sitecore\\server",
   "BuildConfiguration": "Debug",
   "BuildToolVersions": "Auto",
   "RunCleanBuilds": true,
