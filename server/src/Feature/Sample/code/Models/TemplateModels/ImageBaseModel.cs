@@ -15,8 +15,11 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
         [SitecoreField(Templates.ImageBase.Fields.Image)]
         public virtual Glass.Mapper.Sc.Fields.Image Image { get; set; }
         [SitecoreField(Templates.ImageBase.Fields.Link)]
-        public virtual string Link { get; set; }
+        public virtual Link Link { get; set; }
         [SitecoreField(Templates.ImageBase.Fields.Alt)]
         public virtual string Alt { get; set; }
+
+        [SitecoreField(Templates.ImageBase.Fields.LinkYoutube)]
+        public virtual string LinkYoutube { get; set; }
     }
 }

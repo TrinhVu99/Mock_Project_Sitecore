@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using MockProject.Foundation.Mvc.Controllers;
 using MockProject.Feature.Sample.Models.TemplateModels.MainModel.ListModel;
+using MockProject.Feature.Sample.Models.TemplateModels;
 
 namespace MockProject.Feature.Sample.Controller
 {
@@ -21,6 +22,12 @@ namespace MockProject.Feature.Sample.Controller
         {
             var model = MvcContext.GetDataSourceItem<ListVideoModel>();
             return View("~/Views/MockProject/Sample/VideoViews/Podcast.cshtml", model);
+        }
+
+        public ActionResult GetImage()
+        {
+            var model = MvcContext.GetDataSourceItem<ImageBaseModel>();
+            return View("~/Views/MockProject/Sample/VideoViews/ImageView.cshtml", model);
         }
     }
 }

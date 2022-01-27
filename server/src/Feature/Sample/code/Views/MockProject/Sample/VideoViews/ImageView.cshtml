@@ -1,0 +1,7 @@
+﻿
+@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.ImageBaseModel
+
+@Html.Glass().RenderImage(Model, x => x.Image, isEditable: true)
