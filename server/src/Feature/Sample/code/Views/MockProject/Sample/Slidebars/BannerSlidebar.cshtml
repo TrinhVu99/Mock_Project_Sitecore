@@ -3,8 +3,18 @@
 @using MockProject.Foundation.SitecoreExtensions.Helpers
 @model MockProject.Feature.Sample.Models.TemplateModels.SlidebarModel
 
+@{
+    string autoTime = string.Empty;
+    var rc = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    if (rc != null)
+    {
+        var parms = rc.Rendering.Parameters;
+        autoTime = parms["AutoTime"];
+    }
+}
+
 <div class="hero-banner">
-    <div class="swiper-container banner-carousel" autoplaytime="5000">
+    <div class="swiper-container banner-carousel" autoplaytime="@autoTime">
         <div class="swiper-wrapper">
             @foreach (var image in Model.Images)
             {
@@ -22,7 +32,7 @@
                     <div class="swiper-slide item bg-overlay">
                         @using (Html.Glass().BeginRenderLink(image, x => x.Link, new { @class = "img-to-bg" }, isEditable: true))
                         {
-                                @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
+                            @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
                         }
                     </div>
                 }
