@@ -3,18 +3,28 @@
 @using MockProject.Foundation.SitecoreExtensions.Helpers
 @model MockProject.Feature.Sample.Models.TemplateModels.SlidebarModel
 
+@{
+    string autoTime = string.Empty;
+    var rc = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    if (rc != null)
+    {
+        var parms = rc.Rendering.Parameters;
+        autoTime = parms["AutoTime"];
+    }
+}
+
 <div class="advertising">
-    <div class="swiper-container advertising-in-col text-center" autoplaytime="5000">
+    <div class="swiper-container advertising-in-col text-center" autoplaytime="@autoTime">
         <div class="swiper-wrapper">
             @foreach (var image in Model.Images)
             {
+
                 <div class="swiper-slide ad-item">
-                    <a href="#" target="_blank">
-                        @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
-                    </a>
+                    @Html.Glass().RenderImage(image, x => x.Image, isEditable: true)
                 </div>
             }
         </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
     <p class="title">Advertising</p>
 </div>

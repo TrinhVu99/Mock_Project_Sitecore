@@ -24,7 +24,13 @@
                 <ul class="promotion-header">
                     @foreach (var item in Model.MainNavigation)
                     {
-                        <li><a href="/articles/@item.Name">@Html.Glass().Editable(item, x => x.Name)</a></li>
+                    <li>
+                        @using (Html.Glass().BeginRenderLink(item, x => x.Link, isEditable: true))
+                        {
+                            @Html.Glass().Editable(item, x => x.Name, true)
+                        }
+
+                    </li>
                     }
                 </ul>
                 <div class="social-icon-block">
