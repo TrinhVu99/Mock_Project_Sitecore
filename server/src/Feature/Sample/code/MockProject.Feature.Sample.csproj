@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\Templates.cs" />
+    <Compile Include="Controller\BloggerController.cs" />
     <Compile Include="Controller\EventController.cs" />
     <Compile Include="Controller\CategoryController.cs" />
     <Compile Include="Controller\ArticalController.cs" />
@@ -154,6 +155,8 @@
     <Content Include="Views\MockProject\Sample\ArticalViews\DetailArtical\DetailArticle.cshtml" />
     <Content Include="Views\MockProject\Sample\VideoViews\ImageView.cshtml" />
     <Content Include="Views\MockProject\Sample\ArticalViews\DetailArtical\YouMayLike.cshtml" />
+    <Content Include="Views\MockProject\Sample\BloggerViews\BloggerRabbit.cshtml" />
+    <Content Include="Views\MockProject\Sample\SectionViews\HeroNewsLandingSection.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />
