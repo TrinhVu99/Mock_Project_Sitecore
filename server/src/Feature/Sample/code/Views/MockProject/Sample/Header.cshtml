@@ -6,7 +6,7 @@
 <header class="header">
     <div class="container">
         <div class="header-content">
-            <a class="logo" href="#">
+            <a class="logo" href="/SitecoreFundamental/Home">
                 @Html.Glass().RenderImage(Model, x => x.Logo, isEditable: true)
                 <img src="images/logo.svg" alt="">
             </a>
@@ -24,13 +24,13 @@
                 <ul class="promotion-header">
                     @foreach (var item in Model.MainNavigation)
                     {
-                    <li>
-                        @using (Html.Glass().BeginRenderLink(item, x => x.Link, isEditable: true))
-                        {
-                            @Html.Glass().Editable(item, x => x.Name, true)
-                        }
+                        <li>
+                            @using (Html.Glass().BeginRenderLink(item, x => x.Link, isEditable: true))
+                            {
+                                @Html.Glass().Editable(item, x => x.Name, true)
+                            }
 
-                    </li>
+                        </li>
                     }
                 </ul>
                 <div class="social-icon-block">
@@ -51,14 +51,14 @@
                 <ul class="language">
                     <li class="lang-th">TH</li>
                     <li class="lang-en">EN</li>
-                </ul><a class="user-profile" href="#"><img src="images/icons/icon-userprofile.svg" alt=""></a><a class="store" href="#"><img src="images/icons/icon-store.svg" alt=""><span>2</span></a>
-                <div class="search-global-icon"><span class="icon-search header-search-icon"></span></div>
+                </ul><a class="user-profile" href="#"><i class="far fa-user"></i></a><a class="store" href="#"><i class="fas fa-store"></i><span>2</span></a>
+                <div class="search-global-icon"><span class="icon-search header-search-icon"><i class="fas fa-search"></i></span></div>
                 <div class="menu-icon"><span>เมนู</span><img src="images/icons/icon-menu.svg" alt=""></div>
             </div>
         </div>
         <div class="search-global">
             <div class="search-input-wrapper">
-                <input class="search-input" type="text" name="search-global" placeholder="placeholder..."><span class="header-search-icon"><i class="icon-search"></i></span>
+                <input class="search-input" type="text" name="search-global" placeholder="placeholder..."><span class="header-search-icon"><i class="fas fa-search"></i></span>
             </div>
             <div class="search-global-error-message">123123123</div>
             <div class="search-global-error-message" id="max-length-message">123123123</div>
