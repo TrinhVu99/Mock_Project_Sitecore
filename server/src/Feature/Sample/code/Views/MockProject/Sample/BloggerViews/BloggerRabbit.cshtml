@@ -16,7 +16,10 @@
                         }
                         <div class="round-box">
                             <div class="title-carrot">
-                                @Html.Glass().Editable(blogger.Category, x => x.Name)
+                                @using (Html.Glass().BeginRenderLink(blogger.Category, x => x.Link, isEditable: true))
+                                {
+                                    @Html.Glass().Editable(blogger.Category, x => x.Name)
+                                }
                                 <i class="icon-eye"></i>@Html.Glass().Editable(blogger, x => x.Views)
                             </div>
                             @using (Html.Glass().BeginRenderLink(blogger, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))
