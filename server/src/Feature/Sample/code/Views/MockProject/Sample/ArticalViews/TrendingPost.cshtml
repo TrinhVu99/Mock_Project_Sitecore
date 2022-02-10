@@ -16,7 +16,10 @@
                     }
                 </div>
                 <div class="card-body">
-                    <a class="title-carrot" href="#">@Html.Glass().Editable(artical.Category, x => x.Name)</a>
+                    @using (Html.Glass().BeginRenderLink(artical.Category, x => x.Link, new { @class = "title-carrot" }, isEditable: true))
+                    {
+                        @Html.Glass().Editable(artical.Category, x => x.Name)
+                    }
                     @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "card-text" }, isEditable: true))
                     {
                         @Html.Glass().Editable(artical, x => x.TitleEntity);
