@@ -1,0 +1,32 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@using System.Linq
+@model MockProject.Feature.Sample.Models.TemplateModels.ListEventModel
+
+@foreach (var item in Model.Events)
+{
+    <div class="col-md-4">
+        <div class="post">
+            <article class="post-overlap-title">
+                <div class="img-with-box">
+                    @using (Html.Glass().BeginRenderLink(item, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                    {
+                        @Html.Glass().RenderImage(item, x => x.Image, isEditable: true)
+                    }
+                    <div class="round-box">
+                        <a class="title-carrot" href="#">@Html.Glass().Editable(item.Category, x => x.Name)</a>
+                        @using (Html.Glass().BeginRenderLink(item, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))
+                        {
+                            @Html.Glass().Editable(item, x => x.TitleEntity);
+                        }
+                    </div>
+                </div>
+                <ul class="social-list-items">
+                    <li class="item"><i class="icon-clock"></i>@Html.Glass().Editable(item, x => x.StartTime)</li>
+                    <li class="item"><i class="icon-location"></i>@Html.Glass().Editable(item, x => x.Location)</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+}

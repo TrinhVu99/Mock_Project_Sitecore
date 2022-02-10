@@ -1,0 +1,20 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.ListEventModel
+
+<h2 class="heading text-uppercase">@Html.Glass().Editable(Model, x => x.Name)</h2>
+<div class="trending-item-group expand-item-wrapper" style="height: auto;">
+
+    @foreach (var item in Model.Events.OrderByDescending(x => x.StartTime))
+    {
+        <article class="post-left-img card flex-row border-0">
+            <div class="card-img-left"><a class="img bg-overlay img-to-bg" href="#" title="Image" style="background-image: url(&quot;images/trend-1.png&quot;);">@Html.Glass().RenderImage(item, x => x.Image, isEditable: true)</a></div>
+            <div class="card-body">
+                <a class="title-carrot" href="#">@Html.Glass().Editable(item.Category, x => x.Name)</a><a class="card-text" href="#" style="overflow-wrap: break-word; white-space: normal;">@Html.Glass().Editable(item, x => x.TitleEntity) </a>
+                <div class="date"><i class="icon-clock"></i>@Html.Glass().Editable(item, x => x.Views)</div>
+            </div>
+        </article>
+    }
+    </div>
+<div class="more-btn text-center"><a class="show-more active" title="Show more button"> <span>more</span><i class="icon-arrow-down"></i></a><a class="show-less" title="Show less button"><span>less</span><i class="icon-arrow-down"></i></a></div>

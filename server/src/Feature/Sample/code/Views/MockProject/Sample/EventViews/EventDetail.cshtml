@@ -1,0 +1,206 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.EventModel
+
+<div class="wrapper">
+    <div class="main-content">
+        <section class="detail-section event-detail">
+            <div class="news-detail-title-block">
+                <section class="breadcrumb">
+                    <div class="container">
+                        <ul class="breadcrumb-link-list">
+                            <li class="breadcrumb-link"><a href="#"><span>HOME</span></a></li>
+                            <li class="breadcrumb-link"><a href="#"><span>LOOKS</span></a></li>
+                            <li class="breadcrumb-link active"><a href="#"><span>FRONT ROW</span></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-9">
+                            <a class="title-carrot" href="#">@Html.Glass().Editable(Model.Category, x => x.Name)</a>
+                            <div class="news-detail-title">
+                                <h1>@Html.Glass().Editable(Model, x => x.TitleEntity)</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 detail-author-col col-lg-9">
+                            <div class="news-detail-author">
+                                <div class="profile">
+                                    <div class="pic" style="background-image:url(images/author-avatar.png)"><img src="images/author-avatar.png"></div>
+                                    <div class="info">
+                                        <p>Published 8 months ago</p>
+                                        <p>By <span>@Html.Glass().Editable(Model, x => x.Author)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news-detail-share-block flex-end">
+                                <div class="reaction">
+                                    <div class="reaction-view"><span class="icon-eye"></span><span>@Html.Glass().Editable(Model, x => x.Views)</span></div>
+                                    <div class="reaction-heart"><span class="icon-heart-bold"></span><span class="heart-number">@Html.Glass().Editable(Model, x => x.Likes)</span></div>
+                                </div>
+                                <div class="news-detail-share-img"><img src="../images/share-icon.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="detail-maincontent">
+                <div class="container">
+                    <div class="detail-maincontent-container">
+                        <div class="row detail-maincontent-row">
+                            <div class="col col-md-8 col-lg-9 detail-maincontent-col">
+                                <div class="detail-image-block"><img src="../images/detail-image.jpg" alt=""></div><div class="column-social-block"><a class="column-social-icon" href=""><span class="icon-twitter"></span></a><a class="column-social-icon" href=""><span class="icon-facebook"></span></a><a class="column-social-icon" href=""><span class="icon-mail"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a><a class="column-social-icon is__Line-Share" href=""><span class="icon-line"><span class="path1"></span><span class="path2"></span></span></a></div>
+
+                                <div class="detail-maincontent-block">
+                                    <div class="event-info-section">
+                                        <div class="event-info-block">
+                                            <div class="container">
+                                                <ul class="event-info-list">
+                                                    <li class="event-info-category">
+                                                        <span class="icon-clock event-info-category-icon"></span>
+                                                        <div class="event-info-category-content">
+                                                            <div class="row">
+                                                                <div class="col-12 col-md-4">
+                                                                    <p class="event-info-category-title">วันที่แสดง :</p>
+                                                                </div>
+                                                                <div class="col-12 col-md-8">
+                                                                    <p class="event-info-hours-detail">06 เมษายน 2018 12:00 - 07 เมษายน 2018 23:59</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="event-info-category">
+                                                        <span class="icon-location event-info-category-icon"></span>
+                                                        <div class="event-info-category-content">
+                                                            <div class="row">
+                                                                <div class="col-12 col-md-4">
+                                                                    <p class="event-info-category-title">สถานที่แสดง :</p>
+                                                                </div>
+                                                                <div class="col-12 col-md-8">
+                                                                    <p>@Html.Glass().Editable(Model, x => x.Location)</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="event-info-category">
+                                                        <span class="icon-open-door event-info-category-icon"></span>
+                                                        <div class="event-info-category-content">
+                                                            <div class="row">
+                                                                <div class="col-12 col-md-4">
+                                                                    <p class="event-info-category-title">ประตูเปิด  :</p>
+                                                                </div>
+                                                                <div class="col-12 col-md-8">
+                                                                    <p>@Html.Glass().Editable(Model, x => x.StartTime) น.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="event-info-category">
+                                                        <span class="icon-date event-info-category-icon"></span>
+                                                        <div class="event-info-category-content">
+                                                            <div class="row">
+                                                                <div class="col-12 col-md-4">
+                                                                    <p class="event-info-category-title">วันจำหน่ายบัตร  :</p>
+                                                                </div>
+                                                                <div class="col-12 col-md-8">
+                                                                    <p>ตั้งแต่  31 มีนาคม 2561 เวลา 10:00 น. เป็นต้นไป</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="event-info-category">
+                                                        <span class="icon-ticket event-info-category-icon"></span>
+                                                        <div class="event-info-category-content">
+                                                            <div class="row">
+                                                                <div class="col-12 col-md-4">
+                                                                    <p class="event-info-category-title">ราคาบัตร  :</p>
+                                                                </div>
+                                                                <div class="col-12 col-md-8">
+                                                                    <p>2,000 (บัตรนั่ง) / 1,200 (บัตรยืน) บาท</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail-maincontent-text">
+                                        <div class="event-detail-maincontent-img-section"><img class="event-detail-maincontent-each-img" src="../images/event-detail-maincontent-img.jpg" alt=""><img class="event-detail-maincontent-each-img" src="../images/event-detail-maincontent-img.jpg" alt=""><img class="event-detail-maincontent-each-img" src="../images/event-detail-maincontent-img.jpg" alt=""><img class="event-detail-maincontent-each-img" src="../images/event-detail-maincontent-img.jpg" alt=""><img class="event-detail-maincontent-each-img" src="../images/event-detail-maincontent-img.jpg" alt=""><img class="event-detail-maincontent-each-img" src="../images/event-detail-maincontent-img.jpg" alt=""></div>
+                                        @Html.Glass().Editable(Model, x => x.Content)
+                                        <div class="event-detail-logo-section">
+                                            <div class="event-detail-logo-title">
+                                                <p>ช่องทางจำหน่ายบัตร :</p>
+                                            </div>
+                                            <div class="event-detail-logo-img"><img src="../images/major-logo.png" alt=""></div>
+                                            <div class="event-detail-logo-img"><img src="../images/eventpop-logo.png" alt=""></div>
+                                            <div class="event-detail-logo-img"><img src="../images/intouch-logo.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 col-lg-3 trending-post-col">
+                                <div class="advertise-trending-post">
+                                    <div class="advertising">
+                                        <div class="swiper-container advertising-in-col text-center instance-2 swiper-container-horizontal" autoplaytime="5000">
+                                            @Html.Sitecore().Placeholder("block-slidebar")
+                                        </div>
+                                    </div>
+                                    <section class="trending-post-section">
+                                        @Html.Sitecore().Placeholder("block-upcoming-events")
+                                    </section>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-detail-advertising-section">
+                        <section class="advertising-section">
+                            <div class="container">
+                                <div class="swiper-container advertising advertising-carousel text-center instance-0 swiper-container-horizontal appear" autoplaytime="5000">
+                                    @Html.Sitecore().Placeholder("horizontal-slidebar")
+                                </div>
+                        </section>
+                    </div>
+                    <div class="event-detail-related-item-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-9">
+                                    @Html.Sitecore().Placeholder("related-event")
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-page-advertising-type2-section">
+                        <section class="advertising-section">
+                            <div class="container">
+                                <div class="swiper-container advertising advertising-carousel text-center instance-1 swiper-container-horizontal" autoplaytime="5000">
+                                    <div class="swiper-wrapper" style="transition-duration: 800ms;">
+                                        <div class="swiper-slide item swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="3"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                        <div class="swiper-slide item" data-swiper-slide-index="0"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                        <div class="swiper-slide item" data-swiper-slide-index="1"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                        <div class="swiper-slide item" data-swiper-slide-index="2"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                        <div class="swiper-slide item" data-swiper-slide-index="3"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                        <div class="swiper-slide item swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0"><a href="#" target="_blank"><img src="images/advertise-type-2.jpg" alt="Advertising"></a></div>
+                                    </div>
+                                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="detail-maincontent-sidebar-section">
+                        <div class="container">
+                            <div class="row trending-post-row">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+</div>

@@ -25,11 +25,7 @@
                     @foreach (var item in Model.MainNavigation)
                     {
                     <li>
-                        @using (Html.Glass().BeginRenderLink(item, x => x.Link, isEditable: true))
-                        {
                             @Html.Glass().Editable(item, x => x.Name, true)
-                        }
-
                     </li>
                     }
                 </ul>

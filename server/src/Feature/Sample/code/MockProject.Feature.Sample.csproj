@@ -147,13 +147,19 @@
     <Content Include="Views\MockProject\Sample\FooterViews\NavigationSocial.cshtml" />
     <Content Include="Views\MockProject\Sample\FooterViews\Navigation.cshtml" />
     <Content Include="Views\MockProject\Sample\Tag\Tag.cshtml" />
-    <Content Include="Views\MockProject\Sample\EventViews\UpcomingEvents.cshtml" />
     <Content Include="Views\MockProject\Sample\EventViews\AllEvents.cshtml" />
     <Content Include="Views\MockProject\Sample\VideoViews\VideoToday.cshtml" />
     <Content Include="Views\MockProject\Sample\VideoViews\Podcast.cshtml" />
     <Content Include="Views\MockProject\Sample\ArticalViews\DetailArtical\DetailArticle.cshtml" />
     <Content Include="Views\MockProject\Sample\VideoViews\ImageView.cshtml" />
     <Content Include="Views\MockProject\Sample\ArticalViews\DetailArtical\YouMayLike.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventViews\EventDetail.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventViews\UpcommingEventsBlock.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventViews\RelatedEvents.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventLanding\EventLading.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventLanding\LatestPosts.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventLanding\LatestEvents.cshtml" />
+    <Content Include="Views\MockProject\Sample\EventViews\UpcomingEvents.cshtml" />
     <None Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup />
