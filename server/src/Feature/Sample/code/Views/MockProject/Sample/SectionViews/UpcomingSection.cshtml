@@ -8,7 +8,12 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="section-heading">
-                    <h1 class="heading">@Html.Glass().Editable(Model, x => x.Name)<span class="txt-italic">@Html.Glass().Editable(Model, x => x.SubName)</span></h1><a class="view-all" href="#">View all</a>
+                    <h1 class="heading">
+                        @Html.Glass().Editable(Model, x => x.Name)
+                    <span class="txt-italic">@Html.Glass().Editable(Model, x => x.SubName)</span>
+                </h1>
+                @*@Html.Glass().RenderLink(Model, x => x.ViewAll, new { @class = "view-all" }, true, contents: "View all")*@
+                <a class="view-all" href="#">View all</a>
                 </div>
                 <div class="row upcoming-items expand-item-wrapper upcoming-items-type">
                     @Html.Sitecore().Placeholder("upcoming-event")

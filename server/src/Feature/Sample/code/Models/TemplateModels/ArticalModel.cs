@@ -49,5 +49,11 @@ namespace MockProject.Feature.Sample.Models.TemplateModels
         [SitecoreField(Templates.Artical.Fields.Link)]
         public virtual Glass.Mapper.Sc.Fields.Link Link { get; set; }
 
+        [SitecoreField(Templates.Artical.Fields.AuthorImage)]
+        public virtual Glass.Mapper.Sc.Fields.Image AuthorImage { get; set; }
+
+        [SitecoreField(Templates.Artical.Fields.AuthorDescription)]
+        public virtual string AuthorDescription { get; set; }
+
     }
 }

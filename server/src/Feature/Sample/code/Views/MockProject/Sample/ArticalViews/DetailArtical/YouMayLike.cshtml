@@ -1,0 +1,32 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.ListArticalModel
+
+<div class="col-12 col-lg-9">
+    <div class="category-block-title may-like-title">
+        <p>@Html.Glass().Editable(Model, x => x.Name)</p>
+    </div>
+    <div class="row">
+        @foreach (var artical in Model.Articals)
+        {
+            <div class="col-12 col-md-4">
+                <div class="may-like-category">
+                    <article class="post-overlap-title">
+                        <div class="img-with-box">
+                            <a class="img bg-overlay img-to-bg" href="#" title="Image">@Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)</a>
+                            <div class="round-box">
+                                <a class="title-carrot" href="#">@Html.Glass().Editable(artical.Category, x => x.Name)</a>
+                                <a class="round-box-text mb-0" href="#">@Html.Glass().Editable(artical, x => x.TitleEntity)</a>
+                            </div>
+                        </div>
+                        <ul class="social-list-items">
+                            <li class="item"><i class="icon-heart"></i>@Html.Glass().Editable(artical, x => x.Likes)</li>
+                            <li class="item"><i class="icon-eye"></i>@Html.Glass().Editable(artical, x => x.Views)</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        }
+    </div>
+</div>

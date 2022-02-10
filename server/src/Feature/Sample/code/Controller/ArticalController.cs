@@ -33,5 +33,11 @@ namespace MockProject.Feature.Sample.Controller
             var model = MvcContext.GetDataSourceItem<ArticalModel>();
             return View("~/Views/MockProject/Sample/ArticalViews/DetailArtical/DetailArticle.cshtml", model);
         }
+
+        public ActionResult GetYouMayLike()
+        {
+            var model = MvcContext.GetDataSourceItem<ListArticalModel>();
+            return View("~/Views/MockProject/Sample/ArticalViews/DetailArtical/YouMayLike.cshtml", model);
+        }
     }
 }

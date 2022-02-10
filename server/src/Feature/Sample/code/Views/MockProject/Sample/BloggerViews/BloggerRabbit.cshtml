@@ -1,0 +1,45 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.ListBloggerModel
+
+<div class="row blogger-items expand-item-wrapper">
+    @foreach (var blogger in Model.Bloggers)
+    {
+        <div class="col-md-4">
+            <div class="blogger">
+                <article class="post-overlap-title">
+                    <div class="img-with-box">
+                        @using (Html.Glass().BeginRenderLink(blogger, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                        {
+                            @Html.Glass().RenderImage(blogger, x => x.Image, isEditable: true)
+                        }
+                        <div class="round-box">
+                            <div class="title-carrot">
+                                @using (Html.Glass().BeginRenderLink(blogger.Category, x => x.Link, isEditable: true))
+                                {
+                                    @Html.Glass().Editable(blogger.Category, x => x.Name)
+                                }
+                                <i class="icon-eye"></i>@Html.Glass().Editable(blogger, x => x.Views)
+                            </div>
+                            @using (Html.Glass().BeginRenderLink(blogger, x => x.Link, new { @class = "round-box-text mb-0" }, isEditable: true))
+                            {
+                                @Html.Glass().Editable(blogger, x => x.TitleEntity);
+                            }
+                        </div>
+                    </div>
+                    <div class="blogger-info">
+                        <span>
+                            @using (Html.Glass().BeginRenderLink(blogger, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                            {
+                                @Html.Glass().RenderImage(blogger, x => x.AuthorImage, new { @class = "rounded-circle" }, isEditable: true)
+                            }
+                            @*<img class="rounded-circle" src="images/blogger-1.png" alt="blogger">*@ @Html.Glass().Editable(blogger, x => x.Author)
+                        </span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    }
+</div>
+

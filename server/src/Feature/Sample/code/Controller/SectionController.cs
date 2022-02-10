@@ -40,5 +40,11 @@ namespace MockProject.Feature.Sample.Controller
             var model = MvcContext.GetDataSourceItem<SectionModel>();
             return View("~/Views/MockProject/Sample/SectionViews/AdvertisingSection.cshtml", model);
         }
+
+        public ActionResult GetHeroNewsLandingSection()
+        {
+            var model = MvcContext.GetDataSourceItem<SectionModel>();
+            return View("~/Views/MockProject/Sample/SectionViews/HeroNewsLandingSection.cshtml", model);
+        }
     }
 }

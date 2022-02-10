@@ -1,0 +1,114 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.EventModel
+
+
+<div class="wrapper">
+    <div class="main-content">
+        <section class="section hero-section hero-event-landing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-9 latest-posts">
+                        @Html.Sitecore().Placeholder("latest-posts")
+                    </div>
+                    <div class="col-md-4 col-lg-3 social-post">
+                        <section class="trending-post-section">
+                            @Html.Sitecore().Placeholder("block-upcoming-events")
+                        </section>
+                        <div class="advertising">
+                            <div class="swiper-container advertising-in-col text-center instance-0 swiper-container-horizontal" autoplaytime="5000">
+                                @Html.Sitecore().Placeholder("horizontal-slidebar")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advertising-section">
+            <div class="container">
+                <div class="swiper-container advertising advertising-carousel text-center instance-1 swiper-container-horizontal" autoplaytime="5000">
+                    @Html.Sitecore().Placeholder("horizontal-slidebar")
+                </div>
+            </div>
+        </section>
+        <section class="around-the-world-section section-grey-bg">
+            <div class="container animated fadeInUp">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="section-heading">
+                            <h1 class="heading">Around<span class="txt-italic">the world</span></h1><a class="view-all" href="#">View all</a>
+                        </div>
+                        <div class="row upcoming-items row expand-item-wrapper around-world-type" style="height: auto;">
+                            @Html.Sitecore().Placeholder("upcoming-event")
+                        </div>
+                        <div class="more-btn text-center"><a class="show-more active" title="Show more button"> <span>more</span><i class="icon-arrow-down"></i></a><a class="show-less" title="Show less button"><span>less</span><i class="icon-arrow-down"></i></a></div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="advertise-trending-post">
+                            <div class="advertising">
+                                <div class="swiper-container advertising-in-col text-center instance-2 swiper-container-horizontal" autoplaytime="5000">
+                                    @Html.Sitecore().Placeholder("block-slidebar")
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="latest-events">
+            <div class="container animated">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="section-heading">
+                            <h1 class="heading">Latest<span class="txt-italic">events</span></h1><a class="view-all" href="#">View all</a>
+                        </div>
+                        <div class="row upcoming-items expand-item-wrapper latest-event-type lazy-load-type" style="height: auto;">
+                            @Html.Sitecore().Placeholder("latest-events")
+                        </div>
+                        <div class="more-btn text-center"><a class="show-more active" title="Show more button"> <span>more</span><i class="icon-arrow-down"></i></a><a class="show-less" title="Show less button"><span>less</span><i class="icon-arrow-down"></i></a></div>
+                        <input id="LastestEventDatasourceId" name="LastestEventDatasourceId" type="hidden" value="{EA36C595-06CA-476C-8F1B-39335453F62D}">
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="advertise-trending-post>
+                            <div class="advertising">
+                                <div class="swiper-container advertising-in-col text-center instance-3 swiper-container-horizontal" autoplaytime="5000">
+                                        @Html.Sitecore().Placeholder("block-slidebar")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="lightbox-wrapper lightbox-video">
+            <div class="close"></div>
+            <div class="lightbox">
+                <div class="iframe-responsive-wrapper">
+                    <div class="loader"></div>
+                </div>
+                <div class="lightbox-content niceScroll">
+                    <a class="title-carrot" href="#">bucket list</a>
+                    <h3>JS Usage: call lightbox.openLightbox('video') to open lightbox</h3>
+                    <div class="profile">
+                        <div class="pic" style="background-image:url(images/photo-day-1.png)"><img src="images/photo-day-1.png"></div>
+                        <div class="info">
+                            <p>Published 9 months ago</p>
+                            <p>By <span>span Rabbit Today Staff</span></p>
+                        </div>
+                    </div>
+                    <div class="reaction red">
+                        <div class="reaction-view"><span class="icon-eye"></span><span></span></div>
+                        <div class="reaction-heart"><span class="icon-heart-bold"></span><span class="heart-number"></span></div>
+                    </div>
+                    <div class="brief">พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้ พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้ พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้ พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้ พื้นฐานของจิตต์สิงห์ เริ่มต้นมาจากความชอบงานด้านศิลปะมาตั้งแต่วัยเด็ก จากการเขียนภาพเลียนแบบการ์ตูนญี่ปุ่นเล่นยามว่าง จนสามารถหารายได้...</div>
+                </div>
+            </div>
+        </div>
+        <div class="lightbox-wrapper lightbox-youtube-video">
+            <div class="close"></div>
+            <div class="lightbox">
+                <div class="loader"></div>
+                <div class="iframe-responsive-wrapper"></div>
+            </div>
+        </div>
+    </div>
+</div>

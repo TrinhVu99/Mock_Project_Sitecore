@@ -113,6 +113,8 @@
                 public const string Author = "{9FE5AFB6-78E6-4DCA-8E79-B5DCE1BBCE4A}";
                 public const string Image = "{34DE20D7-8C2A-46A9-B1D7-895CDFCD816E}";
                 public const string Link = "{99DD331D-BC00-46CE-8594-BA2D625521CB}";
+                public const string AuthorDescription = "{880E35FE-8A22-4562-8D42-3CBC1CECEAFF}";
+                public const string AuthorImage = "{65727955-8393-492E-9127-F8FBC0F81A87}";
             }
         }
 
@@ -139,13 +141,21 @@
 
         public static class Blogger
         {
-            public const string TemplateId = "{C7DCE390-4381-4EE9-AC68-29874652CFB1}";
+            public const string TemplateId = "{FDB9984E-E2C7-4D90-BCB7-FA18A9586BB6}";
 
             public static class Fields
             {
-                public const string Name = "{5A230DDE-DEF8-4F5D-A522-0D237B922523}";
-                public const string Text = "{7C7F7312-1B5F-4BE0-B526-1EF781A64F80}";
-                public const string Image = "{3F77A3EA-F323-4014-A570-3F1FB8375035}";
+                public const string Name = "{AE2C4892-0856-433E-ADB1-55BCCDA0786D}";
+                public const string TitleEntity = "{DF867E82-2305-4FCA-829E-E435040769B5}";
+                public const string Category = "{9C36BA68-31EB-428E-B3A9-39A43E922995}";
+                public const string Views = "{36FA86AB-0664-47CE-8B51-E30AE1E2728F}";
+                public const string Tags = "{698E3A92-2911-4F54-A259-47201E64A59F}";
+                public const string Content = "{39FD7253-AC88-414F-9A6E-03875C06DCEE}";
+                public const string Likes = "{D8FDB099-D9DB-476E-886E-FEA43A2221BC}";
+                public const string Author = "{9FE5AFB6-78E6-4DCA-8E79-B5DCE1BBCE4A}";
+                public const string AuthorImage = "{65727955-8393-492E-9127-F8FBC0F81A87}";
+                public const string Image = "{34DE20D7-8C2A-46A9-B1D7-895CDFCD816E}";
+                public const string Link = "{99DD331D-BC00-46CE-8594-BA2D625521CB}";
             }
         }
 
@@ -174,12 +184,12 @@
 
         public static class ListBlogger
         {
-            public const string TemplateId = "{5BF3D0A4-53F4-46A1-9B35-BBCBE1F1A10D}";
+            public const string TemplateId = "{73693F4D-9E08-4A55-B4C8-B6369CD0236A}";
 
             public static class Fields
             {
-                public const string Name = "{0D9AE236-AFD3-4CC4-A18F-34EDE6169120}";
-                public const string Bloggers = "{409BB3C9-58DD-4CA6-9258-A5C67644D8D3}";
+                public const string Name = "{EE9A09B9-1F77-47C5-8FCE-7D8777DD400F}";
+                public const string Bloggers = "{7858169D-BF8B-4D49-9E50-42E706886AED}";
             }
         }
 

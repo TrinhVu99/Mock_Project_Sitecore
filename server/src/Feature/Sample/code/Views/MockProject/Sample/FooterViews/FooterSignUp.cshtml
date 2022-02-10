@@ -3,6 +3,15 @@
 @using MockProject.Foundation.SitecoreExtensions.Helpers
 @model MockProject.Feature.Sample.Models.TemplateModels.FooterNavigation.SignUpModel
 
+@{
+    string placeholder = string.Empty;
+    var rc = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    if (rc != null)
+    {
+        var parms = rc.Rendering.Parameters;
+        placeholder = parms["Placeholder"];
+    }
+}
 <div class="e-newsletter-subscription-section">
     <div class="container">
         <div class="row">
@@ -18,7 +27,7 @@
                     <form id="e-newsletter-form" method="POST">
                         <div class="row row-newsletter">
                             <div class="e-newsletter-input-section col-md-6 col-lg-8">
-                                <input class="email-input email" id="newsletter__register" data-msg-regex="It's not email" name="newsletter__register" type="text" placeholder="Your email address">
+                                <input class="email-input email" id="newsletter__register" data-msg-regex="It's not email" name="newsletter__register" type="text" placeholder="@placeholder">
                             </div>
                             <div class="thanks-message col-md-6 col-lg-8">
                                 <p>รับข่าวสารอัพเดตไลฟ์สไตล์หลากหลายจาก Rabbit Today </p>
