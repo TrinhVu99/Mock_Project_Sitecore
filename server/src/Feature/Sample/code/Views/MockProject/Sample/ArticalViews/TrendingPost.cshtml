@@ -10,10 +10,13 @@
         {
             <article class="post-left-img card flex-row border-0">
                 <div class="card-img-left">
-                    @using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
+                    <a href="@artical.Url">
+                        @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
+                    </a>
+                    @*@using (Html.Glass().BeginRenderLink(artical, x => x.Link, new { @class = "img bg-overlay img-to-bg" }, isEditable: true))
                     {
                         @Html.Glass().RenderImage(artical, x => x.Image, isEditable: true)
-                    }
+                    }*@
                 </div>
                 <div class="card-body">
                     @using (Html.Glass().BeginRenderLink(artical.Category, x => x.Link, new { @class = "title-carrot" }, isEditable: true))

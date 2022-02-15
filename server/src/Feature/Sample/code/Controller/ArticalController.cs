@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using MockProject.Foundation.Mvc.Controllers;
 using MockProject.Feature.Sample.Models.TemplateModels;
+using Glass.Mapper.Sc;
 
 namespace MockProject.Feature.Sample.Controller
 {
@@ -30,8 +31,11 @@ namespace MockProject.Feature.Sample.Controller
         }
         public ActionResult GetArtical()
         {
+            var item = Sitecore.Context.Item;
+            var context = new SitecoreService(Sitecore.Context.Database);
+            var modelArtical = context.GetItem<ArticalModel>(item);
             var model = MvcContext.GetDataSourceItem<ArticalModel>();
-            return View("~/Views/MockProject/Sample/ArticalViews/DetailArtical/DetailArticle.cshtml", model);
+            return View("~/Views/MockProject/Sample/ArticalViews/DetailArtical/DetailArticle.cshtml", modelArtical);
         }
 
         public ActionResult GetYouMayLike()
